@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Air Sew — Beechcraft Bonanza (Logbook)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--paper:#ffffff;--draft:#f3f5f8;--ink:#14243d;--navy:#18335f;--navy-deep:#10264a;--muted:#4f5b6e;--rule:#c5cdd8;--hair:#e2e7ee;--needle:#b71c1c;--valid:#2b6a4a;--control:#8590a2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper)}
+.lb{font-family:'Archivo',system-ui,sans-serif;font-variation-settings:'wdth' 100;color:var(--ink);-webkit-font-smoothing:antialiased;font-size:17px;line-height:28px}
+.lb a{color:var(--navy)}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace;font-feature-settings:'tnum'}
+.wrap{max-width:1232px;margin:0 auto;padding:0 32px}
+.d1{font-weight:500;font-variation-settings:'wdth' 112;font-size:76px;line-height:78px;letter-spacing:-.025em;margin:0}
+.d2{font-weight:500;font-variation-settings:'wdth' 112;font-size:44px;line-height:50px;letter-spacing:-.02em;margin:0}
+.d3{font-weight:600;font-variation-settings:'wdth' 106;font-size:22px;line-height:30px;margin:0}
+.lead{font-size:20px;line-height:31px;color:var(--muted);margin:0;max-width:34em}
+.body{font-size:17px;line-height:28px;color:var(--muted);margin:0}
+.small{font-size:15px;line-height:24px;color:var(--muted)}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:20px;color:var(--muted)}
+.sec{padding:120px 0}.sec.tight{padding:88px 0}.draft{background:var(--draft)}
+.btn{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;min-height:56px;padding:0 28px;border:0;border-radius:4px;font:600 16px 'Archivo',sans-serif;cursor:pointer;text-decoration:none}
+.btn.red{background:var(--needle);color:#fff}
+.btn.navy{background:var(--navy);color:#fff}
+.btn.ghost{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)}
+.btn.sm{min-height:44px;padding:0 18px;font-size:15px}
+.lb :focus-visible{outline:2px solid var(--navy);outline-offset:3px}
+.plate{border:1px solid var(--ink);border-radius:2px;background:#fff}
+.plate dl{display:grid;grid-template-columns:150px 1fr;margin:0}
+.plate dt,.plate dd{margin:0;padding:12px 20px;border-top:1px solid var(--hair);font-size:15px;line-height:24px}
+.plate dt{color:var(--muted)}
+.seg{display:inline-flex;border:1px solid var(--ink);border-radius:4px;overflow:hidden}
+.seg button{border:0;background:#fff;color:var(--ink);font:600 15px 'Archivo',sans-serif;padding:0 22px;min-height:44px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:#fff}
+.tail{display:flex;border:1.5px solid var(--ink);border-radius:4px;overflow:hidden;background:#fff}
+.tail span{display:flex;align-items:center;padding:0 16px;font-size:24px;background:var(--draft);border-right:1.5px solid var(--ink)}
+.tail input{flex:1 1 auto;min-width:0;border:0;font-size:24px;padding:0 16px;min-height:58px;color:var(--ink);letter-spacing:.06em;text-transform:uppercase;background:#fff}
+.field label{display:block;font-size:15px;font-weight:600;margin-bottom:8px}
+.field input{width:100%;min-height:52px;border:1.5px solid var(--control);border-radius:4px;padding:0 14px;font:400 17px 'Archivo',sans-serif;color:var(--ink);background:#fff}
+.pin{position:absolute;width:34px;height:34px;border-radius:999px;background:#fff;color:var(--ink);display:flex;align-items:center;justify-content:center;font:600 14px 'IBM Plex Mono',monospace;box-shadow:0 0 0 1.5px var(--ink),0 0 0 6px rgba(255,255,255,.55);pointer-events:none}
+.wiper{position:relative;overflow:hidden;background:#cfd6df;touch-action:pan-y}
+.wiper img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.wiper .seam{position:absolute;top:0;bottom:0;width:2px;background:#fff;pointer-events:none}
+.wiper .grip{position:absolute;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:999px;background:#fff;box-shadow:0 0 0 1.5px var(--ink),0 8px 24px rgba(20,36,61,.25);display:flex;align-items:center;justify-content:center;gap:6px;pointer-events:none}
+.wiper .grip i{display:block;width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent}
+.wiper .grip i:first-child{border-right:8px solid var(--ink)}.wiper .grip i:last-child{border-left:8px solid var(--ink)}
+.wiper input[type=range]{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+.wiper input[type=range]:focus-visible + .focus{outline:3px solid #fff;outline-offset:-6px}
+.wiper .focus{position:absolute;inset:0;pointer-events:none}
+.wiper .lbl{position:absolute;top:20px;padding:4px 10px;background:#fff;color:var(--ink);font:500 13px 'IBM Plex Mono',monospace;border-radius:2px;pointer-events:none}
+.faq{border-top:1px solid var(--rule)}
+.faq button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;gap:24px;padding:22px 0;font-size:18px;font-weight:600;color:var(--ink);cursor:pointer}
+.faq button:focus-visible{outline:2px solid var(--navy);outline-offset:4px}
+.reg{width:100%;border-collapse:collapse}
+.reg th{font:500 13px 'IBM Plex Mono',monospace;color:var(--muted);text-align:left;padding:12px 20px 12px 0;border-bottom:1.5px solid var(--ink)}
+.reg td{padding:16px 20px 16px 0;border-bottom:1px solid var(--hair);font-size:16px;line-height:24px;vertical-align:top}
+@keyframes resolve{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.found{animation:resolve .4s ease-out both}
+@media (prefers-reduced-motion:reduce){.found{animation:none}}
+</style>
+</helmet>
+<div class="lb" style="">
+<header style="border-bottom:1px solid var(--hair);background:#fff"><div class="wrap" style="display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:32px">
+  <a href="LBHome.dc.html"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew home" style="height:36px;display:block"></a>
+  <nav aria-label="Main" style="display:flex;gap:36px;font-size:15px;font-weight:500"><a href="#" style="text-decoration:none;color:var(--ink);padding:6px 0;">Services</a><a href="#" style="text-decoration:none;color:var(--ink);padding:6px 0;box-shadow:inset 0 -2px 0 var(--ink)" aria-current=page>Aircraft</a><a href="#" style="text-decoration:none;color:var(--ink);padding:6px 0;">Capabilities</a><a href="#" style="text-decoration:none;color:var(--ink);padding:6px 0;">Portfolio</a></nav>
+  <div style="display:flex;gap:24px;align-items:center;font-size:15px"><a href="https://app.air-sew.com/" style="text-decoration:none;color:var(--muted)">Client login</a><a href="LBStart1.dc.html" class="btn ghost sm">Start your design</a></div>
+</div></header>
+<section style="padding:56px 0 96px;background:linear-gradient(90deg,var(--hair) 1px,transparent 1px) 0 0/calc(100%/12) 100%">
+  <div class="wrap">
+    <nav aria-label="Breadcrumb" class="tag" style="margin-bottom:48px"><a href="LBHome.dc.html" style="color:var(--muted)">Home</a> / <a href="#" style="color:var(--muted)">Aircraft</a> / <a href="#" style="color:var(--muted)">Beechcraft</a> / <span style="color:var(--ink)">Bonanza</span></nav>
+    <div style="display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:start">
+      <div>
+        <p class="tag" style="margin:0 0 20px">Six-seat piston, certified</p>
+        <h1 class="d1">Beechcraft Bonanza interiors.</h1>
+        <p class="lead" style="margin-top:28px">The Bonanza was built to carry six in comfort. Decades of sun and use wear that down. We bring it back, then make it yours: club seats you can talk across, a cabin that stays cool and quiet, and a finish no other Bonanza on the field has.</p>
+        <div style="display:flex;gap:12px;margin-top:36px"><a href="LBStart1.dc.html" class="btn red">Start your Bonanza design</a><a href="#work" class="btn ghost">See Bonanza cabins</a></div>
+      </div>
+      <div class="plate">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;padding:18px 20px;border-bottom:1px solid var(--ink)"><span style="font-weight:600;font-variation-settings:'wdth' 108;font-size:20px">Beechcraft Bonanza</span><span class="tag">Type data</span></div>
+  <dl style="margin:0"><dt>Seats</dt><dd class=mono>4–6</dd><dt>Layouts</dt><dd>Club or forward</dd><dt>Cabin (A36)</dt><dd class=mono>[L × W × H]</dd><dt>Burn standard</dt><dd>Part 23</dd><dt>On the US register</dt><dd class=mono>[Fleet count]</dd></dl>
+</div>
+    </div>
+  </div>
+</section>
+<nav aria-label="On this page" style="position:sticky;top:0;z-index:5;background:#fff;border-top:1.5px solid var(--ink);border-bottom:1px solid var(--hair)"><div class="wrap" style="display:flex;gap:32px;align-items:center;min-height:60px;font-size:15px;font-weight:500">
+  <a href="#cabin" style="text-decoration:none;color:var(--ink);box-shadow:inset 0 -2px 0 var(--ink);padding:18px 0">Cabin</a><a href="#squawks" style="text-decoration:none;color:var(--muted);padding:18px 0">What wears</a><a href="#work" style="text-decoration:none;color:var(--muted);padding:18px 0">Our work</a><a href="#services" style="text-decoration:none;color:var(--muted);padding:18px 0">What we do</a><a href="#variants" style="text-decoration:none;color:var(--muted);padding:18px 0">Variants</a><a href="#faq" style="text-decoration:none;color:var(--muted);padding:18px 0">FAQ</a>
+  <a href="LBStart1.dc.html" class="btn navy sm" style="margin-left:auto">Start your design</a>
+</div></nav>
+
+<section id="cabin" class="sec">
+  <div class="wrap" style="display:grid;grid-template-columns:4fr 8fr;gap:72px;align-items:center">
+    <div><h2 class="d2">Your Bonanza cabin.</h2><p class="body" style="margin:20px 0 28px">Most A36s and G36s carry six, with an optional club layout in the middle row. We design around the layout you have, or help you change it.</p>
+      <div class="seg" role="group" aria-label="Seat layout"><button type="button" aria-pressed="{{isClub}}" onClick="{{setClub}}">Club</button><button type="button" aria-pressed="{{isStd}}" onClick="{{setStd}}">Standard</button></div>
+      <p class="small" style="margin:16px 0 0">{{mapNote}}</p></div>
+    <div class="plate" style="padding:28px 32px"><div class="tag" style="display:flex;justify-content:space-between;margin-bottom:16px"><span>Seat plan, top view</span><span>Not to scale</span></div><svg viewBox="0 0 520 190" width="100%" role="img" aria-label="{{mapLabel}}" style="display:block">
+  <path d="M18 95 C18 58 52 44 104 42 L430 46 C470 48 500 70 502 95 C500 120 470 142 430 144 L104 148 C52 146 18 132 18 95Z" fill="none" stroke="var(--ink)" stroke-width="1"/>
+  <path d="M250 46 L300 4 L360 4 L330 46 M250 144 L300 186 L360 186 L330 144" fill="none" stroke="var(--rule)" stroke-width="1"/>
+  <path d="M96 52 V138" stroke="var(--rule)" stroke-width="1" stroke-dasharray="3 3"/>
+  <g fill="none" stroke="var(--ink)" stroke-width="1">
+    <rect x="120" y="56" width="46" height="34" rx="6"/><rect x="120" y="100" width="46" height="34" rx="6"/>
+    <rect x="{{r2x}}" y="56" width="46" height="34" rx="6"/><rect x="{{r2x}}" y="100" width="46" height="34" rx="6"/>
+    <rect x="322" y="56" width="46" height="34" rx="6"/><rect x="322" y="100" width="46" height="34" rx="6"/>
+  </g>
+  <g stroke="var(--ink)" stroke-width="3" stroke-linecap="round"><path d="M166 58V88M166 102V132M368 58V88M368 102V132M{{b2}} 58V88M{{b2}} 102V132"/></g>
+  <path d="M396 144 V156 H460 V142" fill="none" stroke="var(--rule)" stroke-width="1" stroke-dasharray="3 3"/>
+  <g font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--muted)"><text x="40" y="99">PANEL</text><text x="404" y="170">AFT DOORS</text><text x="128" y="172">ROW 1</text><text x="236" y="172">ROW 2</text><text x="326" y="172">ROW 3</text></g>
+</svg></div>
+  </div>
+</section>
+
+<section id="squawks" class="sec draft">
+  <div class="wrap"><div style="display:grid;grid-template-columns:7fr 5fr;gap:72px;align-items:end;margin-bottom:48px"><h2 class="d2">Squawk list: what wears out on a Bonanza.</h2><p class="body">After [number] Bonanzas through our shop, we know where they tire first, and how to make the fix outlast the original.</p></div>
+    <table class="reg"><thead><tr><th style="width:56px">#</th><th style="width:220px"></th><th>Squawk</th><th>Our fix</th></tr></thead><tbody>
+      <tr><td class="mono">01</td><td><img src="../assets/img/worn-seats.jpg" alt="Sun-baked seat leather" style="display:block;width:200px;aspect-ratio:4/3;object-fit:cover"></td><td><div style="font-weight:600;font-size:18px">Sun-baked seat leather</div><div class="small" style="margin-top:4px">Big side windows cook the seat tops.</div></td><td>Rebuild the foam; re-cover in UV-stable, burn-certified leather.</td></tr><tr><td class="mono">02</td><td><img src="../assets/img/worn-sidewall.jpg" alt="Cracked sidewalls and window trim" style="display:block;width:200px;aspect-ratio:4/3;object-fit:cover"></td><td><div style="font-weight:600;font-size:18px">Cracked sidewalls and window trim</div><div class="small" style="margin-top:4px">Original plastics go brittle with age and heat.</div></td><td>Repair and refinish, or 3D-print new trim; wrap panels to match.</td></tr><tr><td class="mono">03</td><td><img src="../assets/img/seat-frame.jpg" alt="Tired aft doors and club seats" style="display:block;width:200px;aspect-ratio:4/3;object-fit:cover"></td><td><div style="font-weight:600;font-size:18px">Tired aft doors and club seats</div><div class="small" style="margin-top:4px">The aft double doors and club seats take the most traffic.</div></td><td>Reinforce wear points; rebuild seat mechanisms.</td></tr>
+    </tbody></table>
+  </div>
+</section>
+
+<section id="work" class="sec" style="padding-bottom:0">
+  <div class="wrap" style="display:flex;justify-content:space-between;align-items:end;margin-bottom:40px"><h2 class="d2">Bonanza cabins we've built.</h2><a href="#" style="font-weight:600">See the project</a></div>
+  <figure style="margin:0"><div class="wiper" style="height:720px;border-radius:0px">
+  <img src="../assets/img/hero-after.jpg" alt="After: the finished cabin">
+  <img src="../assets/img/hero-before.jpg" alt="Before: the same cabin as it arrived" style="{{beforeClip}}">
+  
+  <span class="lbl" style="left:20px">Before</span><span class="lbl" style="right:20px">After</span>
+  <span class="seam" style="left:{{pos}}%"></span>
+  <span class="grip" style="left:{{pos}}%"><i></i><i></i></span>
+  <input type="range" min="0" max="100" value="{{pos}}" onInput="{{slide}}" aria-label="Drag to compare before and after"><span class="focus"></span>
+</div></figure>
+  <div class="wrap" style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding:24px 32px 0">
+    <div style="border-top:1px solid var(--rule);padding-top:12px"><div class="tag">Aircraft</div><div style="font-weight:600;margin-top:2px">[Year] Beechcraft A36</div></div><div style="border-top:1px solid var(--rule);padding-top:12px"><div class="tag">Scope</div><div style="font-weight:600;margin-top:2px">Full interior</div></div><div style="border-top:1px solid var(--rule);padding-top:12px"><div class="tag">Delivered</div><div style="font-weight:600;margin-top:2px">[Month Year]</div></div>
+  </div>
+</section>
+
+<section id="services" class="sec">
+  <div class="wrap" style="display:grid;grid-template-columns:4fr 8fr;gap:72px">
+    <div><h2 class="d2">Everything inside your Bonanza.</h2>
+      <p class="tag" style="margin:32px 0 10px">Popular on Bonanzas</p>
+      <p style="margin:0;font-size:16px;line-height:30px">Perforated inserts / Two-tone leather / Club conversion / LED cabin lighting / USB-C at every seat / Sound deadening / Embroidered headrests</p></div>
+    <div><a href="#" style="display:grid;grid-template-columns:40px 1fr 1.4fr;gap:20px;align-items:center;padding:22px 0;border-top:1px solid var(--rule);text-decoration:none;color:var(--ink)"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 32px"><g stroke="#18335f" stroke-width="0.6"><path d="M6.6 3h3.1c.9 0 1.6.8 1.5 1.7L10.2 13H6.1L5.1 4.7C5 3.8 5.7 3 6.6 3z"/><path d="M5 13h11.5a1.5 1.5 0 0 1 1.5 1.5V16H5z"/><path d="M10.6 10H16M8 16v4M15 16v4M6 20h11"/></g><path d="M7.4 5.6l.6 5" stroke="#b71c1c" stroke-width="0.7" stroke-dasharray=".9 1.3"/></svg><span class="d3" style="font-size:20px">Seats & upholstery</span><span class="small">All six seats, including club conversions and seat-back storage.</span></a><a href="#" style="display:grid;grid-template-columns:40px 1fr 1.4fr;gap:20px;align-items:center;padding:22px 0;border-top:1px solid var(--rule);text-decoration:none;color:var(--ink)"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 32px"><g stroke="#18335f" stroke-width="0.6"><rect x="4" y="3" width="16" height="18" rx="2"/><rect x="9" y="6.5" width="6" height="8" rx="3"/></g><path d="M7 18h10" stroke="#b71c1c" stroke-width="0.7" stroke-dasharray=".9 1.3"/></svg><span class="d3" style="font-size:20px">Sidewalls & panels</span><span class="small">Soft-touch sidewalls, armrests and aft door panels, matched to the seats.</span></a><a href="#" style="display:grid;grid-template-columns:40px 1fr 1.4fr;gap:20px;align-items:center;padding:22px 0;border-top:1px solid var(--rule);text-decoration:none;color:var(--ink)"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 32px"><path d="M3 20v-8a9 9 0 0 1 18 0v8M3 20h18" stroke="#18335f" stroke-width="0.6"/><path d="M7 11a5 5 0 0 1 10 0" stroke="#b71c1c" stroke-width="0.7" stroke-dasharray=".9 1.3"/></svg><span class="d3" style="font-size:20px">Headliner</span><span class="small">A tight, quiet headliner; reading lights and vents re-fitted.</span></a><a href="#" style="display:grid;grid-template-columns:40px 1fr 1.4fr;gap:20px;align-items:center;padding:22px 0;border-top:1px solid var(--rule);text-decoration:none;color:var(--ink)"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 32px"><path d="M8 9h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2zM8 9V6h4v3M12 7h1.5" stroke="#18335f" stroke-width="0.6"/><path d="M17 5h.01M19.5 3.5h.01M19 7h.01M21 5.5h.01M17.5 9h.01" stroke="#b71c1c" stroke-width="0.9"/></svg><span class="d3" style="font-size:20px">Plastics, covers & cowl plugs</span><span class="small">Restored trim, plus Bonanza-pattern covers and plugs.</span></a><div style="border-top:1px solid var(--rule)"></div></div>
+  </div>
+</section>
+
+<section id="variants" class="sec draft">
+  <div class="wrap"><h2 class="d2" style="margin-bottom:40px">Bonanza variants we cover.</h2>
+    <table class="reg"><thead><tr><th>Variant</th><th>Seats</th><th>Cabin notes</th></tr></thead><tbody>
+      <tr><td style="font-weight:600;font-size:18px;width:28%">A36 Bonanza</td><td class="mono" style="width:12%">6</td><td>Straight tail, aft double doors, optional club seating</td></tr><tr><td style="font-weight:600;font-size:18px;width:28%">A36TC / B36TC</td><td class="mono" style="width:12%">6</td><td>Turbocharged; same cabin, oxygen fittings to work around</td></tr><tr><td style="font-weight:600;font-size:18px;width:28%">G36 Bonanza</td><td class="mono" style="width:12%">6</td><td>Newer interiors; refresh or full redesign</td></tr><tr><td style="font-weight:600;font-size:18px;width:28%">V35 / 35-series</td><td class="mono" style="width:12%">4–6</td><td>V-tail; shorter cabin, single cabin door</td></tr>
+    </tbody></table></div>
+</section>
+
+<section id="faq" class="sec">
+  <div class="wrap" style="display:grid;grid-template-columns:4fr 8fr;gap:72px"><h2 class="d2">Bonanza questions.</h2><div><div class="faq"><button type="button" aria-expanded="{{o0}}" onClick="{{t0}}"><span>How long will my Bonanza be down?</span><span aria-hidden="true" class="mono">{{s0}}</span></button><p class="body" style="display:{{d0}};padding:0 0 22px;max-width:40em">Every Bonanza and every scope is different, so we don't quote a typical number. After your design session, your completion date is written into your quote, and you watch it hold in your client portal.</p></div><div class="faq"><button type="button" aria-expanded="{{o1}}" onClick="{{t1}}"><span>Can you pick it up?</span><span aria-hidden="true" class="mono">{{s1}}</span></button><p class="body" style="display:{{d1}};padding:0 0 22px;max-width:40em">Yes. Fly it in, or we arrange a ferry pilot to and from your home field.</p></div><div class="faq"><button type="button" aria-expanded="{{o2}}" onClick="{{t2}}"><span>What does a Bonanza interior cost?</span><span aria-hidden="true" class="mono">{{s2}}</span></button><p class="body" style="display:{{d2}};padding:0 0 22px;max-width:40em">It depends on scope and materials. Start your design to see a concept, then we follow with a written quote.</p></div><div class="faq"><button type="button" aria-expanded="{{o3}}" onClick="{{t3}}"><span>What paperwork do I get?</span><span aria-hidden="true" class="mono">{{s3}}</span></button><p class="body" style="display:{{d3}};padding:0 0 22px;max-width:40em">Logbook entries, burn certificates for every material, and a records packet, kept in your portal for good.</p></div><div style="border-top:1px solid var(--rule)"></div></div></div>
+</section>
+
+<section style="background:var(--navy-deep);color:#fff;padding:96px 0">
+  <div class="wrap" style="display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:center">
+    <h2 class="d2" style="color:#fff">Picture your Bonanza, made for you.</h2>
+    <div><p style="margin:0 0 20px;color:rgba(255,255,255,.82)">Enter your tail number; we pull the rest from the FAA. We call you within one business day.</p><a href="LBStart1.dc.html" class="btn red">Start your Bonanza design</a></div>
+  </div>
+</section>
+<footer style="border-top:1.5px solid var(--ink);padding:56px 0 40px"><div class="wrap">
+  <div style="display:grid;grid-template-columns:4fr 2fr 2fr 2fr;gap:32px">
+    <div><img src="../assets/logo/air-sew-logo.png" alt="Air Sew" style="height:32px"><p class="small" style="margin:16px 0 0;max-width:26em">Aircraft interiors from an owner-operated FAA Part 145 repair station. [City, State] · [Airport ID]</p></div>
+    <div class="small" style="display:flex;flex-direction:column;gap:8px"><span class="tag">Work</span><a href="#" style="color:var(--ink);text-decoration:none">Services</a><a href="#" style="color:var(--ink);text-decoration:none">Aircraft</a><a href="#" style="color:var(--ink);text-decoration:none">Capabilities</a><a href="#" style="color:var(--ink);text-decoration:none">Portfolio</a></div>
+    <div class="small" style="display:flex;flex-direction:column;gap:8px"><span class="tag">Company</span><a href="#" style="color:var(--ink);text-decoration:none">About</a><a href="#" style="color:var(--ink);text-decoration:none">How it works</a><a href="#" style="color:var(--ink);text-decoration:none">FAQ</a><a href="#" style="color:var(--ink);text-decoration:none">Contact</a></div>
+    <div class="small" style="display:flex;flex-direction:column;gap:8px"><span class="tag">Clients</span><a href="LBStart1.dc.html" style="color:var(--ink);text-decoration:none">Start your design</a><a href="https://app.air-sew.com/" style="color:var(--ink);text-decoration:none">Client login</a><a href="tel:+10000000000" class="mono" style="color:var(--ink);text-decoration:none">[Phone]</a></div>
+  </div>
+  <div class="tag" style="display:flex;justify-content:space-between;margin-top:48px;padding-top:20px;border-top:1px solid var(--hair)"><span>© 2026 Air Sew</span><span><a href="#" style="color:var(--muted)">Privacy</a>  <a href="#" style="color:var(--muted)">Terms</a></span></div>
+</div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6100}}'>
+class Component extends DCLogic {
+  constructor(p) { super(p); this.state = { club: true, pos: 50, open: 0 }; }
+  renderVals() {
+    const s = this.state;
+    const v = { isClub: String(s.club), isStd: String(!s.club), setClub: () => this.setState({ club: true }), setStd: () => this.setState({ club: false }),
+      r2x: s.club ? 236 : 226, b2: s.club ? 236 : 272,
+      mapLabel: s.club ? 'Top-down seat plan, club layout: middle row faces aft' : 'Top-down seat plan, standard layout: all seats face forward',
+      mapNote: s.club ? 'Middle row faces aft, so four passengers sit face to face.' : 'Every seat faces forward.',pos: s.pos, slide: (e) => this.setState({ pos: Number(e.target.value) }), beforeClip: 'clip-path:inset(0 ' + (100 - s.pos) + '% 0 0)', };
+    for (let i = 0; i < 4; i++) { const on = s.open === i; v['o'+i] = String(on); v['s'+i] = on ? '−' : '+'; v['d'+i] = on ? 'block' : 'none'; v['t'+i] = () => this.setState({ open: on ? -1 : i }); }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

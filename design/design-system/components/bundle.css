@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Manrope:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap");
 
 /* Air Sew components. Values come from tokens.css; nothing here hard-codes a brand value. */
 
@@ -32,17 +32,16 @@
 .as-btn--accent { background: var(--needle); color: var(--on-needle); }
 .as-btn--accent:hover { filter: brightness(.92); }
 .as-btn--text { background: transparent; color: var(--navy); padding: 0 var(--space-2xs); min-height: 40px; }
-.as-btn--text:hover { text-decoration: underline; text-decoration-color: var(--needle); text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.as-btn--text:hover { text-decoration: underline; text-decoration-color: currentColor; text-underline-offset: 6px; text-decoration-thickness: 2px; }
 .as-btn--sm { min-height: 40px; padding: 0 var(--space-md); }
 .as-btn[disabled] { opacity: .45; cursor: not-allowed; }
 
 /* ---------- Eyebrow ---------- */
 .as-eyebrow {
-  display: inline-flex; align-items: center; gap: var(--space-xs);
-  font-family: var(--font-sans); font-size: 13px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--navy);
+  display: inline-block;
+  font-family: var(--font-mono); font-size: 13px; line-height: 20px; font-weight: 400;
+  color: var(--ink-muted);
 }
-.as-eyebrow::before { content: ""; width: 20px; height: 2px; border-radius: 2px; background: var(--needle); }
 
 /* ---------- Header / nav ---------- */
 .as-header {
@@ -58,13 +57,13 @@
   border-bottom: 2px solid transparent;
 }
 .as-nav a:hover { color: var(--navy); }
-.as-nav a[aria-current="page"] { color: var(--navy); border-bottom-color: var(--needle); }
+.as-nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--ink); }
 
 /* ---------- Hero ---------- */
-.as-hero { background: var(--sky); padding: var(--space-5xl) var(--space-xl); }
+.as-hero { background: var(--surface); background-image: linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: calc(100% / 12) 100%; padding: var(--space-5xl) var(--space-xl); }
 .as-hero__inner { max-width: var(--container); margin: 0 auto; }
 .as-hero h1 {
-  font-family: var(--font-display); font-weight: 300; font-size: 64px; line-height: 68px; letter-spacing: -0.02em;
+  font-family: var(--font-display); font-variation-settings: 'wdth' 112; font-weight: 500; font-size: 76px; line-height: 78px; letter-spacing: -0.025em;
   color: var(--ink); margin: var(--space-md) 0 var(--space-lg); max-width: 14ch;
 }
 .as-hero p { font-size: 20px; line-height: 32px; color: var(--ink-muted); max-width: var(--measure); margin: 0 0 var(--space-xl); }
@@ -74,16 +73,14 @@
 .as-card {
   display: flex; flex-direction: column; gap: var(--space-md);
   padding: var(--space-xl); background: var(--surface);
-  border: 1px solid var(--line); border-radius: var(--radius-lg);
-  transition: box-shadow .2s ease, transform .2s ease;
+  border: 1px solid var(--ink); border-radius: var(--radius-lg);
 }
-.as-card:hover { box-shadow: var(--shadow-lift); transform: translateY(-2px); }
-.as-card__media { aspect-ratio: 4 / 3; border-radius: var(--radius-md); background: var(--linen); overflow: hidden; }
+.as-card__media { aspect-ratio: 4 / 3; border-radius: 0; background: var(--linen); overflow: hidden; }
 .as-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.as-card h3 { font-family: var(--font-display); font-weight: 400; font-size: 24px; line-height: 32px; margin: 0; color: var(--ink); }
+.as-card h3 { font-family: var(--font-display); font-variation-settings: 'wdth' 106; font-weight: 600; font-size: 22px; line-height: 30px; margin: 0; color: var(--ink); }
 .as-card p { font-size: 15px; line-height: 24px; color: var(--ink-muted); margin: 0; }
 .as-card__link { margin-top: auto; font-size: 15px; font-weight: 600; color: var(--navy); text-decoration: none; }
-.as-card__link:hover { text-decoration: underline; text-decoration-color: var(--needle); text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.as-card__link:hover { text-decoration: underline; text-decoration-color: currentColor; text-underline-offset: 6px; text-decoration-thickness: 2px; }
 
 /* ---------- Form field ---------- */
 .as-field { display: flex; flex-direction: column; gap: var(--space-xs); }
@@ -99,3 +96,13 @@
 .as-field--error .as-input { border-color: var(--needle); }
 .as-field--error .as-help { color: var(--needle); }
 .as-field--error .as-help::before { content: "! "; font-weight: 700; }
+
+/* ---------- Logbook additions ---------- */
+.as-plate { border: 1px solid var(--ink); border-radius: var(--radius-lg); background: var(--surface); }
+.as-plate dl { display: grid; grid-template-columns: 150px 1fr; margin: 0; }
+.as-plate dt, .as-plate dd { margin: 0; padding: 12px 20px; border-top: 1px solid var(--line); font-size: 15px; line-height: 24px; }
+.as-plate dt { color: var(--ink-muted); }
+.as-mono { font-family: var(--font-mono); font-feature-settings: "tnum"; }
+.as-tail { display: flex; border: 1.5px solid var(--ink); border-radius: var(--radius-sm); overflow: hidden; }
+.as-tail span { display: flex; align-items: center; padding: 0 16px; font: 400 24px var(--font-mono); background: var(--draft); border-right: 1.5px solid var(--ink); }
+.as-tail input { flex: 1; min-width: 0; border: 0; padding: 0 16px; min-height: 58px; font: 400 24px var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink); }

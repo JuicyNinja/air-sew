@@ -1,6 +1,6 @@
 # Air Sew — design package
 
-Everything Claude Code needs to build the new site. Start with `/CLAUDE.md` at the repo root.
+Everything Claude Code needs to build the new site. Start with `/CLAUDE.md` at the repo root. Direction: **Logbook** — the `LB*` mockups and screenshots are the ones to build.
 
 | Folder | What's in it |
 | --- | --- |

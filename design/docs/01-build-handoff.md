@@ -1,5 +1,7 @@
 # Air Sew Website — Build Handoff
 
+> **Update, Oct 20, 2026:** the visual direction is Logbook. Colors, type and component styling in the "Design system" section below are superseded by `design/design-system/` (Archivo + IBM Plex Mono, ink plates, needle red only on the primary action). Step 1 of the Start flow now leads with the tail number and an instant FAA match, with contact fields on the same screen. Everything else in this doc stands.
+
 Oct 20, 2026 · @Tad
 
 ## Overview

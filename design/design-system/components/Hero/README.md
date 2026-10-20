@@ -1,9 +1,9 @@
 # Hero
-The opening band of a page: eyebrow, `display` headline, `lead` paragraph and up to two buttons, on `sky`.
+The opening band of a page on `surface`, with the 12-column grid shown as faint `line` columns. Left: a mono label, the `display` headline, a `lead` paragraph and the primary action. Right: a data plate (tail lookup on Home, type data on model pages).
 
-**Consumer provides:** an eyebrow (1–3 words), a headline of 2–6 words, one or two sentences of lead copy, and a primary + secondary button. An optional photograph sits to the right on desktop, framed at `radius-lg`.
+**Consumer provides:** a mono label (e.g. "FAA Part 145 repair station [cert no.]"), a headline that ends with a period, one or two sentences of lead copy, and one needle action (the tail field + Find my aircraft on Home; Start your design elsewhere).
 
-- Padding `space-5xl` top and bottom on desktop, `space-3xl` on mobile. The headline wraps at about 14 characters per line; let it.
-- The home page uses `display`; interior pages use the same layout with `h1` and `paper` or `surface` ground.
+- Padding 88px top, 104px bottom on desktop; 32/40 on mobile, where the plate stacks under the copy.
+- Headline at `display` (76/78, 'wdth' 112); mobile 42/44.
 
-Don't: overlay text on a busy photo, add a third button, or center long copy.
+Don't: put text over photos, add a third button, or center the copy.

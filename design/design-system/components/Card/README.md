@@ -1,10 +1,10 @@
 # Card
-A white card with a hairline border for one service, project or article, laid out in a grid of two or three.
+A square-cornered project or service item: image on top, mono label, one-line title. In Logbook most lists are rows or registers, not cards; use cards only for photo-led items (projects, style tiles).
 
-**Consumer provides:** an image in `.as-card__media` (4:3, photography of real work), an `h3` title, one or two sentences of `body-sm` copy, and one `.as-card__link`.
+**Consumer provides:** an image in `.as-card__media` (4:3, real work), a mono label in `.as-eyebrow` (e.g. "[Year] A36 Bonanza"), an `h3` title, and at most one `.as-card__link`.
 
-- Fill `surface`, border `line`, radius `radius-lg`, padding `space-xl`; gutter `space-lg`. Hover lifts with `shadow-lift`.
-- Place card grids on `paper` or `sky` so the white cards float; on `surface`, keep the border.
+- Border 1px `ink`, radius `radius-lg` (2px), image corners 0. No hover lift; links underline on hover.
+- Grids are 3-up desktop, 1-up or swipe rows on mobile with 20px gutters.
 - Empty media falls back to `linen` — replace with a photo before launch.
 
-Don't: add colored top or side borders, icons in circles, or more than one link per card.
+Don't: add shadows, colored borders, icons in circles, or more than one link per card.
