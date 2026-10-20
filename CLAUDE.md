@@ -2,7 +2,7 @@
 
 You are building the new Air Sew marketing site from the approved design package in `/design`. Tad (owner) and Claude designed it together; your job is to turn it into a production site that matches it closely.
 
-**Visual direction: Logbook (chosen Oct 20, 2026).** Aviation-paperwork precision: white pages, ink hairlines, data plates and registers, Archivo (wide) for headlines and text, IBM Plex Mono for data. The drag-to-compare before/after "wiper" is a full-width section, not the hero. The `LB*` mockups are the visual source of truth; every other page takes its **structure and copy** from the earlier mockups and its **styling** from the Logbook kit (`design/design-system/README.md`).
+**Visual direction: Logbook (chosen Oct 20, 2026).** Aviation-paperwork precision: white pages, ink hairlines, data plates and registers, Archivo (wide) for headlines and text, IBM Plex Mono for data. The drag-to-compare before/after "wiper" is a full-width section, not the hero. Every page now has an `LB*` mockup, and those are the visual source of truth. The non-LB mockups are earlier versions kept for reference only.
 
 ## What this site is
 
@@ -14,11 +14,11 @@ You are building the new Air Sew marketing site from the approved design package
 
 1. `design/docs/01-build-handoff.md`: the build spec (pages, URLs, content model, components, Start flow, integrations, SEO, launch checklist). **This is the source of truth.**
 2. `design/design-system/`: the Logbook tokens (`tokens.json`), README (signature components: data plate, tail field, seat plan, wiper, register, job file, step rail), icons, logo. Its token values override the older color/type values quoted in the handoff doc.
-3. `design/screenshots/LB*.jpg` and `design/mockups/LB*.dc.html`: Home, the Bonanza model page and the Start flow in Logbook, desktop and mobile. Build these first, exactly.
-4. `design/screenshots/` and `design/mockups/` (non-LB files): every other page's structure, sections and copy. Restyle them with the Logbook kit; don't copy their old look (Fraunces, rounded cards, eyebrow labels, sky bands).
+3. `design/screenshots/LB*.jpg` and `design/mockups/LB*.dc.html`: every page in Logbook. Home, the Bonanza model page and the Start flow have desktop and mobile; the other pages are desktop, so derive their mobile layouts from the LB mobile boards (same header, menu, stacking and type scale). Build these exactly.
+4. `design/screenshots/` and `design/mockups/` (non-LB files): superseded earlier versions. Don't copy their look (Fraunces, rounded cards, eyebrow labels, sky bands).
 5. `design/docs/04-design-audit-and-directions.md`: why Logbook, and the improvement plan (spacing, type, flow, motion, responsiveness, accessibility) that applies to every page.
 6. `design/docs/02-sitemap-ux-plan.md` and `03-media-motion-trust-brief.md`: background on structure, media and motion. Where they disagree with the handoff or mockups, **the handoff and mockups win** (they are newer).
-7. `design/wireframes/`: gray wireframes. Use them only for pages that have no full-design mockup: manufacturer page, Certified/Experimental category pages, Privacy/Terms, and 404.
+7. `design/wireframes/`: gray wireframes, superseded by the LB mockups. Useful only for the Experimental category and Terms pages, which reuse the LBCategory and LBLegal layouts.
 
 ## Reading the mockups
 
@@ -26,25 +26,28 @@ Each `*.dc.html` file is one page. Inside `<x-dc>` is plain HTML with inline sty
 
 To view a mockup in a browser: `cd design && python3 -m http.server 8765`, then open `http://localhost:8765/mockups/LBHome.dc.html`. The `support.js` next to the files is a small preview shim; it is not part of the product.
 
-| Mockup file | Page |
-| --- | --- |
-| **LBHome / LBHomeM** | **Home, Logbook (desktop / mobile): build this** |
-| **LBModel / LBModelM** | **Model template, Logbook, filled for the Bonanza: build this** |
-| **LBStart1–6 / LBStartM1–6** | **Start flow, Logbook: tail number first, job-file sidebar, wiper on the concept step: build this** |
-| Main | Home, earlier version (superseded by LBHome) |
-| HomeM | Home (mobile, 390px) |
-| ModelBonanza / BonanzaM | Model template, earlier version (superseded by LBModel) |
-| Services | Services hub |
-| ServiceSeats | Service template, filled for Seats & upholstery |
-| Aircraft | Aircraft hub |
-| Capabilities | Capabilities hub |
-| Capability | Capability template, filled for CNC sewing & cutting |
-| Portfolio | Portfolio |
-| CaseStudy | Case study template |
-| Process | How it works |
-| About, Faq, Contact | Those pages |
-| Start1–Start6 / StartM1–StartM6 | Start flow, earlier version (superseded by LBStart) |
-| ConceptA / B / C (+M for mobile) | The three directions shown to Tad; A (Logbook) was picked |
+| Mockup file (Logbook: build these) | Page | URL |
+| --- | --- | --- |
+| **LBHome / LBHomeM** | Home (desktop / mobile) | `/` |
+| **LBServices** | Services hub | `/services` |
+| **LBService** | Service template, filled for Seats & upholstery | `/services/[slug]` |
+| **LBAircraft** | Aircraft hub (search, Certified / Experimental, sizes, popular models, A–Z) | `/aircraft` |
+| **LBCategory** | Category template, filled for Certified (reuse for Experimental) | `/aircraft/certified` |
+| **LBManufacturer** | Manufacturer template, filled for Beechcraft | `/aircraft/[make]` |
+| **LBModel / LBModelM** | Model template, filled for the Bonanza | `/aircraft/[make]/[model]` |
+| **LBCapabilities** | Capabilities hub | `/capabilities` |
+| **LBCapability** | Capability template, filled for CNC sewing & cutting | `/capabilities/[slug]` |
+| **LBPortfolio** | Portfolio, with working filter | `/portfolio` |
+| **LBCaseStudy** | Case study template | `/portfolio/[slug]` |
+| **LBProcess** | How it works, with clickable stage rail | `/how-it-works` |
+| **LBAbout** | About | `/about` |
+| **LBFaq** | FAQ, grouped, with search | `/faq` |
+| **LBContact** | Contact | `/contact` |
+| **LBLegal** | Privacy (reuse for Terms) | `/privacy`, `/terms` |
+| **LB404** | 404 | — |
+| **LBStart1–6 / LBStartM1–6** | Start flow: tail number first, job-file sidebar, wiper on the concept step | `/start` |
+
+Superseded, for reference only: Main, HomeM, ModelBonanza, BonanzaM, Services, ServiceSeats, Aircraft, Capabilities, Capability, Portfolio, CaseStudy, Process, About, Faq, Contact, Start1–6, StartM1–6. ConceptA / B / C (+M) are the three directions shown to Tad; A (Logbook) was picked. Confirm the URLs above against the handoff doc; where they differ, the handoff wins.
 
 Rebuild these as real, reusable components. Don't copy the inline styles verbatim; use the design tokens.
 

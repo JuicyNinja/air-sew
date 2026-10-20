@@ -63,30 +63,30 @@ Use the design system artifact's tokens as CSS custom properties; never hard-cod
 
 The site is 10 static pages, the Start Your Design flow and 7 CMS templates. The templates generate every aircraft, service, capability and project page; build each template once.
 
-| Page | URL | Type | Mockup board |
+| Page | URL | Type | Mockup (design/mockups/*.dc.html) |
 | --- | --- | --- | --- |
-| Home | / | Static | Home, Home · mobile |
-| Services hub | /services | Static | Services hub |
-| Service | /services/{slug} | CMS template | Service page · Seats & upholstery |
-| Aircraft hub | /aircraft | Static | Aircraft hub |
-| Category | /aircraft/certified, /aircraft/experimental | CMS template | Wireframe only |
-| Manufacturer | /aircraft/{maker} | CMS template | Wireframe only |
-| Model family | /aircraft/{maker}/{model} | CMS template | Model page · Beechcraft Bonanza, Bonanza · mobile |
-| Capabilities hub | /capabilities | Static | Capabilities hub |
-| Capability | /capabilities/{slug} | CMS template | Capability page · CNC sewing & cutting |
-| Portfolio | /portfolio | Static + CMS grid | Portfolio |
-| Case study | /portfolio/{slug} | CMS template | Case study |
-| How it works | /how-it-works | Static | How it works |
-| About | /about | Static | About |
-| FAQ | /faq | Static + CMS FAQs | FAQ |
-| Contact | /contact | Static | Contact |
-| Start your design | /start (steps 1–6) | App flow | Start 1–6, Start 1–6 · mobile |
-| Privacy, Terms | /privacy, /terms | CMS template | Wireframe only |
-| 404 | — | Static | Wireframe only |
+| Home | / | Static | LBHome, LBHomeM |
+| Services hub | /services | Static | LBServices |
+| Service | /services/{slug} | CMS template | LBService |
+| Aircraft hub | /aircraft | Static | LBAircraft |
+| Category | /aircraft/certified, /aircraft/experimental | CMS template | LBCategory |
+| Manufacturer | /aircraft/{maker} | CMS template | LBManufacturer |
+| Model family | /aircraft/{maker}/{model} | CMS template | LBModel, LBModelM |
+| Capabilities hub | /capabilities | Static | LBCapabilities |
+| Capability | /capabilities/{slug} | CMS template | LBCapability |
+| Portfolio | /portfolio | Static + CMS grid | LBPortfolio |
+| Case study | /portfolio/{slug} | CMS template | LBCaseStudy |
+| How it works | /how-it-works | Static | LBProcess |
+| About | /about | Static | LBAbout |
+| FAQ | /faq | Static + CMS FAQs | LBFaq |
+| Contact | /contact | Static | LBContact |
+| Start your design | /start (steps 1–6) | App flow | LBStart1–6, LBStartM1–6 |
+| Privacy, Terms | /privacy, /terms | CMS template | LBLegal |
+| 404 | — | Static | LB404 |
 
 Main navigation: Services · Aircraft · Capabilities · Portfolio, with Client login (to app.air-sew.com) and the Start your design button on the right. The footer adds About, How it works, FAQ, Contact, Privacy and Terms.
 
-Mobile: every page is responsive at 390 px. Home, the model template and the Start flow have dedicated mobile mockups; all other pages follow the same patterns (stacked sections, horizontal swipe rows, pinned bottom action bar).
+Mobile: every page is responsive at 390 px. Home, the model template and the Start flow have dedicated mobile mockups; all other pages follow the same patterns as those LB mobile boards (stacked sections, horizontal swipe rows, pinned bottom action bar).
 
 ## CMS content model
 
