@@ -14,8 +14,9 @@ You are building the new Air Sew marketing site from the approved design package
 2. `design/screenshots/`: a rendered image of every page. Look at these before writing a page.
 3. `design/mockups/*.dc.html`: full-design source for each page (layout, exact copy, spacing, interactions). See "Reading the mockups" below.
 4. `design/design-system/`: tokens (`tokens.json`), component specs, icon rules, logo.
-5. `design/docs/02-sitemap-ux-plan.md` and `03-media-motion-trust-brief.md`: background on structure, media and motion. Where they disagree with the handoff or mockups, **the handoff and mockups win** (they are newer).
-6. `design/wireframes/`: gray wireframes. Use them only for pages that have no full-design mockup: manufacturer page, Certified/Experimental category pages, Privacy/Terms, and 404.
+5. `design/docs/04-design-audit-and-directions.md`: the audit and three visual directions (`ConceptA/B/C` mockups). **Wait for Tad to pick a direction before styling pages**; the structure, content and flows above don't change.
+6. `design/docs/02-sitemap-ux-plan.md` and `03-media-motion-trust-brief.md`: background on structure, media and motion. Where they disagree with the handoff or mockups, **the handoff and mockups win** (they are newer).
+7. `design/wireframes/`: gray wireframes. Use them only for pages that have no full-design mockup: manufacturer page, Certified/Experimental category pages, Privacy/Terms, and 404.
 
 ## Reading the mockups
 
@@ -38,6 +39,7 @@ To view a mockup in a browser: `cd design && python3 -m http.server 8765`, then 
 | Process | How it works |
 | About, Faq, Contact | Those pages |
 | Start1–Start6 / StartM1–StartM6 | Start Your Design flow (desktop / mobile) |
+| ConceptA / B / C (+M for mobile) | Visual directions under review: Logbook, Atelier, Altitude |
 
 Rebuild these as real, reusable components. Don't copy the inline styles verbatim; use the design tokens.
 

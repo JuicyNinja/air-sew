@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Concept B — Atelier</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+:root{--white:#ffffff;--felt:#eceef1;--ink:#16202e;--navy:#18335f;--deep:#0f1d33;--muted:#545e6c;--needle:#b71c1c}
+body{margin:0;background:#fff}
+.b{font-family:'Hanken Grotesk',system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+.b a{color:var(--navy)}
+.serif{font-family:'Bodoni Moda',Didot,serif;font-optical-sizing:auto}
+.wrap{max-width:1280px;margin:0 auto;padding:0 40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border:0;border-radius:999px;font:600 16px 'Hanken Grotesk',sans-serif;text-decoration:none;cursor:pointer}
+.btn.red{background:var(--needle);color:#fff}.btn.line{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.8)}
+.btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.seam{stroke:var(--needle);stroke-width:2;stroke-dasharray:10 8;fill:none}
+@keyframes sew{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.sew-rect{transform-origin:0 0;animation:sew 2.4s .3s cubic-bezier(.2,.6,.2,1) both}
+@media (prefers-reduced-motion:reduce){.sew-rect{animation:none}}
+.grip{position:absolute;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:999px;background:#fff;box-shadow:0 6px 24px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;color:var(--ink);font-size:18px;pointer-events:none}
+.range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+</style>
+</helmet>
+<div class="b">
+<header style="position:relative;z-index:2"><div class="wrap" style="display:flex;align-items:center;justify-content:space-between;min-height:80px">
+  <img src="../assets/logo/air-sew-logo.png" alt="Air Sew" style="height:38px">
+  <nav aria-label="Main" style="display:flex;gap:40px;font-size:15px;font-weight:500"><a href="#" style="text-decoration:none;color:var(--ink)">Services</a><a href="#" style="text-decoration:none;color:var(--ink)">Aircraft</a><a href="#" style="text-decoration:none;color:var(--ink)">Craft</a><a href="#" style="text-decoration:none;color:var(--ink)">Portfolio</a></nav>
+  <a href="#" style="font-size:15px;font-weight:500;text-decoration:none;color:var(--muted)">Client login</a>
+</div></header>
+<section style="position:relative;height:860px;overflow:hidden;background:#222">
+  <img src="../assets/img/hero-after.jpg" alt="After: cream leather club seats" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+  <img src="../assets/img/hero-before.jpg" alt="Before: the same cabin, worn and faded" style="{{beforeClip}}">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,16,28,0) 45%,rgba(10,16,28,.72) 100%);pointer-events:none"></div>
+  <span style="position:absolute;top:0;bottom:0;left:{{pos}}%;width:2px;background:#fff;pointer-events:none"></span>
+  <span class="grip" style="left:{{pos}}%" aria-hidden="true">⟷</span>
+  <input class="range" type="range" min="0" max="100" value="{{pos}}" onInput="{{slide}}" aria-label="Drag to compare the cabin before and after">
+  <div style="position:absolute;left:0;right:0;bottom:80px;pointer-events:none"><div class="wrap" style="">
+    <h1 class="serif" style="font-weight:400;font-size:120px;line-height:112px;letter-spacing:-.01em;color:#fff;margin:0;max-width:11em">From worn out to one of a kind.</h1>
+    <div style="pointer-events:auto"><div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px"><a href="#" class="btn red">Start your design</a><a href="#" class="btn line">See transformations</a></div></div>
+  </div></div>
+</section>
+<svg viewBox="0 0 1440 24" preserveAspectRatio="none" width="100%" height="24" aria-hidden="true" style="display:block"><defs><clipPath id="sew"><rect class="sew-rect" x="0" y="0" width="1440" height="24"/></clipPath></defs><path class="seam" clip-path="url(#sew)" d="M0 12 H1440"/></svg>
+<section style="padding:140px 0 120px">
+  <div class="wrap" style="display:grid;grid-template-columns:5fr 6fr;gap:96px;align-items:end">
+    <img src="../assets/img/portrait-craftsman.jpg" alt="[Name], owner of Air Sew, at the sewing table" style="width:100%;aspect-ratio:4/5;object-fit:cover">
+    <div style="padding-bottom:24px">
+      <h2 class="serif" style="font-weight:400;font-size:64px;line-height:68px;margin:0;letter-spacing:-.01em">One owner. One shop. Your airplane never gets passed down the line.</h2>
+      <p style="font-size:19px;line-height:31px;color:var(--muted);margin:32px 0 0;max-width:30em">You design your cabin with the person who builds it and signs it off. That's the whole idea behind Air Sew.</p>
+      <p style="font-size:15px;margin:28px 0 0;font-weight:600">[Name], owner</p>
+    </div>
+  </div>
+</section>
+<section style="padding:0 0 140px">
+  <div class="wrap"><h2 class="serif" style="font-weight:400;font-size:48px;line-height:54px;margin:0 0 48px;max-width:15em">Chosen by you. Cut by machine. Finished by hand.</h2></div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr)">
+    <figure style="margin:0;position:relative"><img src="../assets/img/perforated.jpg" alt="Perforated leather insert" style="display:block;width:100%;aspect-ratio:3/4;object-fit:cover"><figcaption style="position:absolute;left:24px;bottom:20px;color:#fff;font-size:17px;font-weight:600;text-shadow:0 1px 8px rgba(0,0,0,.5)">Perforated inserts</figcaption></figure>
+    <figure style="margin:0;position:relative"><img src="../assets/img/diamond.jpg" alt="Diamond quilted leather" style="display:block;width:100%;aspect-ratio:3/4;object-fit:cover"><figcaption style="position:absolute;left:24px;bottom:20px;color:#fff;font-size:17px;font-weight:600;text-shadow:0 1px 8px rgba(0,0,0,.5)">Diamond quilting</figcaption></figure>
+    <figure style="margin:0;position:relative"><img src="../assets/img/channel.jpg" alt="Channel stitched leather" style="display:block;width:100%;aspect-ratio:3/4;object-fit:cover"><figcaption style="position:absolute;left:24px;bottom:20px;color:#fff;font-size:17px;font-weight:600;text-shadow:0 1px 8px rgba(0,0,0,.5)">Channel stitching</figcaption></figure>
+    <figure style="margin:0;position:relative"><img src="../assets/img/hands-sewing.jpg" alt="Hands guiding leather through a sewing machine" style="display:block;width:100%;aspect-ratio:3/4;object-fit:cover"><figcaption style="position:absolute;left:24px;bottom:20px;color:#fff;font-size:17px;font-weight:600;text-shadow:0 1px 8px rgba(0,0,0,.5)">Finished by hand</figcaption></figure>
+  </div>
+</section>
+<section style="background:var(--deep);color:#fff;padding:140px 0">
+  <div class="wrap" style="display:grid;grid-template-columns:5fr 6fr;gap:80px;align-items:center">
+    <div>
+      <h2 class="serif" style="font-weight:400;font-size:56px;line-height:62px;margin:0">While it's with us, you can see everything.</h2>
+      <p style="font-size:19px;line-height:31px;color:rgba(255,255,255,.78);margin:28px 0 0">Every stage photographed and signed off in your portal. Every finding priced before we touch it. Most shops go dark until the job is done. We don't.</p>
+    </div>
+    <div style="background:#fff;color:var(--ink);border-radius:18px;padding:28px;box-shadow:0 30px 80px rgba(0,0,0,.35)">
+      <div style="font-size:13px;font-weight:600;color:var(--navy)">N12345 · A36 Bonanza</div>
+      <div class="serif" style="font-size:28px;margin:4px 0 20px">Full interior</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px"><img src="../assets/img/hero-before.jpg" alt="" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px"><img src="../assets/img/seat-frame.jpg" alt="" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px"><img src="../assets/img/project-front-seats.jpg" alt="" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px"></div>
+      <div style="font-size:14px;color:var(--muted);margin-top:10px">Seats · signed off [date]</div>
+      <div style="margin-top:20px;padding:16px;border:1px solid #e3e7ed;border-radius:12px;display:flex;justify-content:space-between;align-items:center;gap:12px"><span style="font-size:15px"><strong>Finding: seat-rail bracket</strong><br><span style="color:var(--muted)">Replace · $[price]</span></span><span style="display:flex;gap:8px"><span class="btn" style="min-height:40px;padding:0 16px;font-size:14px;background:var(--navy);color:#fff">Approve</span></span></div>
+    </div>
+  </div>
+</section>
+<section style="padding:160px 0 140px">
+  <div class="wrap" style="max-width:1040px;text-align:center">
+    <blockquote class="serif" style="margin:0;font-weight:400;font-size:52px;line-height:62px">“[Owner quote about the finished cabin and working with Air Sew.]”</blockquote>
+    <p style="margin:36px 0 0;font-size:16px"><strong>[Owner name]</strong> <span style="color:var(--muted)">[Year] [Aircraft], [home airport]</span></p>
+  </div>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3900}}'>
+class Component extends DCLogic {
+  constructor(p) { super(p); this.state = { pos: 50 }; }
+  renderVals() {
+    const pos = this.state.pos;
+    return { pos, slide: (e) => this.setState({ pos: Number(e.target.value) }),
+      beforeClip: 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:inset(0 ' + (100 - pos) + '% 0 0)' };
+  }
+}
+</script>
+</body>
+</html>
