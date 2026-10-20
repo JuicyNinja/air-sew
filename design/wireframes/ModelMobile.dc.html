@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wireframe — Model family template, mobile</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./wf.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div class="wf m" style="height:5400px">
+  <div class="fold"><span>first screen · 844px</span></div>
+  <div class="mbar"><a href="#start" class="btn">Start your <span class="var">{Model}</span> design</a><a href="#call" class="btn o" style="flex:0 0 auto;padding:0 16px" aria-label="Call Air Sew">Call</a></div>
+
+  <header class="mhdr"><a href="Main.dc.html" class="logo">AIR SEW</a><div class="row" style="gap:8px"><a href="https://app.air-sew.com/" class="lnk" style="font-size:14px">Log in</a><button type="button" class="burger" aria-label="Menu">≡</button></div></header>
+
+  <section class="sec alt" style="padding-top:24px"><span class="tag">01 · Hero</span>
+    <div class="crumb" style="margin-top:16px">Aircraft / <span class="var">{Manufacturer}</span></div>
+    <h1 class="h1" style="font-size:34px;line-height:40px"><span class="var">{Manufacturer}</span> <span class="var">{Model}</span> interiors</h1>
+    <img class="img r43" src="../assets/img/hero-after.jpg" alt="Finished cabin of this model" style="padding:0;display:block;width:100%;height:auto;object-fit:cover">
+    <p class="lead" style="margin-top:16px"><span class="var">{Model-specific promise}</span></p>
+    <p class="sm" style="margin-top:12px"><span class="var">{Fleet count}</span> on the US register</p>
+  </section>
+
+  <nav aria-label="On this page" style="position:relative;display:flex;gap:8px;overflow-x:auto;padding:12px 20px;border-bottom:1px solid #d1d5db;background:#fff"><span class="tag" style="top:-10px">02 · Sticky jump chips</span><span class="chip on">Cabin</span><span class="chip">Wear</span><span class="chip">Services</span><span class="chip">Options</span><span class="chip">Work</span><span class="chip">FAQ</span></nav>
+
+  <section class="sec"><span class="tag">03 · Cabin at a glance</span>
+    <h2 class="h2">Your <span class="var">{Model}</span> cabin</h2>
+    <div class="row" style="margin:8px 0 12px"><span class="chip on">Standard</span><span class="chip">Club</span></div>
+    <div class="img" style="aspect-ratio:3/4">Top-down seat map diagram (vertical on mobile)</div>
+    <div class="g6" style="gap:16px;margin-top:20px">
+      <div><div class="sm">Seats</div><div style="font-weight:600"><span class="var">{4–6}</span></div></div>
+      <div><div class="sm">Layouts</div><div style="font-weight:600"><span class="var">{Club}</span></div></div>
+      <div><div class="sm">Cabin size</div><div style="font-weight:600"><span class="var">{L×W×H}</span></div></div>
+      <div><div class="sm">Burn standard</div><div style="font-weight:600"><span class="var">{Part 23}</span></div></div>
+    </div>
+  </section>
+
+  <section class="sec alt"><span class="tag">04 · What wears out (swipe)</span>
+    <h2 class="h2">What wears out on a <span class="var">{Model}</span></h2>
+    <div class="swipe" style="margin-top:16px">
+      <div class="card" style="padding:12px"><img class="img r43" src="../assets/img/worn-seats.jpg" alt="Wear photo" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span style="font-weight:600"><span class="var">{Wear point}</span></span><span class="sm"><span class="var">{How we fix it}</span></span></div>
+      <div class="card" style="padding:12px"><img class="img r43" src="../assets/img/worn-sidewall.jpg" alt="Wear photo" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span style="font-weight:600"><span class="var">{Wear point}</span></span><span class="sm"><span class="var">{How we fix it}</span></span></div>
+    </div>
+  </section>
+
+  <section class="sec"><span class="tag">05 · What we do on it</span>
+    <h2 class="h2">What we do on your <span class="var">{Model}</span></h2>
+    <a href="ServiceTemplate.dc.html" class="mrow"><span class="ico"></span><span><span style="font-weight:600"><span class="var">{Service}</span></span><br><span class="sm"><span class="var">{Model-specific line}</span></span></span><span class="chev">›</span></a>
+    <a href="ServiceTemplate.dc.html" class="mrow"><span class="ico"></span><span><span style="font-weight:600"><span class="var">{Service}</span></span><br><span class="sm"><span class="var">{Model-specific line}</span></span></span><span class="chev">›</span></a>
+    <a href="ServiceTemplate.dc.html" class="mrow"><span class="ico"></span><span><span style="font-weight:600"><span class="var">{Service}</span></span><br><span class="sm"><span class="var">{Model-specific line}</span></span></span><span class="chev">›</span></a>
+  </section>
+
+  <section class="sec alt"><span class="tag">06 · Options</span>
+    <h2 class="h2">Popular on <span class="var">{Model}</span>s</h2>
+    <img class="img r43" src="../assets/img/perforated.jpg" alt="Material detail" style="padding:0;display:block;width:100%;height:auto;object-fit:cover;margin-top:12px">
+    <div class="row" style="margin-top:16px"><span class="chip"><span class="var">{Perforated inserts}</span></span><span class="chip"><span class="var">{Two-tone}</span></span><span class="chip"><span class="var">{LED lighting}</span></span><span class="chip"><span class="var">{USB-C}</span></span></div>
+  </section>
+
+  <section class="sec"><span class="tag">07 · Our work (thumb-drag before/after)</span>
+    <h2 class="h2"><span class="var">{Model}</span> cabins we've built</h2>
+    <div style="position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/3;margin-top:12px">
+      <img src="../assets/img/hero-after.jpg" alt="After" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <img src="../assets/img/hero-before.jpg" alt="Before" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:inset(0 50% 0 0)">
+      <span style="position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff"></span>
+    </div>
+    <a href="CaseStudyTemplate.dc.html" class="lnk" style="display:inline-block;margin-top:16px">See the project →</a>
+  </section>
+
+  <section class="sec alt"><span class="tag">08 · Variants (stacked rows, no table)</span>
+    <h2 class="h2">Variants we cover</h2>
+    <div class="mrow" style="flex-direction:column;align-items:flex-start;gap:4px"><span style="font-weight:600"><span class="var">{Variant}</span></span><span class="sm"><span class="var">{Years}</span> · <span class="var">{Seats}</span> · <span class="var">{Note}</span></span></div>
+    <div class="mrow" style="flex-direction:column;align-items:flex-start;gap:4px"><span style="font-weight:600"><span class="var">{Variant}</span></span><span class="sm"><span class="var">{Years}</span> · <span class="var">{Seats}</span> · <span class="var">{Note}</span></span></div>
+  </section>
+
+  <section class="sec"><span class="tag">09 · FAQ</span>
+    <h2 class="h2"><span class="var">{Model}</span> questions</h2>
+    <div class="faq" style="font-size:15px"><span>How long will it be down?</span><span>+</span></div>
+    <div class="faq" style="font-size:15px"><span>Can you pick it up?</span><span>+</span></div>
+    <div class="faq" style="font-size:15px"><span>What does it cost?</span><span>+</span></div>
+  </section>
+
+  <section class="sec tight"><span class="tag">11 · Closing CTA</span>
+    <div class="cta"><h2 class="h2">Picture your <span class="var">{Model}</span>, made for you.</h2><a href="#start" class="btn acc" style="width:100%">Start your design</a></div>
+  </section>
+  <footer class="ftr" style="padding:32px 20px 100px"><span class="logo">AIR SEW</span><p class="sm" style="margin-top:12px">Footer — same as mobile Home</p></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":5400}}'>
+class Component extends DCLogic { renderVals() { return {}; } }
+</script>
+</body>
+</html>

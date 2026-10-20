@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Air Sew — Aircraft</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Manrope:wght@400;500;600&display=swap">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#18335f}a:hover{color:#10264a}
+.eb{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#18335f}
+.eb:before{content:"";width:20px;height:2px;border-radius:2px;background:#b71c1c}
+.h1{font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:60px;line-height:64px;letter-spacing:-.02em;margin:16px 0 24px}
+.h2{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:36px;line-height:44px;letter-spacing:-.01em;margin:8px 0 16px}
+.h3{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:22px;line-height:30px;margin:0}
+.lead{font-size:20px;line-height:32px;color:#566174;margin:0 0 32px;max-width:560px}
+.body{font-size:17px;line-height:28px;color:#566174;margin:0}
+.sm{font-size:15px;line-height:24px;color:#566174}
+.xs{font-size:13px;line-height:20px;color:#566174}
+.wrap{max-width:1200px;margin:0 auto}
+.sec{padding:96px 24px}.alt{background:#f8f7f4}.sky{background:#eef3f9}
+.split{display:flex;flex-wrap:wrap;gap:64px;align-items:center}.split>*{flex:1 1 440px;min-width:0}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:10px;background:#18335f;color:#fff;font-size:15px;font-weight:600;text-decoration:none;border:0;font-family:inherit;cursor:pointer}
+.btn:hover{color:#fff;background:#10264a}
+.btn.o{background:transparent;border:1.5px solid #18335f;color:#18335f}
+.btn.red{background:#b71c1c}
+.chip{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border:1px solid #e3e7ed;border-radius:999px;background:#fff;font-size:15px;color:#14243d;text-decoration:none;font-family:inherit;cursor:pointer}
+.chip.on{background:#18335f;border-color:#18335f;color:#fff}
+.card{display:flex;flex-direction:column;gap:12px;padding:16px 16px 24px;background:#fff;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d}
+.card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
+.pin{padding:0 8px}
+.ph{display:block;width:100%;object-fit:cover;border-radius:16px}
+.rowlink{display:flex;gap:20px;align-items:center;padding:24px;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d;background:#fff}
+.faq{border-bottom:1px solid #e3e7ed}
+.faq button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;gap:24px;padding:24px 0;font-size:17px;font-weight:600;color:#14243d;cursor:pointer}
+.faq button:focus-visible{outline:2px solid #18335f;outline-offset:4px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin:0}
+.facts>div{border-top:1px solid #e3e7ed;padding-top:16px}
+.facts dd{margin:4px 0 0;font-family:'Fraunces',Georgia,serif;font-size:22px;line-height:30px}
+.crumb{font-size:14px;color:#566174;margin-bottom:40px}.crumb a{color:#566174;text-decoration:none}
+.badge{position:absolute;padding:4px 12px;border-radius:999px;background:#fff;font-size:13px;font-weight:600;color:#14243d}
+</style>
+</helmet>
+<div style="font-family:'Manrope','Segoe UI',system-ui,sans-serif;color:#14243d;background:#fff;-webkit-font-smoothing:antialiased">
+  <header style="background:#fff;border-bottom:1px solid #e3e7ed">
+    <div class="wrap" style="padding:0 24px;min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap">
+      <a href="Main.dc.html" style="display:flex;align-items:center"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew home" style="height:40px;width:auto;display:block"></a>
+      <nav aria-label="Main" style="display:flex;align-items:center;gap:32px;flex-wrap:wrap"><a href="Services.dc.html" style="font-size:15px;font-weight:500;color:#14243d;text-decoration:none">Services</a><a href="Aircraft.dc.html" aria-current="page" style="font-size:15px;font-weight:600;color:#18335f;text-decoration:none;box-shadow:inset 0 -2px 0 #b71c1c;padding:4px 0">Aircraft</a><a href="Capabilities.dc.html" style="font-size:15px;font-weight:500;color:#14243d;text-decoration:none">Capabilities</a><a href="Portfolio.dc.html" style="font-size:15px;font-weight:500;color:#14243d;text-decoration:none">Portfolio</a></nav>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap"><a href="https://app.air-sew.com/" style="font-size:15px;font-weight:500;color:#566174;text-decoration:none">Client login</a><a href="Start1.dc.html" class="btn" style="min-height:44px;padding:0 20px">Start your design</a></div>
+    </div>
+  </header>
+
+  <section class="sky" style="padding:72px 24px 112px"><div class="wrap">
+    <nav aria-label="Breadcrumb" class="crumb"><a href="Main.dc.html">Home</a> <span aria-hidden="true">/</span> <span style="color:#14243d">Aircraft</span></nav>
+    <div style="max-width:760px"><div class="eb">Aircraft</div><h1 class="h1">Find your airplane.</h1><p class="lead">From two-seat trainers to midsize jets, certified or experimental. Every model has its own layout and rules. We design around yours.</p>
+      <form style="background:#fff;border-radius:16px;padding:20px;box-shadow:0 1px 2px rgba(20,36,61,.05),0 8px 24px rgba(20,36,61,.06)">
+        <label for="q" style="display:block;font-size:15px;font-weight:600;margin-bottom:8px">Search by make, model or tail number</label>
+        <div style="display:flex;gap:8px"><input id="q" placeholder="Bonanza, PC-12, N12345…" style="flex:1 1 auto;min-width:0;min-height:48px;padding:0 16px;border:1.5px solid #8590a2;border-radius:6px;font-family:inherit;font-size:17px;color:#14243d"><button type="button" class="btn">Search</button></div>
+      </form></div>
+  </div></section>
+  <section class="sec"><div class="wrap grid3" style="grid-template-columns:repeat(auto-fit,minmax(440px,1fr))">
+    <a href="#" class="card" style="padding:16px 16px 32px"><img src="../assets/img/ac-turboprop.jpg" alt="Certified turboprop on the ramp" style="aspect-ratio:16/9"><div class="pin"><div class="eb">Certified</div><h2 class="h2" style="font-size:30px;line-height:38px">Certified aircraft</h2><p class="sm" style="margin:0">Part 23 and Part 25 airplanes, with burn-tested materials and the paperwork to match.</p></div></a>
+    <a href="#" class="card" style="padding:16px 16px 32px"><img src="../assets/img/ac-experimental.jpg" alt="Experimental homebuilt aircraft" style="aspect-ratio:16/9"><div class="pin"><div class="eb">Experimental</div><h2 class="h2" style="font-size:30px;line-height:38px">Experimental &amp; homebuilt</h2><p class="sm" style="margin:0">RVs, Lancairs, Kitfoxes and more. Build-stage interiors or a finish for the one you fly.</p></div></a>
+  </div></section>
+  <section class="sec alt"><div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px"><div style="max-width:680px"><div class="eb">By size</div><h2 class="h2">Browse by size</h2></div></div>
+    <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px">
+      <a href="#" class="card" style="padding:12px 12px 20px"><img src="../assets/img/ac-2seat.jpg" alt="2-seat aircraft" style="aspect-ratio:1/1"><div class="pin" style="padding:0 4px"><div style="font-size:17px;font-weight:600">2-seat</div><div class="xs">Trainers, taildraggers, LSAs</div></div></a><a href="#" class="card" style="padding:12px 12px 20px"><img src="../assets/img/aircraft-ramp.jpg" alt="4–6 seat singles aircraft" style="aspect-ratio:1/1"><div class="pin" style="padding:0 4px"><div style="font-size:17px;font-weight:600">4–6 seat singles</div><div class="xs">Bonanza, SR22, 182, PA-46</div></div></a><a href="#" class="card" style="padding:12px 12px 20px"><img src="../assets/img/ac-twin.jpg" alt="Twins aircraft" style="aspect-ratio:1/1"><div class="pin" style="padding:0 4px"><div style="font-size:17px;font-weight:600">Twins</div><div class="xs">Baron, Seneca, 310</div></div></a><a href="#" class="card" style="padding:12px 12px 20px"><img src="../assets/img/ac-turboprop.jpg" alt="Turboprops aircraft" style="aspect-ratio:1/1"><div class="pin" style="padding:0 4px"><div style="font-size:17px;font-weight:600">Turboprops</div><div class="xs">King Air, PC-12, TBM</div></div></a><a href="#" class="card" style="padding:12px 12px 20px"><img src="../assets/img/ac-jet.jpg" alt="Light &amp; midsize jets aircraft" style="aspect-ratio:1/1"><div class="pin" style="padding:0 4px"><div style="font-size:17px;font-weight:600">Light &amp; midsize jets</div><div class="xs">Citation, Phenom, HondaJet</div></div></a>
+    </div>
+  </div></section>
+  <section class="sec"><div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px"><div style="max-width:680px"><div class="eb">Popular</div><h2 class="h2">Models owners ask about most</h2></div></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px">
+      <a href="ModelBonanza.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d"><span><span class="xs" style="display:block">Beechcraft</span><span style="display:block;font-size:17px;font-weight:600">Bonanza</span></span><span aria-hidden="true" style="color:#18335f">→</span></a><a href="#" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d"><span><span class="xs" style="display:block">Cirrus</span><span style="display:block;font-size:17px;font-weight:600">SR22</span></span><span aria-hidden="true" style="color:#18335f">→</span></a><a href="#" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d"><span><span class="xs" style="display:block">Cessna</span><span style="display:block;font-size:17px;font-weight:600">182 Skylane</span></span><span aria-hidden="true" style="color:#18335f">→</span></a><a href="#" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d"><span><span class="xs" style="display:block">Piper</span><span style="display:block;font-size:17px;font-weight:600">PA-46 Malibu / M-Class</span></span><span aria-hidden="true" style="color:#18335f">→</span></a><a href="#" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d"><span><span class="xs" style="display:block">Pilatus</span><span style="display:block;font-size:17px;font-weight:600">PC-12</span></span><span aria-hidden="true" style="color:#18335f">→</span></a><a href="#" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d"><span><span class="xs" style="display:block">Beechcraft</span><span style="display:block;font-size:17px;font-weight:600">King Air</span></span><span aria-hidden="true" style="color:#18335f">→</span></a><a href="#" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d"><span><span class="xs" style="display:block">Daher</span><span style="display:block;font-size:17px;font-weight:600">TBM</span></span><span aria-hidden="true" style="color:#18335f">→</span></a><a href="#" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d"><span><span class="xs" style="display:block">Cessna</span><span style="display:block;font-size:17px;font-weight:600">Citation CJ</span></span><span aria-hidden="true" style="color:#18335f">→</span></a><a href="#" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d"><span><span class="xs" style="display:block">Van's</span><span style="display:block;font-size:17px;font-weight:600">RV-10</span></span><span aria-hidden="true" style="color:#18335f">→</span></a>
+    </div>
+  </div></section>
+  <section class="sec alt"><div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px"><div style="max-width:680px"><div class="eb">A–Z</div><h2 class="h2">All manufacturers</h2><p class="body">Don&#39;t see yours? We work on most aircraft. Start your design with your tail number and we&#39;ll take it from there.</p></div></div>
+    <ul style="list-style:none;margin:0;padding:0;columns:4 200px;column-gap:32px">
+      <li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Aviat</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Beechcraft</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Bellanca</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Cessna</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Cirrus</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Daher</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Diamond</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Eclipse</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Embraer</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Extra</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Grumman</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Honda</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Lancair</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Maule</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Mooney</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Piper</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Pilatus</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Quest / Kodiak</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Van's</a></li><li style="break-inside:avoid;border-bottom:1px solid #e3e7ed"><a href="#" style="display:block;padding:14px 0;font-size:17px;color:#14243d;text-decoration:none">Vashon</a></li>
+    </ul>
+  </div></section>
+<section style="padding:0 24px 96px"><div class="wrap sky" style="border-radius:16px;padding:80px 32px;text-align:center">
+      <h2 style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:48px;line-height:56px;letter-spacing:-.015em;margin:0 auto 16px;max-width:18ch">Picture your airplane, made for you.</h2>
+      <p class="lead" style="margin:0 auto 32px">Enter your tail number, answer ten questions about how you fly, and see a concept of your own interior. We call you within one business day.</p>
+      <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap"><a href="Start1.dc.html" class="btn red" style="padding:0 28px">Start your design</a><a href="tel:+10000000000" class="btn o">Call [phone]</a></div>
+    </div></section>
+  <footer class="alt" style="border-top:1px solid #e3e7ed;padding:64px 24px 40px">
+    <div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px;justify-content:space-between">
+      <div style="flex:1 1 280px;max-width:360px"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew" style="height:40px;width:auto;display:block"><p class="sm" style="margin:16px 0 0">One-of-a-kind aircraft interiors from an owner-operated shop, designed with you and built by hand. [City, State] · [Airport ID]</p></div>
+      <nav aria-label="Footer" style="flex:2 1 480px;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px">
+        <div style="display:flex;flex-direction:column;gap:8px"><div class="eb" style="gap:0">Work</div><a href="Services.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Services</a><a href="Aircraft.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Aircraft</a><a href="Capabilities.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Capabilities</a><a href="Portfolio.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Portfolio</a></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div class="eb" style="gap:0">Company</div><a href="About.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">About</a><a href="Process.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">How it works</a><a href="Faq.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">FAQ</a><a href="Contact.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Contact</a></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div class="eb" style="gap:0">Clients</div><a href="Start1.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Start your design</a><a href="https://app.air-sew.com/" style="font-size:15px;color:#14243d;text-decoration:none">Client login</a><a href="tel:+10000000000" style="font-size:15px;color:#14243d;text-decoration:none">[Phone]</a></div>
+      </nav>
+    </div>
+    <div class="wrap xs" style="margin-top:48px;padding-top:24px;border-top:1px solid #e3e7ed;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px"><span>© 2026 Air Sew</span><span><a href="#" style="color:#566174">Privacy</a> · <a href="#" style="color:#566174">Terms</a></span></div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4600}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { pos: 50, open: 0 }; }
+  renderVals() {
+    const s = this.state, pos = s.pos, open = s.open;
+    const v = {
+      pos,
+      slide: (e) => this.setState({ pos: Number(e.target.value) }),
+      beforeClip: 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:inset(0 ' + (100 - pos) + '% 0 0)'
+    };
+    for (let i = 0; i < 0; i++) {
+      const on = open === i;
+      v['o' + i] = String(on); v['s' + i] = on ? '−' : '+'; v['d' + i] = on ? 'block' : 'none';
+      v['t' + i] = () => this.setState({ open: on ? -1 : i });
+    }
+    
+    return v;
+  }
+}
+</script>
+</body>
+</html>

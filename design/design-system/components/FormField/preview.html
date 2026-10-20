@@ -1,0 +1,13 @@
+<!-- @dsCard group="Forms" height=300 subtitle="Default and error states" -->
+<div class="as-root" style="padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:760px">
+  <div class="as-field">
+    <label class="as-label" for="tail">Aircraft make &amp; model</label>
+    <input class="as-input" id="tail" placeholder="e.g. Beechcraft Baron 58">
+    <span class="as-help">Year helps us quote materials.</span>
+  </div>
+  <div class="as-field as-field--error">
+    <label class="as-label" for="em">Email</label>
+    <input class="as-input" id="em" value="pilot@" aria-invalid="true" aria-describedby="em-h">
+    <span class="as-help" id="em-h">Enter a full email address.</span>
+  </div>
+</div>

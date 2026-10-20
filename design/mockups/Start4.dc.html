@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Start your design — step 4</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Manrope:wght@400;500;600&display=swap">
+<style>
+body{margin:0;background:#f8f7f4}
+a{color:#18335f}a:hover{color:#10264a}
+</style>
+</helmet>
+<div style="font-family: 'Manrope', 'Segoe UI', system-ui, sans-serif; color: #14243d; background: #f8f7f4; min-height: 900px">
+  <header style="background: #ffffff; border-bottom: 1px solid #e3e7ed">
+    <div style="max-width: 1080px; margin: 0 auto; padding: 0 24px; min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+      <a href="Main.dc.html"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew home" style="height: 36px; width: auto; display: block"></a>
+      <div style="flex: 1 1 280px; max-width: 420px">
+        <div style="display: flex; justify-content: space-between; font-size: 13px; color: #566174; margin-bottom: 8px"><span style="font-weight: 600; color: #14243d">Step 4 of 6</span><span>Cabin photos</span></div>
+        <div role="progressbar" aria-valuemin="1" aria-valuemax="6" aria-valuenow="4" aria-label="Progress" style="height: 4px; border-radius: 999px; background: #e3e7ed"><div style="width: 66.6%; height: 4px; border-radius: 999px; background: #18335f"></div></div>
+      </div>
+      <a href="tel:+10000000000" style="font-size: 15px; font-weight: 500; text-decoration: none">Questions? [Phone]</a>
+    </div>
+  </header>
+
+  <main style="max-width: 1080px; margin: 0 auto; padding: 56px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+    <section style="flex: 3 1 560px; min-width: 0">
+      <h1 style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 40px; line-height: 48px; letter-spacing: -0.015em; margin: 0 0 8px">Show us your cabin.</h1>
+      <p style="font-size: 17px; line-height: 28px; color: #566174; margin: 0 0 32px">Add up to 6 photos. We'll use the first one for your concept render.</p>
+
+      <label for="photos" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; min-height: 220px; padding: 32px; border: 2px dashed #8590a2; border-radius: 16px; background: #ffffff; text-align: center; cursor: pointer">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7.5a2 2 0 0 1 2-2h2l1.5-2h5l1.5 2h2a2 2 0 0 1 2 2V18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" stroke="#18335f" stroke-width="0.6"/><circle cx="12" cy="12.5" r="3.5" stroke="#b71c1c" stroke-width="0.7"/></svg>
+        <span style="font-size: 17px; font-weight: 600; color: #18335f">Take photos or choose files</span>
+        <span style="font-size: 15px; color: #566174">JPG, PNG or HEIC · up to 20 MB each</span>
+        <input id="photos" type="file" accept="image/*" multiple style="position: absolute; width: 1px; height: 1px; opacity: 0">
+      </label>
+
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 16px">
+        <div style="position: relative; aspect-ratio: 1 / 1; border-radius: 10px; overflow: hidden; box-sizing: border-box; border: 2px solid #18335f">
+          <img src="../assets/img/hero-before.jpg" alt="Cabin from the door" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+          <span style="position: absolute; left: 8px; bottom: 8px; padding: 2px 8px; border-radius: 999px; background: #18335f; color: #ffffff; font-size: 11px; font-weight: 600">For render</span>
+        </div>
+        <img src="../assets/img/worn-seats.jpg" alt="Worn seats" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px">
+        <img src="../assets/img/worn-sidewall.jpg" alt="Worn sidewall" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px">
+        <div style="aspect-ratio: 1 / 1; border-radius: 10px; border: 1.5px dashed #8590a2; display: flex; align-items: center; justify-content: center; font-size: 28px; color: #566174" aria-hidden="true">+</div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 40px">
+        <a href="Start3.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 600; text-decoration: none">← Back</a>
+        <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap">
+          <a href="Start6.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; font-size: 15px; font-weight: 600; text-decoration: none; color: #566174">Skip, no render</a>
+          <a href="Start5.dc.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 28px; border-radius: 10px; background: #18335f; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none">Create my concept <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <aside aria-label="Photo tips" style="flex: 1 1 260px; min-width: 0; background: #ffffff; border: 1px solid #e3e7ed; border-radius: 16px; padding: 32px">
+      <h2 style="font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 24px; line-height: 32px; margin: 0 0 20px">Tips for a good render</h2>
+      <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; font-size: 15px; line-height: 24px">
+        <li style="display: flex; gap: 12px"><span aria-hidden="true" style="color: #b71c1c; font-weight: 700">·</span><span>Shoot from the cabin door, looking forward.</span></li>
+        <li style="display: flex; gap: 12px"><span aria-hidden="true" style="color: #b71c1c; font-weight: 700">·</span><span>Daylight, door open, no flash.</span></li>
+        <li style="display: flex; gap: 12px"><span aria-hidden="true" style="color: #b71c1c; font-weight: 700">·</span><span>Add close-ups of worn spots so we can quote them.</span></li>
+      </ul>
+    </aside>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

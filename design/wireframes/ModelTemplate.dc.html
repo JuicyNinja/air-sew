@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wireframe — Model family page template</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./wf.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div class="wf">
+  <header class="hdr-bar"><div class="hdr">
+    <a href="Main.dc.html" class="logo">AIR SEW</a>
+    <nav class="nav" aria-label="Main"><a href="ServicesHub.dc.html">Services</a><a href="AircraftHub.dc.html" class="on">Aircraft</a><a href="CapabilitiesHub.dc.html">Capabilities</a><a href="Portfolio.dc.html">Portfolio</a></nav>
+    <div class="row"><a href="https://app.air-sew.com/" class="lnk">Client login</a><a href="#start" class="btn sm">Start your design</a></div>
+  </div></header>
+
+  <section class="sec alt" style="padding-bottom:104px"><span class="tag">01 · Hero</span>
+    <div class="wrap split">
+      <div><div class="crumb">Home / Aircraft / <span class="var">{Manufacturer}</span> / <span class="var">{Model family}</span></div><div class="eb" style="margin-top:16px"><span class="var">{Size class}</span> · <span class="var">{Category}</span></div><h1 class="h1"><span class="var">{Manufacturer}</span> <span class="var">{Model family}</span> interiors</h1><p class="lead"><span class="var">{Model-specific promise: what this cabin can become}</span></p>
+        <div class="row" style="margin-top:24px"><a href="#start" class="btn">Start your <span class="var">{Model}</span> design</a><a href="#work" class="btn o">See <span class="var">{Model}</span> cabins</a></div>
+        <p class="sm" style="margin-top:20px"><span class="var">{Fleet count}</span> <span class="var">{Model}</span>s on the US register · refreshed monthly from FAA data</p>
+      </div>
+      <img class="img r43" src="../assets/img/hero-after.jpg" alt="{Hero: finished {Model} cabin}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover">
+    </div>
+  </section>
+
+  <nav aria-label="On this page" class="sec tight" style="padding:16px 24px;background:#fff"><span class="tag">02 · Sticky in-page nav</span>
+    <div class="wrap row" style="justify-content:center;gap:24px"><a href="#cabin" class="lnk">Cabin</a><a href="#wear" class="lnk">What wears</a><a href="#services" class="lnk">What we do</a><a href="#options" class="lnk">Options</a><a href="#work" class="lnk">Our work</a><a href="#variants" class="lnk">Variants</a><a href="#faq" class="lnk">FAQ</a></div>
+  </nav>
+
+  <section id="cabin" class="sec"><span class="tag">03 · Cabin at a glance</span>
+    <div class="wrap split" style="align-items:flex-start">
+      <span class="img r169">Top-down cabin layout diagram: <span class="var">{seat map, standard and club layouts}</span> (toggle)</span>
+      <div><div class="eb">Cabin at a glance</div><h2 class="h2">Your <span class="var">{Model}</span> cabin</h2>
+        <dl class="g2" style="grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:16px 0 0">
+          <div><dt class="sm">Seats</dt><dd class="h3" style="margin:4px 0 0"><span class="var">{4–6}</span></dd></div>
+          <div><dt class="sm">Layouts</dt><dd class="h3" style="margin:4px 0 0"><span class="var">{Club, forward}</span></dd></div>
+          <div><dt class="sm">Cabin size</dt><dd class="h3" style="margin:4px 0 0"><span class="var">{L × W × H}</span></dd></div>
+          <div><dt class="sm">Burn standard</dt><dd class="h3" style="margin:4px 0 0"><span class="var">{Part 23 / 25}</span></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="wear" class="sec alt"><span class="tag">04 · What wears out on this airplane</span>
+    <div class="wrap"><div class="eb">From the shop floor</div><h2 class="h2">What wears out on a <span class="var">{Model}</span></h2>
+      <div class="g3" style="margin-top:24px">
+        <div class="card"><img class="img r43" src="../assets/img/worn-seats.jpg" alt="{Wear photo}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Wear point — e.g. seat-back plastics crack}</span></span><span class="sm"><span class="var">{How we fix it}</span></span></div>
+        <div class="card"><img class="img r43" src="../assets/img/worn-sidewall.jpg" alt="{Wear photo}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Wear point}</span></span><span class="sm"><span class="var">{How we fix it}</span></span></div>
+        <div class="card"><img class="img r43" src="../assets/img/hero-before.jpg" alt="{Wear photo}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Wear point}</span></span><span class="sm"><span class="var">{How we fix it}</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="sec"><span class="tag">05 · What we do on it</span>
+    <div class="wrap"><h2 class="h2">What we do on your <span class="var">{Model}</span></h2>
+      <div class="g2" style="margin-top:20px">
+        <a href="ServiceTemplate.dc.html" class="card" style="flex-direction:row;align-items:center;gap:16px"><span class="ico"></span><span class="stack" style="gap:4px"><span class="h3" style="font-size:18px"><span class="var">{Service}</span></span><span class="sm"><span class="var">{Model-specific line}</span></span></span></a>
+        <a href="ServiceTemplate.dc.html" class="card" style="flex-direction:row;align-items:center;gap:16px"><span class="ico"></span><span class="stack" style="gap:4px"><span class="h3" style="font-size:18px"><span class="var">{Service}</span></span><span class="sm"><span class="var">{Model-specific line}</span></span></span></a>
+        <a href="ServiceTemplate.dc.html" class="card" style="flex-direction:row;align-items:center;gap:16px"><span class="ico"></span><span class="stack" style="gap:4px"><span class="h3" style="font-size:18px"><span class="var">{Service}</span></span><span class="sm"><span class="var">{Model-specific line}</span></span></span></a>
+        <a href="ServiceTemplate.dc.html" class="card" style="flex-direction:row;align-items:center;gap:16px"><span class="ico"></span><span class="stack" style="gap:4px"><span class="h3" style="font-size:18px"><span class="var">{Service}</span></span><span class="sm"><span class="var">{Model-specific line}</span></span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="options" class="sec alt"><span class="tag">06 · Options &amp; upgrades</span>
+    <div class="wrap split" style="align-items:flex-start"><div><div class="eb">Make it yours</div><h2 class="h2">Popular on <span class="var">{Model}</span>s</h2><div class="row" style="margin-top:12px"><span class="chip"><span class="var">{Perforated inserts}</span></span><span class="chip"><span class="var">{Two-tone}</span></span><span class="chip"><span class="var">{LED lighting}</span></span><span class="chip"><span class="var">{USB-C power}</span></span><span class="chip"><span class="var">{Sound deadening}</span></span><span class="chip"><span class="var">{Embroidered logo}</span></span></div></div><img class="img r43" src="../assets/img/materials-wall.jpg" alt="Material and stitch detail montage" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"></div>
+  </section>
+
+  <section id="work" class="sec"><span class="tag">07 · Our work on this model</span>
+    <div class="wrap"><h2 class="h2"><span class="var">{Model}</span> cabins we've built</h2>
+      <img class="img r219" src="../assets/img/style-classic.jpg" alt="Before / after slider — {tagged {Model} project}" style="margin-top:20px;padding:0;display:block;width:100%;height:auto;object-fit:cover">
+      <div class="g3" style="margin-top:16px"><a href="CaseStudyTemplate.dc.html" class="card"><img class="img r43" src="../assets/img/project-turboprop.jpg" alt="Project" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Project}</span></span></a><a href="CaseStudyTemplate.dc.html" class="card"><img class="img r43" src="../assets/img/project-front-seats.jpg" alt="Project" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Project}</span></span></a><a href="CaseStudyTemplate.dc.html" class="card"><img class="img r43" src="../assets/img/hero-after.jpg" alt="Project" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Project}</span></span></a></div>
+      <p class="sm" style="margin-top:12px">No projects yet: show 3 AI concept cabins for this model, labelled "Concept".</p>
+    </div>
+  </section>
+
+  <section id="variants" class="sec alt"><span class="tag">08 · Variants we cover</span>
+    <div class="wrap"><h2 class="h2">Variants we cover</h2>
+      <div style="overflow-x:auto;margin-top:16px"><table style="width:100%;border-collapse:collapse;font-size:15px;background:#fff"><thead><tr style="text-align:left"><th style="padding:14px;border-bottom:1px solid #9ca3af">Variant</th><th style="padding:14px;border-bottom:1px solid #9ca3af">Years</th><th style="padding:14px;border-bottom:1px solid #9ca3af">Seats</th><th style="padding:14px;border-bottom:1px solid #9ca3af">Cabin notes</th></tr></thead>
+      <tbody><tr><td style="padding:14px;border-bottom:1px solid #e5e7eb"><span class="var">{Variant}</span></td><td style="padding:14px;border-bottom:1px solid #e5e7eb"><span class="var">{Years}</span></td><td style="padding:14px;border-bottom:1px solid #e5e7eb"><span class="var">{n}</span></td><td style="padding:14px;border-bottom:1px solid #e5e7eb"><span class="var">{Note}</span></td></tr><tr><td style="padding:14px;border-bottom:1px solid #e5e7eb"><span class="var">{Variant}</span></td><td style="padding:14px;border-bottom:1px solid #e5e7eb"><span class="var">{Years}</span></td><td style="padding:14px;border-bottom:1px solid #e5e7eb"><span class="var">{n}</span></td><td style="padding:14px;border-bottom:1px solid #e5e7eb"><span class="var">{Note}</span></td></tr><tr><td style="padding:14px"><span class="var">{Variant}</span></td><td style="padding:14px"><span class="var">{Years}</span></td><td style="padding:14px"><span class="var">{n}</span></td><td style="padding:14px"><span class="var">{Note}</span></td></tr></tbody></table></div>
+    </div>
+  </section>
+
+  <section id="faq" class="sec"><span class="tag">09 · FAQ</span>
+    <div class="wrap" style="max-width:820px"><h2 class="h2"><span class="var">{Model}</span> questions</h2><div class="faq"><span>How long will my <span class="var">{Model}</span> be down?</span><span>+</span></div><div class="faq"><span>Can you pick it up?</span><span>+</span></div><div class="faq"><span>What does a <span class="var">{Model}</span> interior cost?</span><span>+</span></div><div class="faq"><span>What paperwork do I get?</span><span>+</span></div></div>
+  </section>
+
+  <section class="sec alt"><span class="tag">10 · Related models</span>
+    <div class="wrap row"><span class="sm">Also from <span class="var">{Manufacturer}</span>:</span><a href="ModelTemplate.dc.html" class="chip"><span class="var">{Model}</span></a><a href="ModelTemplate.dc.html" class="chip"><span class="var">{Model}</span></a><span class="sm" style="margin-left:24px">Owners also compare:</span><a href="ModelTemplate.dc.html" class="chip"><span class="var">{Similar model}</span></a><a href="ModelTemplate.dc.html" class="chip"><span class="var">{Similar model}</span></a></div>
+  </section>
+
+  <section class="sec tight"><span class="tag">11 · Closing CTA (pre-fills model)</span>
+    <div class="wrap cta"><h2 class="h2">Picture your <span class="var">{Model}</span>, made for you.</h2><div class="row" style="justify-content:center"><a href="#start" class="btn acc">Start your <span class="var">{Model}</span> design</a></div></div>
+  </section>
+  <footer class="ftr"><div class="wrap row" style="justify-content:space-between"><span class="logo">AIR SEW</span><span class="sm">Footer — same as Home</span></div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4800}}'>
+class Component extends DCLogic { renderVals() { return {}; } }
+</script>
+</body>
+</html>

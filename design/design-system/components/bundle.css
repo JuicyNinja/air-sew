@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Manrope:wght@400;500;600&display=swap");
+
+/* Air Sew components. Values come from tokens.css; nothing here hard-codes a brand value. */
+
+.as-root, .as-root * { box-sizing: border-box; }
+.as-root {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Focus ring — one rule for everything interactive */
+.as-btn:focus-visible, .as-nav a:focus-visible, .as-input:focus-visible, .as-card a:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
+
+/* ---------- Button ---------- */
+.as-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-xs);
+  min-height: 48px; padding: 0 var(--space-lg);
+  font-family: var(--font-sans); font-size: 15px; line-height: 20px; font-weight: 600; letter-spacing: 0.01em;
+  border-radius: var(--radius-md); border: 1.5px solid transparent;
+  text-decoration: none; cursor: pointer;
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;
+}
+.as-btn--primary { background: var(--navy); color: var(--on-navy); }
+.as-btn--primary:hover { background: var(--navy-deep); }
+.as-btn--secondary { background: transparent; color: var(--navy); border-color: var(--navy); }
+.as-btn--secondary:hover { background: var(--sky); }
+.as-btn--accent { background: var(--needle); color: var(--on-needle); }
+.as-btn--accent:hover { filter: brightness(.92); }
+.as-btn--text { background: transparent; color: var(--navy); padding: 0 var(--space-2xs); min-height: 40px; }
+.as-btn--text:hover { text-decoration: underline; text-decoration-color: var(--needle); text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.as-btn--sm { min-height: 40px; padding: 0 var(--space-md); }
+.as-btn[disabled] { opacity: .45; cursor: not-allowed; }
+
+/* ---------- Eyebrow ---------- */
+.as-eyebrow {
+  display: inline-flex; align-items: center; gap: var(--space-xs);
+  font-family: var(--font-sans); font-size: 13px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--navy);
+}
+.as-eyebrow::before { content: ""; width: 20px; height: 2px; border-radius: 2px; background: var(--needle); }
+
+/* ---------- Header / nav ---------- */
+.as-header {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-xl);
+  height: var(--header-height); padding: 0 var(--space-xl);
+  background: var(--surface); border-bottom: 1px solid var(--line);
+}
+.as-header__logo img { height: 40px; width: auto; display: block; }
+.as-nav { display: flex; align-items: center; gap: var(--space-xl); }
+.as-nav a {
+  font-family: var(--font-sans); font-size: 15px; line-height: 20px; font-weight: 500;
+  color: var(--ink); text-decoration: none; padding: var(--space-xs) 0;
+  border-bottom: 2px solid transparent;
+}
+.as-nav a:hover { color: var(--navy); }
+.as-nav a[aria-current="page"] { color: var(--navy); border-bottom-color: var(--needle); }
+
+/* ---------- Hero ---------- */
+.as-hero { background: var(--sky); padding: var(--space-5xl) var(--space-xl); }
+.as-hero__inner { max-width: var(--container); margin: 0 auto; }
+.as-hero h1 {
+  font-family: var(--font-display); font-weight: 300; font-size: 64px; line-height: 68px; letter-spacing: -0.02em;
+  color: var(--ink); margin: var(--space-md) 0 var(--space-lg); max-width: 14ch;
+}
+.as-hero p { font-size: 20px; line-height: 32px; color: var(--ink-muted); max-width: var(--measure); margin: 0 0 var(--space-xl); }
+.as-hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+
+/* ---------- Card ---------- */
+.as-card {
+  display: flex; flex-direction: column; gap: var(--space-md);
+  padding: var(--space-xl); background: var(--surface);
+  border: 1px solid var(--line); border-radius: var(--radius-lg);
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+.as-card:hover { box-shadow: var(--shadow-lift); transform: translateY(-2px); }
+.as-card__media { aspect-ratio: 4 / 3; border-radius: var(--radius-md); background: var(--linen); overflow: hidden; }
+.as-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.as-card h3 { font-family: var(--font-display); font-weight: 400; font-size: 24px; line-height: 32px; margin: 0; color: var(--ink); }
+.as-card p { font-size: 15px; line-height: 24px; color: var(--ink-muted); margin: 0; }
+.as-card__link { margin-top: auto; font-size: 15px; font-weight: 600; color: var(--navy); text-decoration: none; }
+.as-card__link:hover { text-decoration: underline; text-decoration-color: var(--needle); text-underline-offset: 6px; text-decoration-thickness: 2px; }
+
+/* ---------- Form field ---------- */
+.as-field { display: flex; flex-direction: column; gap: var(--space-xs); }
+.as-label { font-size: 15px; line-height: 20px; font-weight: 600; color: var(--ink); }
+.as-input {
+  min-height: 48px; padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-sans); font-size: 17px; line-height: 24px; color: var(--ink);
+  background: var(--surface); border: 1.5px solid var(--line-strong); border-radius: var(--radius-sm);
+}
+.as-input::placeholder { color: var(--ink-muted); }
+.as-input:hover { border-color: var(--navy); }
+.as-help { font-size: 15px; line-height: 24px; color: var(--ink-muted); }
+.as-field--error .as-input { border-color: var(--needle); }
+.as-field--error .as-help { color: var(--needle); }
+.as-field--error .as-help::before { content: "! "; font-weight: 700; }

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wireframe — Portfolio</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./wf.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div class="wf">
+  <header class="hdr-bar"><div class="hdr">
+    <a href="Main.dc.html" class="logo">AIR SEW</a>
+    <nav class="nav" aria-label="Main"><a href="ServicesHub.dc.html">Services</a><a href="AircraftHub.dc.html">Aircraft</a><a href="CapabilitiesHub.dc.html">Capabilities</a><a href="Portfolio.dc.html" class="on">Portfolio</a></nav>
+    <div class="row"><a href="https://app.air-sew.com/" class="lnk">Client login</a><a href="#start" class="btn sm">Start your design</a></div>
+  </div></header>
+
+  <section class="sec alt"><span class="tag">01 · Hero</span>
+    <div class="wrap"><div class="crumb">Home / Portfolio</div><h1 class="h1">Real transformations.</h1><p class="lead">From worn out to one of a kind, airplane by airplane.</p></div>
+  </section>
+
+  <section class="sec"><span class="tag">02 · Featured project (large)</span>
+    <div class="wrap"><a href="CaseStudyTemplate.dc.html" class="card" style="padding:0;overflow:hidden"><img class="img r219" src="../assets/img/hero-after.jpg" alt="Featured project: full-width finished cabin, before/after on hover" style="border-radius:0;border:0;padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="row" style="padding:24px;justify-content:space-between"><span class="stack" style="gap:4px"><span class="sm">[Year Make Model] · Full interior</span><span class="h3">[Project headline]</span></span><span class="lnk">Read the story →</span></span></a></div>
+  </section>
+
+  <section class="sec tight"><span class="tag">03 · Filters (sticky)</span>
+    <div class="wrap row" style="gap:20px"><div class="row"><span class="sm">Size</span><span class="chip on">All</span><span class="chip">2-seat</span><span class="chip">4–6 seat</span><span class="chip">Twins</span><span class="chip">Turboprops</span><span class="chip">Jets</span></div><div class="row"><span class="sm">Service</span><span class="chip">Seats</span><span class="chip">Full interior</span><span class="chip">Panels</span><span class="chip">Covers</span></div><span class="input" style="width:240px">Manufacturer ▾</span></div>
+  </section>
+
+  <section class="sec"><span class="tag">04 · Project grid (CMS, 3-up, load more)</span>
+    <div class="wrap"><div class="g3">
+      <a href="CaseStudyTemplate.dc.html" class="card"><img class="img r43" src="../assets/img/style-executive.jpg" alt="Project photo" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="sm">[Year Make Model] · [Scope]</span><span class="h3" style="font-size:18px">[Project headline]</span></a>
+      <a href="CaseStudyTemplate.dc.html" class="card"><img class="img r43" src="../assets/img/style-classic.jpg" alt="Project photo" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="sm">[Year Make Model] · [Scope]</span><span class="h3" style="font-size:18px">[Project headline]</span></a>
+      <a href="CaseStudyTemplate.dc.html" class="card"><img class="img r43" src="../assets/img/style-modern.jpg" alt="Project photo" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="sm">[Year Make Model] · [Scope]</span><span class="h3" style="font-size:18px">[Project headline]</span></a>
+      <a href="CaseStudyTemplate.dc.html" class="card"><img class="img r43" src="../assets/img/project-turboprop.jpg" alt="Project photo" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="sm">[Year Make Model] · [Scope]</span><span class="h3" style="font-size:18px">[Project headline]</span></a>
+      <a href="CaseStudyTemplate.dc.html" class="card"><img class="img r43" src="../assets/img/project-front-seats.jpg" alt="Project photo" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="sm">[Year Make Model] · [Scope]</span><span class="h3" style="font-size:18px">[Project headline]</span></a>
+      <a href="CaseStudyTemplate.dc.html" class="card"><img class="img r43" src="../assets/img/hero-after.jpg" alt="Project photo" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="sm">[Year Make Model] · [Scope]</span><span class="h3" style="font-size:18px">[Project headline]</span></a>
+    </div><div style="text-align:center;margin-top:32px"><span class="btn o">Load more</span></div></div>
+  </section>
+
+  <section class="sec alt"><span class="tag">05 · Testimonials strip</span>
+    <div class="wrap g3"><div class="card"><p class="p">“[Quote]”</p><span class="sm">[Name · Model]</span></div><div class="card"><p class="p">“[Quote]”</p><span class="sm">[Name · Model]</span></div><div class="card"><p class="p">“[Quote]”</p><span class="sm">[Name · Model]</span></div></div>
+  </section>
+
+  <section class="sec tight"><span class="tag">06 · Closing CTA</span>
+    <div class="wrap cta"><h2 class="h2">Your airplane could be next.</h2><div class="row" style="justify-content:center"><a href="#start" class="btn acc">Start your design</a></div></div>
+  </section>
+  <footer class="ftr"><div class="wrap row" style="justify-content:space-between"><span class="logo">AIR SEW</span><span class="sm">Footer — same as Home</span></div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2700}}'>
+class Component extends DCLogic { renderVals() { return {}; } }
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Start your design — step 5</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Manrope:wght@400;500;600&display=swap">
+<style>
+body{margin:0;background:#f8f7f4}
+a{color:#18335f}a:hover{color:#10264a}
+</style>
+</helmet>
+<div style="font-family: 'Manrope', 'Segoe UI', system-ui, sans-serif; color: #14243d; background: #f8f7f4; min-height: 900px">
+  <header style="background: #ffffff; border-bottom: 1px solid #e3e7ed">
+    <div style="max-width: 1080px; margin: 0 auto; padding: 0 24px; min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+      <a href="Main.dc.html"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew home" style="height: 36px; width: auto; display: block"></a>
+      <div style="flex: 1 1 280px; max-width: 420px">
+        <div style="display: flex; justify-content: space-between; font-size: 13px; color: #566174; margin-bottom: 8px"><span style="font-weight: 600; color: #14243d">Step 5 of 6</span><span>Your concept</span></div>
+        <div role="progressbar" aria-valuemin="1" aria-valuemax="6" aria-valuenow="5" aria-label="Progress" style="height: 4px; border-radius: 999px; background: #e3e7ed"><div style="width: 83.3%; height: 4px; border-radius: 999px; background: #18335f"></div></div>
+      </div>
+      <a href="tel:+10000000000" style="font-size: 15px; font-weight: 500; text-decoration: none">Questions? [Phone]</a>
+    </div>
+  </header>
+
+  <main style="max-width: 1080px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start">
+    <section style="flex: 3 1 580px; min-width: 0">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 20px">
+        <h1 style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 40px; line-height: 48px; letter-spacing: -0.015em; margin: 0">Your Bonanza, reimagined.</h1>
+        <div role="group" aria-label="Compare" style="display: inline-flex; padding: 4px; background: #ffffff; border: 1px solid #e3e7ed; border-radius: 999px">
+          <button type="button" aria-pressed="{{beforePressed}}" onClick="{{showBefore}}" style="{{beforeStyle}}">Before</button>
+          <button type="button" aria-pressed="{{afterPressed}}" onClick="{{showAfter}}" style="{{afterStyle}}">Concept</button>
+        </div>
+      </div>
+      <div style="{{frameStyle}}">
+        <img src="{{frameImg}}" alt="{{frameLabel}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+        <span style="position: absolute; left: 16px; top: 16px; padding: 4px 12px; border-radius: 999px; background: #ffffff; font-size: 13px; font-weight: 600; color: #18335f">{{badge}}</span>
+      </div>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px">
+        <button type="button" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 10px; border: 1.5px solid #18335f; background: transparent; color: #18335f; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Try another version (2 left)</button>
+        <button type="button" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 0; background: transparent; color: #18335f; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Download</button>
+      </div>
+      <p style="font-size: 13px; line-height: 20px; color: #566174; margin: 16px 0 0; max-width: 620px">Concept render, made by AI from your photo and answers. Final materials, colors and layout are set with our designer on your design call.</p>
+    </section>
+
+    <aside aria-label="Your choices" style="flex: 1 1 280px; min-width: 0; background: #ffffff; border: 1px solid #e3e7ed; border-radius: 16px; padding: 32px">
+      <div style="font-size: 13px; font-weight: 600; color: #18335f; letter-spacing: 0.06em">N12345 · 1998 A36 BONANZA</div>
+      <h2 style="font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 24px; line-height: 32px; margin: 8px 0 20px">Your choices</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+        <span style="padding: 6px 12px; border-radius: 999px; background: #eef3f9; font-size: 13px; font-weight: 500">Modern</span>
+        <span style="padding: 6px 12px; border-radius: 999px; background: #eef3f9; font-size: 13px; font-weight: 500">Warm neutral</span>
+        <span style="padding: 6px 12px; border-radius: 999px; background: #eef3f9; font-size: 13px; font-weight: 500">Leather</span>
+        <span style="padding: 6px 12px; border-radius: 999px; background: #eef3f9; font-size: 13px; font-weight: 500">Channel stitch</span>
+        <span style="padding: 6px 12px; border-radius: 999px; background: #eef3f9; font-size: 13px; font-weight: 500">Seats</span>
+        <span style="padding: 6px 12px; border-radius: 999px; background: #eef3f9; font-size: 13px; font-weight: 500">Sidewalls</span>
+        <span style="padding: 6px 12px; border-radius: 999px; background: #eef3f9; font-size: 13px; font-weight: 500">Headliner</span>
+        <span style="padding: 6px 12px; border-radius: 999px; background: #eef3f9; font-size: 13px; font-weight: 500">Down in spring</span>
+      </div>
+      <a href="Start3.dc.html" style="display: inline-block; margin-top: 16px; font-size: 15px; font-weight: 600; text-decoration: none">Change answers</a>
+      <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid #e3e7ed">
+        <a href="Start6.dc.html" style="display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 24px; border-radius: 10px; background: #b71c1c; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none">Send my design to Air Sew</a>
+        <a href="Start4.dc.html" style="display: flex; align-items: center; justify-content: center; min-height: 44px; margin-top: 8px; font-size: 15px; font-weight: 600; text-decoration: none">← Back</a>
+      </div>
+    </aside>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { view: 'after' }; }
+  renderVals() {
+    const after = this.state.view === 'after';
+    const on = 'min-height: 40px; padding: 0 20px; border: 0; border-radius: 999px; background: #18335f; color: #ffffff; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer;';
+    const off = 'min-height: 40px; padding: 0 20px; border: 0; border-radius: 999px; background: transparent; color: #14243d; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer;';
+    return {
+      showBefore: () => this.setState({ view: 'before' }),
+      showAfter: () => this.setState({ view: 'after' }),
+      beforePressed: after ? 'false' : 'true',
+      afterPressed: after ? 'true' : 'false',
+      beforeStyle: after ? off : on,
+      afterStyle: after ? on : off,
+      badge: after ? 'Concept render' : 'Your photo',
+      frameImg: after ? '../assets/img/hero-after.jpg' : '../assets/img/hero-before.jpg',
+      frameLabel: after ? 'Concept render of your cabin: cream leather, channel-stitched seat backs' : 'Your photo: the cabin today',
+      frameStyle: 'position: relative; aspect-ratio: 3 / 2; border-radius: 16px; overflow: hidden; background: ' + (after ? '#eef3f9' : '#e3e7ed') + ';'
+    };
+  }
+}
+</script>
+</body>
+</html>

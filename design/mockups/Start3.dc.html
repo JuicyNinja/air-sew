@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Start your design — step 3</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Manrope:wght@400;500;600&display=swap">
+<style>
+body{margin:0;background:#f8f7f4}
+a{color:#18335f}a:hover{color:#10264a}
+</style>
+</helmet>
+<div style="font-family: 'Manrope', 'Segoe UI', system-ui, sans-serif; color: #14243d; background: #f8f7f4; min-height: 900px">
+  <header style="background: #ffffff; border-bottom: 1px solid #e3e7ed">
+    <div style="max-width: 1080px; margin: 0 auto; padding: 0 24px; min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+      <a href="Main.dc.html"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew home" style="height: 36px; width: auto; display: block"></a>
+      <div style="flex: 1 1 280px; max-width: 420px">
+        <div style="display: flex; justify-content: space-between; font-size: 13px; color: #566174; margin-bottom: 8px"><span style="font-weight: 600; color: #14243d">Step 3 of 6</span><span>Your style</span></div>
+        <div role="progressbar" aria-valuemin="1" aria-valuemax="6" aria-valuenow="3" aria-label="Progress" style="height: 4px; border-radius: 999px; background: #e3e7ed"><div style="width: 50%; height: 4px; border-radius: 999px; background: #18335f"></div></div>
+      </div>
+      <a href="tel:+10000000000" style="font-size: 15px; font-weight: 500; text-decoration: none">Questions? [Phone]</a>
+    </div>
+  </header>
+
+  <main style="max-width: 1080px; margin: 0 auto; padding: 56px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+    <section style="flex: 3 1 560px; min-width: 0">
+      <div style="font-size: 13px; font-weight: 600; color: #566174; margin-bottom: 8px">Question 3 of 10</div>
+      <h1 style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 40px; line-height: 48px; letter-spacing: -0.015em; margin: 0 0 8px">What style are you after?</h1>
+      <p style="font-size: 17px; line-height: 28px; color: #566174; margin: 0 0 32px">Pick the closest. We'll fine-tune it together.</p>
+
+      <div role="radiogroup" aria-label="Style direction" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+        <sc-for list="{{styles}}" as="s" hint-placeholder-count="4">
+          <button type="button" role="radio" aria-checked="{{s.checked}}" onClick="{{s.pick}}" style="{{s.cardStyle}}">
+            <img src="{{s.image}}" alt="{{s.alt}}" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 10px; background: {{s.tint}}">
+            <span style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 8px 4px">
+              <span style="text-align: left"><span style="display: block; font-size: 17px; font-weight: 600; color: #14243d">{{s.label}}</span><span style="display: block; font-size: 15px; line-height: 24px; color: #566174">{{s.desc}}</span></span>
+              <span aria-hidden="true" style="{{s.dotStyle}}">{{s.mark}}</span>
+            </span>
+          </button>
+        </sc-for>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 40px">
+        <a href="Start2.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 600; text-decoration: none">← Back</a>
+        <a href="Start4.dc.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 28px; border-radius: 10px; background: #18335f; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none">Next question <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <aside aria-label="Your answers so far" style="flex: 1 1 260px; min-width: 0; background: #ffffff; border: 1px solid #e3e7ed; border-radius: 16px; padding: 32px">
+      <div style="font-size: 13px; font-weight: 600; color: #18335f; letter-spacing: 0.06em">N12345 · A36 BONANZA</div>
+      <h2 style="font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 24px; line-height: 32px; margin: 8px 0 24px">Your answers</h2>
+      <dl style="margin: 0; display: flex; flex-direction: column; gap: 16px">
+        <div><dt style="font-size: 13px; color: #566174">Scope</dt><dd style="margin: 4px 0 0; font-size: 15px; font-weight: 500">Seats, sidewalls, headliner</dd></div>
+        <div><dt style="font-size: 13px; color: #566174">Used for</dt><dd style="margin: 4px 0 0; font-size: 15px; font-weight: 500">Family and business</dd></div>
+        <div><dt style="font-size: 13px; color: #566174">Style</dt><dd style="margin: 4px 0 0; font-size: 15px; font-weight: 500">{{chosen}}</dd></div>
+      </dl>
+      <p style="font-size: 13px; line-height: 20px; color: #566174; margin: 24px 0 0; padding-top: 16px; border-top: 1px solid #e3e7ed">Your progress is saved. Come back any time from the link in your email.</p>
+    </aside>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { picked: 'modern' }; }
+  renderVals() {
+    const list = [
+      { id: 'classic', label: 'Classic', desc: 'Tan leather, piping, warm wood', tint: '#f3eee6', image: '../assets/img/style-classic.jpg', alt: 'Classic cabin: tan leather, piping, warm wood' },
+      { id: 'modern', label: 'Modern', desc: 'Light neutrals, clean seams', tint: '#eef3f9', image: '../assets/img/style-modern.jpg', alt: 'Modern cabin: light gray leather, clean seams' },
+      { id: 'executive', label: 'Executive', desc: 'Dark leather, quilted inserts', tint: '#e3e7ed', image: '../assets/img/style-executive.jpg', alt: 'Executive cabin: dark quilted leather, gloss wood' },
+      { id: 'sport', label: 'Sport', desc: 'Two-tone, perforated, bold stitch', tint: '#f3eee6', image: '../assets/img/style-sport.jpg', alt: 'Sport cabin: black and red perforated leather' }
+    ];
+    const picked = this.state.picked;
+    const styles = list.map((s) => {
+      const on = s.id === picked;
+      return {
+        ...s,
+        checked: on ? 'true' : 'false',
+        mark: on ? '✓' : '',
+        pick: () => this.setState({ picked: s.id }),
+        cardStyle: 'display: flex; flex-direction: column; padding: 12px 12px 16px; background: #ffffff; border-radius: 16px; cursor: pointer; font-family: inherit; text-align: left; ' + (on ? 'border: 2px solid #18335f; box-shadow: 0 2px 4px rgba(20,36,61,0.06), 0 16px 40px rgba(20,36,61,0.10);' : 'border: 2px solid #e3e7ed;'),
+        dotStyle: 'flex: 0 0 24px; width: 24px; height: 24px; border-radius: 999px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; box-sizing: border-box; ' + (on ? 'background: #18335f; color: #ffffff;' : 'border: 1.5px solid #8590a2;')
+      };
+    });
+    const chosen = list.find((s) => s.id === picked).label;
+    return { styles, chosen };
+  }
+}
+</script>
+</body>
+</html>

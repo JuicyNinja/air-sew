@@ -1,0 +1,41 @@
+<!-- @dsCard height=300 -->
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300&family=Manrope:wght@400&display=swap");
+  html, body { margin: 0; background: var(--surface); }
+  .cv { position: relative; width: 960px; height: 300px; overflow: hidden; background: var(--surface); }
+  .cv svg { position: absolute; left: 0; top: 0; }
+  .navy { fill: var(--navy); }
+  .sky { fill: var(--sky); }
+  .linen { fill: var(--linen); }
+  .needle { fill: var(--needle); }
+  .tile { rx: var(--radius-lg); }
+  .pill { rx: 16px; }
+  .stitch-light { stroke: var(--sky); stroke-width: 2; stroke-linecap: round; stroke-dasharray: var(--space-sm) var(--space-xs); fill: none; }
+  .stitch-dark { stroke: var(--navy); stroke-width: 2; stroke-linecap: round; stroke-dasharray: var(--space-sm) var(--space-xs); fill: none; }
+  .cv-text { position: absolute; left: 48px; bottom: 48px; max-width: 440px; }
+  .cv-name { font-family: var(--font-display); font-weight: 300; font-size: 104px; line-height: .95; letter-spacing: -0.02em; color: var(--ink); margin: 0; }
+  .cv-tag { font-family: var(--font-sans); font-size: 14px; line-height: 20px; color: var(--ink-muted); margin: 16px 0 0; }
+</style>
+<div class="cv">
+  <svg width="960" height="300" viewBox="0 0 960 300" aria-hidden="true">
+    <!--
+      blocks: navy slab 160×332 (5×space-xl, bleeds top/bottom), sky 160×128 (bleeds right), linen 96×96 (space-4xl), needle pill 32×192 (space-xl wide).
+      arrangement: one tall navy slab with satellites — the needle to its left, sky and linen stacked to its right, sky running off the edge.
+      pattern: literal motif → running-stitch channel lines, as on a quilted seat back; README: "hand-made", "stitching detail". 3 sky stitches on navy, 2 navy stitches on linen.
+      scales: dash space-sm / gap space-xs; tiles radius-lg; pill = half its short side (16px); gaps space-lg.
+    -->
+    <rect class="navy tile" x="632" y="-16" width="160" height="332"/>
+    <rect class="needle pill" x="576" y="64" width="32" height="192"/>
+    <rect class="sky tile" x="816" y="32" width="160" height="128"/>
+    <rect class="linen tile" x="816" y="184" width="96" height="96"/>
+    <line class="stitch-light" x1="672" y1="24" x2="672" y2="276"/>
+    <line class="stitch-light" x1="712" y1="24" x2="712" y2="276"/>
+    <line class="stitch-light" x1="752" y1="24" x2="752" y2="276"/>
+    <line class="stitch-dark" x1="848" y1="204" x2="848" y2="260"/>
+    <line class="stitch-dark" x1="880" y1="204" x2="880" y2="260"/>
+  </svg>
+  <div class="cv-text">
+    <h1 class="cv-name">Air Sew</h1>
+    <p class="cv-tag">Aircraft interiors, rebuilt by hand.</p>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wireframe — Start 2, mobile</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./wf.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div class="wf m mstep">
+  <header style="padding:12px 16px;border-bottom:1px solid #d1d5db">
+    <div class="row" style="justify-content:space-between"><a href="StartMobile1.dc.html" class="lnk" style="font-size:14px">‹ Back</a><span class="sm" style="font-weight:600">Step 2 of 6</span><a href="#call" class="lnk" style="font-size:14px">Call</a></div>
+    <div class="prog" style="margin-top:10px"><span style="width:33.3%"></span></div>
+  </header>
+  <main>
+    <div class="eb">Found on the FAA registry</div>
+    <h1 class="h2" style="margin-top:6px">Is this your aircraft?</h1>
+    <div class="card" style="padding:0;overflow:hidden;gap:0">
+      <img src="../assets/img/aircraft-ramp.jpg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
+      <div style="padding:16px"><div class="sm" style="font-weight:700">N12345</div><div class="h3">1998 Beechcraft A36 Bonanza</div><span class="chip" style="margin-top:8px;min-height:28px">✓ Registration valid</span></div>
+      <dl class="g6" style="margin:0;padding:0 16px 16px;gap:12px">
+        <div><dt class="sm">Serial</dt><dd style="margin:0;font-weight:600">[E-0000]</dd></div>
+        <div><dt class="sm">Seats</dt><dd style="margin:0;font-weight:600">6</dd></div>
+        <div><dt class="sm">Engines</dt><dd style="margin:0;font-weight:600">1 · piston</dd></div>
+        <div><dt class="sm">Burn standard</dt><dd style="margin:0;font-weight:600">Part 23</dd></div>
+      </dl>
+    </div>
+  </main>
+  <div class="foot" style="flex-direction:column;align-items:stretch"><a href="StartMobile3.dc.html" class="btn">Yes, that's my aircraft</a><a href="StartMobile1.dc.html" class="lnk" style="text-align:center;padding:8px 0">Not my aircraft</a></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic { renderVals() { return {}; } }
+</script>
+</body>
+</html>

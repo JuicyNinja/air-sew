@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wireframe — Capability page template</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./wf.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div class="wf">
+  <header class="hdr-bar"><div class="hdr">
+    <a href="Main.dc.html" class="logo">AIR SEW</a>
+    <nav class="nav" aria-label="Main"><a href="ServicesHub.dc.html">Services</a><a href="AircraftHub.dc.html">Aircraft</a><a href="CapabilitiesHub.dc.html" class="on">Capabilities</a><a href="Portfolio.dc.html">Portfolio</a></nav>
+    <div class="row"><a href="https://app.air-sew.com/" class="lnk">Client login</a><a href="#start" class="btn sm">Start your design</a></div>
+  </div></header>
+
+  <section class="sec alt"><span class="tag">01 · Hero (video loop)</span>
+    <div class="wrap split"><div><div class="crumb">Home / Capabilities / <span class="var">{Capability}</span></div><h1 class="h1"><span class="var">{Capability}</span></h1><p class="lead"><span class="var">{What it means for your cabin, one sentence}</span></p></div><img class="img r43" src="../assets/img/workshop-wide.jpg" alt="{Silent video loop of the process}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"></div>
+  </section>
+
+  <section class="sec"><span class="tag">02 · What it means for your aircraft (3 points)</span>
+    <div class="wrap g3"><div class="card"><span class="ico"></span><span class="h3"><span class="var">{Benefit}</span></span><span class="sm"><span class="var">{One line}</span></span></div><div class="card"><span class="ico"></span><span class="h3"><span class="var">{Benefit}</span></span><span class="sm"><span class="var">{One line}</span></span></div><div class="card"><span class="ico"></span><span class="h3"><span class="var">{Benefit}</span></span><span class="sm"><span class="var">{One line}</span></span></div></div>
+  </section>
+
+  <section class="sec alt"><span class="tag">03 · Process strip (scroll-driven steps)</span>
+    <div class="wrap"><h2 class="h2">How it works</h2><div class="g4" style="grid-template-columns:repeat(5,minmax(0,1fr));margin-top:20px">
+      <div class="stack" style="gap:8px"><img class="img r11" src="../assets/img/workshop-wide.jpg" alt="{Step image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:16px"><span class="var">{Scan}</span></span></div>
+      <div class="stack" style="gap:8px"><img class="img r11" src="../assets/img/cnc-quilting.jpg" alt="{Step image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:16px"><span class="var">{Pattern}</span></span></div>
+      <div class="stack" style="gap:8px"><img class="img r11" src="../assets/img/hands-sewing.jpg" alt="{Step image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:16px"><span class="var">{Cut}</span></span></div>
+      <div class="stack" style="gap:8px"><img class="img r11" src="../assets/img/seat-frame.jpg" alt="{Step image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:16px"><span class="var">{Sew / print}</span></span></div>
+      <div class="stack" style="gap:8px"><img class="img r11" src="../assets/img/hero-after.jpg" alt="{Step image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:16px"><span class="var">{Finish}</span></span></div>
+    </div></div>
+  </section>
+
+  <section class="sec"><span class="tag">04 · Proof block (varies by capability)</span>
+    <div class="wrap split"><div><h2 class="h2"><span class="var">{Proof headline}</span></h2><p class="p">CNC: equipment + specs. 3D printing: original vs printed part. Plastics: before/after slider. Burn-certified: sample certification packet, standards table (Part 23 vs Part 25), what paperwork the owner and their maintenance director receive.</p></div><img class="img r43" src="../assets/img/paperwork.jpg" alt="{Proof visual}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"></div>
+  </section>
+
+  <section class="sec alt"><span class="tag">05 · Gallery</span>
+    <div class="wrap g4"><img class="img r11" src="../assets/img/diamond.jpg" alt="Detail" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><img class="img r11" src="../assets/img/perforated.jpg" alt="Detail" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><img class="img r11" src="../assets/img/channel.jpg" alt="Detail" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><img class="img r11" src="../assets/img/hands-sewing.jpg" alt="Detail" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"></div>
+  </section>
+
+  <section class="sec"><span class="tag">06 · Services that use it</span>
+    <div class="wrap row"><span class="sm">Used in:</span><a href="ServiceTemplate.dc.html" class="chip"><span class="var">{Service}</span></a><a href="ServiceTemplate.dc.html" class="chip"><span class="var">{Service}</span></a><a href="ServiceTemplate.dc.html" class="chip"><span class="var">{Service}</span></a></div>
+  </section>
+
+  <section class="sec tight"><span class="tag">07 · Closing CTA</span>
+    <div class="wrap cta"><h2 class="h2">Picture your cabin, made for you.</h2><div class="row" style="justify-content:center"><a href="#start" class="btn acc">Start your design</a></div></div>
+  </section>
+  <footer class="ftr"><div class="wrap row" style="justify-content:space-between"><span class="logo">AIR SEW</span><span class="sm">Footer — same as Home</span></div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3400}}'>
+class Component extends DCLogic { renderVals() { return {}; } }
+</script>
+</body>
+</html>

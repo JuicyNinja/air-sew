@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Air Sew — CNC sewing & cutting</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Manrope:wght@400;500;600&display=swap">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#18335f}a:hover{color:#10264a}
+.eb{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#18335f}
+.eb:before{content:"";width:20px;height:2px;border-radius:2px;background:#b71c1c}
+.h1{font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:60px;line-height:64px;letter-spacing:-.02em;margin:16px 0 24px}
+.h2{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:36px;line-height:44px;letter-spacing:-.01em;margin:8px 0 16px}
+.h3{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:22px;line-height:30px;margin:0}
+.lead{font-size:20px;line-height:32px;color:#566174;margin:0 0 32px;max-width:560px}
+.body{font-size:17px;line-height:28px;color:#566174;margin:0}
+.sm{font-size:15px;line-height:24px;color:#566174}
+.xs{font-size:13px;line-height:20px;color:#566174}
+.wrap{max-width:1200px;margin:0 auto}
+.sec{padding:96px 24px}.alt{background:#f8f7f4}.sky{background:#eef3f9}
+.split{display:flex;flex-wrap:wrap;gap:64px;align-items:center}.split>*{flex:1 1 440px;min-width:0}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:10px;background:#18335f;color:#fff;font-size:15px;font-weight:600;text-decoration:none;border:0;font-family:inherit;cursor:pointer}
+.btn:hover{color:#fff;background:#10264a}
+.btn.o{background:transparent;border:1.5px solid #18335f;color:#18335f}
+.btn.red{background:#b71c1c}
+.chip{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border:1px solid #e3e7ed;border-radius:999px;background:#fff;font-size:15px;color:#14243d;text-decoration:none;font-family:inherit;cursor:pointer}
+.chip.on{background:#18335f;border-color:#18335f;color:#fff}
+.card{display:flex;flex-direction:column;gap:12px;padding:16px 16px 24px;background:#fff;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d}
+.card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
+.pin{padding:0 8px}
+.ph{display:block;width:100%;object-fit:cover;border-radius:16px}
+.rowlink{display:flex;gap:20px;align-items:center;padding:24px;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d;background:#fff}
+.faq{border-bottom:1px solid #e3e7ed}
+.faq button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;gap:24px;padding:24px 0;font-size:17px;font-weight:600;color:#14243d;cursor:pointer}
+.faq button:focus-visible{outline:2px solid #18335f;outline-offset:4px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin:0}
+.facts>div{border-top:1px solid #e3e7ed;padding-top:16px}
+.facts dd{margin:4px 0 0;font-family:'Fraunces',Georgia,serif;font-size:22px;line-height:30px}
+.crumb{font-size:14px;color:#566174;margin-bottom:40px}.crumb a{color:#566174;text-decoration:none}
+.badge{position:absolute;padding:4px 12px;border-radius:999px;background:#fff;font-size:13px;font-weight:600;color:#14243d}
+</style>
+</helmet>
+<div style="font-family:'Manrope','Segoe UI',system-ui,sans-serif;color:#14243d;background:#fff;-webkit-font-smoothing:antialiased">
+  <header style="background:#fff;border-bottom:1px solid #e3e7ed">
+    <div class="wrap" style="padding:0 24px;min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap">
+      <a href="Main.dc.html" style="display:flex;align-items:center"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew home" style="height:40px;width:auto;display:block"></a>
+      <nav aria-label="Main" style="display:flex;align-items:center;gap:32px;flex-wrap:wrap"><a href="Services.dc.html" style="font-size:15px;font-weight:500;color:#14243d;text-decoration:none">Services</a><a href="Aircraft.dc.html" style="font-size:15px;font-weight:500;color:#14243d;text-decoration:none">Aircraft</a><a href="Capabilities.dc.html" aria-current="page" style="font-size:15px;font-weight:600;color:#18335f;text-decoration:none;box-shadow:inset 0 -2px 0 #b71c1c;padding:4px 0">Capabilities</a><a href="Portfolio.dc.html" style="font-size:15px;font-weight:500;color:#14243d;text-decoration:none">Portfolio</a></nav>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap"><a href="https://app.air-sew.com/" style="font-size:15px;font-weight:500;color:#566174;text-decoration:none">Client login</a><a href="Start1.dc.html" class="btn" style="min-height:44px;padding:0 20px">Start your design</a></div>
+    </div>
+  </header>
+
+  <section class="sky" style="padding:72px 24px 112px"><div class="wrap">
+    <nav aria-label="Breadcrumb" class="crumb"><a href="Main.dc.html">Home</a> <span aria-hidden="true">/</span> <a href="Capabilities.dc.html">Capabilities</a> <span aria-hidden="true">/</span> <span style="color:#14243d">CNC sewing &amp; cutting</span></nav>
+    <div class="split"><div><div class="eb">Capability</div><h1 class="h1" style="max-width:13ch">CNC sewing &amp; cutting</h1><p class="lead">Cut by machine, finished by hand. Every panel matches its twin, and a replacement fits perfectly years from now.</p><a href="Start1.dc.html" class="btn">Start your design</a></div>
+    <div style="position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden"><img src="../assets/img/cnc-quilting.jpg" alt="CNC head quilting a diamond pattern" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="badge" style="left:16px;bottom:16px;display:inline-flex;gap:8px;align-items:center"><span aria-hidden="true" style="width:20px;height:20px;border-radius:999px;background:#18335f;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:9px">▶</span>Video · 0:08 loop</span></div></div>
+  </div></section>
+  <section class="sec"><div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px"><div style="max-width:680px"><div class="eb">For your aircraft</div><h2 class="h2">What it means for you</h2></div></div>
+    <div class="grid3"><div style="border-top:2px solid #b71c1c;padding-top:24px"><h3 class="h3" style="margin-bottom:8px">Perfect symmetry</h3><p class="sm" style="margin:0">Left and right seats, port and starboard panels: identical, stitch for stitch.</p></div><div style="border-top:2px solid #b71c1c;padding-top:24px"><h3 class="h3" style="margin-bottom:8px">Spares that fit</h3><p class="sm" style="margin:0">Your patterns stay on file. Scuff a panel in five years and we cut a new one that drops right in.</p></div><div style="border-top:2px solid #b71c1c;padding-top:24px"><h3 class="h3" style="margin-bottom:8px">Less waste, lower cost</h3><p class="sm" style="margin:0">Pieces are nested on the hide by software, so you pay for less leather.</p></div></div>
+  </div></section>
+  <section class="sec alt"><div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px"><div style="max-width:680px"><div class="eb">Process</div><h2 class="h2">From your airplane to the machine and back</h2></div></div>
+    <ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px">
+      <li style="background:#fff;border:1px solid #e3e7ed;border-radius:16px;padding:24px"><div style="font-family:Fraunces,Georgia,serif;font-size:24px;color:#b71c1c">01</div><div style="font-size:17px;font-weight:600;margin:8px 0">Pattern</div><div class="sm">We pattern your seats and panels once, by hand, right on your airplane.</div></li><li style="background:#fff;border:1px solid #e3e7ed;border-radius:16px;padding:24px"><div style="font-family:Fraunces,Georgia,serif;font-size:24px;color:#b71c1c">02</div><div style="font-size:17px;font-weight:600;margin:8px 0">Digitize</div><div class="sm">The patterns become files: exact, repeatable and stored with your aircraft record.</div></li><li style="background:#fff;border:1px solid #e3e7ed;border-radius:16px;padding:24px"><div style="font-family:Fraunces,Georgia,serif;font-size:24px;color:#b71c1c">03</div><div style="font-size:17px;font-weight:600;margin:8px 0">Cut</div><div class="sm">The CNC table cuts leather and fabric to the line, nesting pieces to save hide.</div></li><li style="background:#fff;border:1px solid #e3e7ed;border-radius:16px;padding:24px"><div style="font-family:Fraunces,Georgia,serif;font-size:24px;color:#b71c1c">04</div><div style="font-size:17px;font-weight:600;margin:8px 0">Quilt &amp; stitch</div><div class="sm">Diamond, channel or custom quilting runs by machine, so every panel matches.</div></li><li style="background:#fff;border:1px solid #e3e7ed;border-radius:16px;padding:24px"><div style="font-family:Fraunces,Georgia,serif;font-size:24px;color:#b71c1c">05</div><div style="font-size:17px;font-weight:600;margin:8px 0">Finish by hand</div><div class="sm">Our hands assemble, close and fit every piece. The machine never finishes the job.</div></li>
+    </ol>
+  </div></section>
+  <section class="sec"><div class="wrap split">
+    <div><div class="eb">Proof</div><h2 class="h2">Matched to a millimeter</h2><p class="body" style="margin-bottom:24px">Two seat backs from the same job, laid side by side. Same pattern file, same stitch count, same result.</p>
+      <dl class="facts" style="grid-template-columns:repeat(2,minmax(0,1fr))"><div><dt class="xs">Stitch tolerance</dt><dd>[± x mm]</dd></div><div><dt class="xs">Patterns on file</dt><dd>[n] aircraft</dd></div></dl></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><img src="../assets/img/diamond.jpg" alt="Diamond quilted panel, left seat" class="ph" style="aspect-ratio:3/4"><img src="../assets/img/diamond.jpg" alt="Diamond quilted panel, right seat" class="ph" style="aspect-ratio:3/4;transform:scaleX(-1)"></div>
+  </div></section>
+  <section style="padding:0 24px 96px"><div class="wrap">
+    <div class="eb">Gallery</div><h2 class="h2" style="margin-bottom:32px">On the machine</h2>
+    <div class="grid4"><img src="../assets/img/cnc-quilting.jpg" alt="CNC work detail" class="ph" style="aspect-ratio:1/1;border-radius:12px"><img src="../assets/img/channel.jpg" alt="CNC work detail" class="ph" style="aspect-ratio:1/1;border-radius:12px"><img src="../assets/img/perforated.jpg" alt="CNC work detail" class="ph" style="aspect-ratio:1/1;border-radius:12px"><img src="../assets/img/hands-sewing.jpg" alt="CNC work detail" class="ph" style="aspect-ratio:1/1;border-radius:12px"></div>
+  </div></section>
+  <section class="sec alt"><div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px"><div style="max-width:680px"><div class="eb">Used in</div><h2 class="h2">Services that use it</h2></div></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px">
+      <a href="ServiceSeats.dc.html" class="rowlink"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 40px"><g stroke="#18335f" stroke-width="0.6"><path d="M6.6 3h3.1c.9 0 1.6.8 1.5 1.7L10.2 13H6.1L5.1 4.7C5 3.8 5.7 3 6.6 3z"/><path d="M5 13h11.5a1.5 1.5 0 0 1 1.5 1.5V16H5z"/><path d="M10.6 10H16M8 16v4M15 16v4M6 20h11"/></g><path d="M7.4 5.6l.6 5" stroke="#b71c1c" stroke-width="0.7" stroke-dasharray=".9 1.3"/></svg><span style="flex:1 1 auto;font-size:17px;font-weight:600">Seats &amp; upholstery</span><span aria-hidden="true" style="color:#18335f">→</span></a><a href="ServiceSeats.dc.html" class="rowlink"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 40px"><g stroke="#18335f" stroke-width="0.6"><rect x="4" y="3" width="16" height="18" rx="2"/><rect x="9" y="6.5" width="6" height="8" rx="3"/></g><path d="M7 18h10" stroke="#b71c1c" stroke-width="0.7" stroke-dasharray=".9 1.3"/></svg><span style="flex:1 1 auto;font-size:17px;font-weight:600">Sidewalls &amp; panels</span><span aria-hidden="true" style="color:#18335f">→</span></a><a href="ServiceSeats.dc.html" class="rowlink"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 40px"><path d="M3 20v-8a9 9 0 0 1 18 0v8M3 20h18" stroke="#18335f" stroke-width="0.6"/><path d="M7 11a5 5 0 0 1 10 0" stroke="#b71c1c" stroke-width="0.7" stroke-dasharray=".9 1.3"/></svg><span style="flex:1 1 auto;font-size:17px;font-weight:600">Headliners</span><span aria-hidden="true" style="color:#18335f">→</span></a><a href="ServiceSeats.dc.html" class="rowlink"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 40px"><g stroke="#18335f" stroke-width="0.6"><circle cx="12" cy="12" r="8"/></g><path d="M8 12c1.5-3 6.5-3 8 0-1.5 3-6.5 3-8 0z" stroke="#b71c1c" stroke-width="0.7" stroke-dasharray=".9 1.3"/></svg><span style="flex:1 1 auto;font-size:17px;font-weight:600">Soft goods &amp; embroidery</span><span aria-hidden="true" style="color:#18335f">→</span></a><a href="ServiceSeats.dc.html" class="rowlink"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 40px"><g stroke="#18335f" stroke-width="0.6"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/></g><path d="M12 20v2" stroke="#b71c1c" stroke-width="0.9"/><path d="M10 22h4" stroke="#b71c1c" stroke-width="0.7"/></svg><span style="flex:1 1 auto;font-size:17px;font-weight:600">Cowl plugs &amp; inlet covers</span><span aria-hidden="true" style="color:#18335f">→</span></a><a href="ServiceSeats.dc.html" class="rowlink"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 40px"><path d="M2 14l10-6 10 6M5 12.5V18h14v-5.5" stroke="#18335f" stroke-width="0.6"/><path d="M9 18v-3h6v3" stroke="#b71c1c" stroke-width="0.7" stroke-dasharray=".9 1.3"/></svg><span style="flex:1 1 auto;font-size:17px;font-weight:600">Aircraft covers</span><span aria-hidden="true" style="color:#18335f">→</span></a>
+    </div>
+  </div></section>
+<section style="padding:0 24px 96px"><div class="wrap sky" style="border-radius:16px;padding:80px 32px;text-align:center">
+      <h2 style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:48px;line-height:56px;letter-spacing:-.015em;margin:0 auto 16px;max-width:18ch">Picture your cabin, made for you.</h2>
+      <p class="lead" style="margin:0 auto 32px">Enter your tail number, answer ten questions about how you fly, and see a concept of your own interior. We call you within one business day.</p>
+      <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap"><a href="Start1.dc.html" class="btn red" style="padding:0 28px">Start your design</a><a href="tel:+10000000000" class="btn o">Call [phone]</a></div>
+    </div></section>
+  <footer class="alt" style="border-top:1px solid #e3e7ed;padding:64px 24px 40px">
+    <div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px;justify-content:space-between">
+      <div style="flex:1 1 280px;max-width:360px"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew" style="height:40px;width:auto;display:block"><p class="sm" style="margin:16px 0 0">One-of-a-kind aircraft interiors from an owner-operated shop, designed with you and built by hand. [City, State] · [Airport ID]</p></div>
+      <nav aria-label="Footer" style="flex:2 1 480px;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px">
+        <div style="display:flex;flex-direction:column;gap:8px"><div class="eb" style="gap:0">Work</div><a href="Services.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Services</a><a href="Aircraft.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Aircraft</a><a href="Capabilities.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Capabilities</a><a href="Portfolio.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Portfolio</a></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div class="eb" style="gap:0">Company</div><a href="About.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">About</a><a href="Process.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">How it works</a><a href="Faq.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">FAQ</a><a href="Contact.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Contact</a></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div class="eb" style="gap:0">Clients</div><a href="Start1.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Start your design</a><a href="https://app.air-sew.com/" style="font-size:15px;color:#14243d;text-decoration:none">Client login</a><a href="tel:+10000000000" style="font-size:15px;color:#14243d;text-decoration:none">[Phone]</a></div>
+      </nav>
+    </div>
+    <div class="wrap xs" style="margin-top:48px;padding-top:24px;border-top:1px solid #e3e7ed;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px"><span>© 2026 Air Sew</span><span><a href="#" style="color:#566174">Privacy</a> · <a href="#" style="color:#566174">Terms</a></span></div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4700}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { pos: 50, open: 0 }; }
+  renderVals() {
+    const s = this.state, pos = s.pos, open = s.open;
+    const v = {
+      pos,
+      slide: (e) => this.setState({ pos: Number(e.target.value) }),
+      beforeClip: 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:inset(0 ' + (100 - pos) + '% 0 0)'
+    };
+    for (let i = 0; i < 0; i++) {
+      const on = open === i;
+      v['o' + i] = String(on); v['s' + i] = on ? '−' : '+'; v['d' + i] = on ? 'block' : 'none';
+      v['t' + i] = () => this.setState({ open: on ? -1 : i });
+    }
+    
+    return v;
+  }
+}
+</script>
+</body>
+</html>
