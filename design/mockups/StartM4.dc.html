@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Air Sew — Start 4 (mobile)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Manrope:wght@400;500;600&display=swap">
+<style>
+body{margin:0;background:#fff}
+a{color:#18335f}
+*{box-sizing:border-box}
+.eb{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#18335f}
+.eb:before{content:"";width:16px;height:2px;border-radius:2px;background:#b71c1c}
+.h1{font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:40px;line-height:44px;letter-spacing:-.02em;margin:12px 0 16px}
+.h2{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:28px;line-height:34px;letter-spacing:-.01em;margin:8px 0 12px}
+.h3{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:20px;line-height:28px;margin:0}
+.lead{font-size:17px;line-height:27px;color:#566174;margin:0 0 24px}
+.body{font-size:16px;line-height:26px;color:#566174;margin:0}
+.sm{font-size:14px;line-height:22px;color:#566174}
+.xs{font-size:12px;line-height:18px;color:#566174}
+.sec{padding:64px 20px}.alt{background:#f8f7f4}.sky{background:#eef3f9}
+.btn{display:flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border-radius:10px;background:#18335f;color:#fff;font-size:16px;font-weight:600;text-decoration:none;border:0;font-family:inherit;cursor:pointer;width:100%}
+.btn.o{background:transparent;border:1.5px solid #18335f;color:#18335f}
+.btn.red{background:#b71c1c}
+.chip{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border:1px solid #e3e7ed;border-radius:999px;background:#fff;font-size:14px;color:#14243d;text-decoration:none;white-space:nowrap}
+.ph{display:block;width:100%;object-fit:cover;border-radius:14px}
+.row{display:flex;gap:14px;align-items:center;padding:16px 0;border-bottom:1px solid #e3e7ed;text-decoration:none;color:#14243d}
+.swipe{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:0 20px 4px;scrollbar-width:none}
+.swipe>*{flex:0 0 78%;scroll-snap-align:start}
+.card{display:flex;flex-direction:column;gap:10px;padding:10px 10px 16px;border:1px solid #e3e7ed;border-radius:14px;background:#fff;text-decoration:none;color:#14243d}
+.card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
+.faq{border-bottom:1px solid #e3e7ed}
+.faq button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;gap:16px;padding:20px 0;font-size:16px;font-weight:600;color:#14243d;cursor:pointer}
+.mbar{position:sticky;bottom:0;z-index:6;display:flex;gap:8px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid #e3e7ed}
+.lbl{display:block;font-size:15px;font-weight:600;margin-bottom:6px}
+.inp{width:100%;min-height:52px;padding:0 14px;border:1.5px solid #8590a2;border-radius:8px;font-family:inherit;font-size:17px;color:#14243d;background:#fff}
+.badge{position:absolute;padding:3px 10px;border-radius:999px;background:#fff;font-size:12px;font-weight:600;color:#14243d}
+</style>
+</helmet>
+<div style="font-family:'Manrope','Segoe UI',system-ui,sans-serif;color:#14243d;background:#fff;-webkit-font-smoothing:antialiased;max-width:390px;margin:0 auto;position:relative">
+<div style="min-height:844px;display:flex;flex-direction:column">
+<header style="position:sticky;top:0;z-index:5;background:#fff;padding:4px 16px 12px;border-bottom:1px solid #e3e7ed">
+  <div style="display:flex;justify-content:space-between;align-items:center"><a href="StartM3.dc.html" style="font-size:15px;font-weight:500;text-decoration:none;padding:12px 0">‹ Back</a><span class="xs" style="font-weight:600;color:#14243d">Step 4 of 6</span><a href="tel:+10000000000" style="font-size:15px;font-weight:500;text-decoration:none;padding:12px 0">Call</a></div>
+  <div role="progressbar" aria-label="Progress" aria-valuenow="4" aria-valuemin="1" aria-valuemax="6" style="height:4px;border-radius:999px;background:#e3e7ed"><span style="display:block;width:66.7%;height:4px;border-radius:999px;background:#18335f"></span></div>
+</header>
+<main style="flex:1 1 auto;padding:24px 20px 24px">
+  <h1 class="h2" style="margin-top:0">Show us your cabin.</h1>
+  <p class="sm" style="margin:0 0 16px">Shoot from the door, looking forward. Daylight, no flash.</p>
+  <label for="cam" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:120px;border:1.5px dashed #8590a2;border-radius:14px;background:#f8f7f4;cursor:pointer">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#18335f" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5" stroke="#b71c1c"/></svg>
+    <span style="font-weight:600">Take photos</span><span class="xs">or choose from your library</span></label>
+  <input id="cam" type="file" accept="image/*" capture="environment" multiple style="position:absolute;width:1px;height:1px;opacity:0">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px">
+    <span style="position:relative"><img src="../assets/img/hero-before.jpg" alt="Cabin from the door" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;border:2px solid #18335f;display:block"><span class="badge" style="left:4px;bottom:4px;font-size:10px;background:#18335f;color:#fff">For render</span></span>
+    <img src="../assets/img/worn-seats.jpg" alt="Seat close-up" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;display:block">
+    <img src="../assets/img/worn-sidewall.jpg" alt="Sidewall close-up" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;display:block">
+  </div>
+  <p class="xs" style="margin-top:12px">Add close-ups of worn spots so we can quote them.</p></main>
+<div class="mbar" style="flex-direction:column;gap:4px"><a href="StartM5.dc.html" class="btn">Create my concept</a><a href="StartM6.dc.html" style="text-align:center;padding:10px 0;font-size:15px;font-weight:500;text-decoration:none">Skip, no render</a></div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = {}; }
+  renderVals() { const s = this.state; return {}; }
+}
+</script>
+</body>
+</html>

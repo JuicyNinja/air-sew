@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wireframe — Contact</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./wf.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div class="wf">
+  <header class="hdr-bar"><div class="hdr">
+    <a href="Main.dc.html" class="logo">AIR SEW</a>
+    <nav class="nav" aria-label="Main"><a href="ServicesHub.dc.html">Services</a><a href="AircraftHub.dc.html">Aircraft</a><a href="CapabilitiesHub.dc.html">Capabilities</a><a href="Portfolio.dc.html">Portfolio</a></nav>
+    <div class="row"><a href="https://app.air-sew.com/" class="lnk">Client login</a><a href="#start" class="btn sm">Start your design</a></div>
+  </div></header>
+
+  <section class="sec alt"><span class="tag">01 · Hero</span>
+    <div class="wrap"><div class="crumb">Home / Contact</div><h1 class="h1">Talk to the owner.</h1><p class="lead">Calls and messages come straight to the shop, not a call center.</p></div>
+  </section>
+
+  <section class="sec"><span class="tag">02 · Routes + form</span>
+    <div class="wrap" style="display:flex;gap:48px;flex-wrap:wrap;align-items:flex-start">
+      <div class="stack" style="flex:3 1 560px;min-width:0;gap:24px">
+        <div class="card" style="background:#f5f6f8"><span class="h3">Planning an interior? Start your design.</span><p class="p">Tail number, ten questions and a concept render. The fastest way to a quote.</p><a href="#start" class="btn" style="align-self:flex-start">Start your design</a></div>
+        <form class="card" style="gap:20px">
+          <span class="h3">Or send us a message</span>
+          <div class="g2" style="grid-template-columns:repeat(2,minmax(0,1fr))"><div><label class="lbl" for="c-name">Name</label><input id="c-name" class="input"></div><div><label class="lbl" for="c-phone">Phone</label><input id="c-phone" class="input"></div><div><label class="lbl" for="c-email">Email</label><input id="c-email" class="input"></div><div><label class="lbl" for="c-tail">Tail number (optional)</label><input id="c-tail" class="input"></div></div>
+          <div><span class="lbl">Topic</span><div class="row"><span class="chip on">New project</span><span class="chip">Existing project</span><span class="chip">Covers &amp; plugs</span><span class="chip">Other</span></div></div>
+          <div><label class="lbl" for="c-msg">Message</label><textarea id="c-msg" class="input" style="min-height:140px;padding-top:12px"></textarea></div>
+          <button type="button" class="btn" style="align-self:flex-start">Send message</button>
+          <span class="sm">Goes into the back office as a lead, same as Start Your Design.</span>
+        </form>
+      </div>
+      <aside class="stack" style="flex:2 1 320px;min-width:0;gap:20px">
+        <div class="card"><span class="eb">Call</span><span class="h3">[Phone]</span><span class="sm">[Hours]</span></div>
+        <div class="card"><span class="eb">Email</span><span class="h3">[email]</span></div>
+        <div class="card"><span class="eb">Visit</span><span class="h3">[Airport name] ([ID])</span><span class="sm">[Hangar address] · by appointment</span><img class="img r169" src="../assets/img/airport-aerial.jpg" alt="Map" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"></div>
+        <div class="card"><span class="eb">Existing clients</span><a href="https://app.air-sew.com/" class="lnk">Message us in your portal →</a></div>
+      </aside>
+    </div>
+  </section>
+  <footer class="ftr"><div class="wrap row" style="justify-content:space-between"><span class="logo">AIR SEW</span><span class="sm">Footer — same as Home</span></div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1900}}'>
+class Component extends DCLogic { renderVals() { return {}; } }
+</script>
+</body>
+</html>

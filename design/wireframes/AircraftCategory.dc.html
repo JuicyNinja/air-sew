@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wireframe — Aircraft category template</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./wf.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div class="wf">
+  <header class="hdr-bar"><div class="hdr">
+    <a href="Main.dc.html" class="logo">AIR SEW</a>
+    <nav class="nav" aria-label="Main"><a href="ServicesHub.dc.html">Services</a><a href="AircraftHub.dc.html" class="on">Aircraft</a><a href="CapabilitiesHub.dc.html">Capabilities</a><a href="Portfolio.dc.html">Portfolio</a></nav>
+    <div class="row"><a href="https://app.air-sew.com/" class="lnk">Client login</a><a href="#start" class="btn sm">Start your design</a></div>
+  </div></header>
+
+  <section class="sec alt"><span class="tag">01 · Hero</span>
+    <div class="wrap split"><div><div class="crumb">Home / Aircraft / <span class="var">{Category}</span></div><h1 class="h1"><span class="var">{Certified | Experimental}</span> aircraft</h1><p class="lead"><span class="var">{Category intro — for Experimental: building your own interior or finishing a kit}</span></p></div><img class="img r169" src="../assets/img/ac-turboprop.jpg" alt="{Category image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"></div>
+  </section>
+
+  <section class="sec tight"><span class="tag">02 · Filters (sticky on scroll)</span>
+    <div class="wrap row" style="justify-content:space-between">
+      <div class="row"><span class="chip on">All sizes</span><span class="chip">2-seat</span><span class="chip">4–6 seat</span><span class="chip">Twins</span><span class="chip">Turboprops</span><span class="chip">Jets</span></div>
+      <span class="input" style="width:320px">Filter manufacturers…</span>
+    </div>
+  </section>
+
+  <section class="sec"><span class="tag">03 · Manufacturer grid (CMS)</span>
+    <div class="wrap g4">
+      <a href="ManufacturerTemplate.dc.html" class="card"><img class="img r169" src="../assets/img/ac-turboprop.jpg" alt="{Manufacturer image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Manufacturer}</span></span><span class="sm"><span class="var">{N} model families</span> · <span class="var">{e.g. Bonanza, Baron, King Air}</span></span></a>
+      <a href="ManufacturerTemplate.dc.html" class="card"><img class="img r169" src="../assets/img/ac-twin.jpg" alt="{Manufacturer image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Manufacturer}</span></span><span class="sm"><span class="var">{N} model families</span></span></a>
+      <a href="ManufacturerTemplate.dc.html" class="card"><img class="img r169" src="../assets/img/ac-jet.jpg" alt="{Manufacturer image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Manufacturer}</span></span><span class="sm"><span class="var">{N} model families</span></span></a>
+      <a href="ManufacturerTemplate.dc.html" class="card"><img class="img r169" src="../assets/img/aircraft-ramp.jpg" alt="{Manufacturer image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Manufacturer}</span></span><span class="sm"><span class="var">{N} model families</span></span></a>
+      <a href="ManufacturerTemplate.dc.html" class="card"><img class="img r169" src="../assets/img/ac-2seat.jpg" alt="{Manufacturer image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Manufacturer}</span></span><span class="sm"><span class="var">{N} model families</span></span></a>
+      <a href="ManufacturerTemplate.dc.html" class="card"><img class="img r169" src="../assets/img/ac-experimental.jpg" alt="{Manufacturer image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Manufacturer}</span></span><span class="sm"><span class="var">{N} model families</span></span></a>
+      <a href="ManufacturerTemplate.dc.html" class="card"><img class="img r169" src="../assets/img/ac-turboprop.jpg" alt="{Manufacturer image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Manufacturer}</span></span><span class="sm"><span class="var">{N} model families</span></span></a>
+      <a href="ManufacturerTemplate.dc.html" class="card"><img class="img r169" src="../assets/img/ac-twin.jpg" alt="{Manufacturer image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Manufacturer}</span></span><span class="sm"><span class="var">{N} model families</span></span></a>
+    </div>
+  </section>
+
+  <section class="sec alt"><span class="tag">04 · Category proof</span>
+    <div class="wrap split"><img class="img r43" src="../assets/img/hero-after.jpg" alt="Featured {category} project" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><div><h2 class="h2"><span class="var">{Category-specific reassurance — e.g. Experimental: we work from your plans and your build log}</span></h2><a href="CaseStudyTemplate.dc.html" class="lnk">See the project →</a></div></div>
+  </section>
+
+  <section class="sec tight"><span class="tag">05 · Closing CTA</span>
+    <div class="wrap cta"><h2 class="h2">Picture your cabin, made for you.</h2><div class="row" style="justify-content:center"><a href="#start" class="btn acc">Start your design</a></div></div>
+  </section>
+  <footer class="ftr"><div class="wrap row" style="justify-content:space-between"><span class="logo">AIR SEW</span><span class="sm">Footer — same as Home</span></div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2500}}'>
+class Component extends DCLogic { renderVals() { return {}; } }
+</script>
+</body>
+</html>

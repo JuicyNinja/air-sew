@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wireframe — Start 5, mobile</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./wf.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div class="wf m mstep">
+  <header style="padding:12px 16px;border-bottom:1px solid #d1d5db">
+    <div class="row" style="justify-content:space-between"><a href="StartMobile4.dc.html" class="lnk" style="font-size:14px">‹ Back</a><span class="sm" style="font-weight:600">Step 5 of 6</span><a href="#call" class="lnk" style="font-size:14px">Call</a></div>
+    <div class="prog" style="margin-top:10px"><span style="width:83.3%"></span></div>
+  </header>
+  <main>
+    <h1 class="h2" style="margin-top:0">Your N12345, reimagined.</h1>
+    <div style="position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/3">
+      <img src="{{frameImg}}" alt="{{frameLabel}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <span style="position:absolute;left:8px;top:8px;font-size:11px;font-weight:700;background:rgba(255,255,255,.9);color:#1f2937;border-radius:999px;padding:2px 8px">{{frameLabel}}</span>
+    </div>
+    <div class="row" style="flex-wrap:nowrap;gap:0;margin:10px 0 14px;border:1px solid #d1d5db;border-radius:999px;overflow:hidden">
+      <button type="button" onClick="{{showBefore}}" style="flex:1 1 0;min-height:40px;border:0;font:inherit;font-weight:600;background:{{beforeBg}};color:{{beforeFg}}">Before</button>
+      <button type="button" onClick="{{showAfter}}" style="flex:1 1 0;min-height:40px;border:0;font:inherit;font-weight:600;background:{{afterBg}};color:{{afterFg}}">Concept</button>
+    </div>
+    <div class="row" style="gap:6px"><span class="chip">Modern</span><span class="chip">Charcoal + tan</span><span class="chip">Perforated</span><span class="chip">USB-C</span></div>
+    <a href="#again" class="lnk" style="display:block;margin:14px 0 6px">↻ Try another version (2 left)</a>
+    <p class="sm" style="margin:0">A concept to start the conversation. Final materials, fit and certification come from Air Sew.</p>
+  </main>
+  <div class="foot"><a href="StartMobile6.dc.html" class="btn" style="flex:1 1 auto">Send my design to Air Sew</a></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const after = this.state.after !== false;
+    return {
+      frameImg: after ? '../assets/img/hero-after.jpg' : '../assets/img/hero-before.jpg',
+      frameLabel: after ? 'Concept' : 'Your cabin today',
+      showBefore: () => this.setState({after:false}),
+      showAfter: () => this.setState({after:true}),
+      beforeBg: after ? '#fff' : '#1f2937', beforeFg: after ? '#1f2937' : '#fff',
+      afterBg: after ? '#1f2937' : '#fff', afterFg: after ? '#fff' : '#1f2937'
+    };
+  }
+}
+</script>
+</body>
+</html>

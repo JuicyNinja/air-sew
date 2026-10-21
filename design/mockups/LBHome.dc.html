@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Air Sew — Home (Logbook)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--paper:#ffffff;--draft:#f3f5f8;--ink:#14243d;--navy:#18335f;--navy-deep:#10264a;--muted:#4f5b6e;--rule:#c5cdd8;--hair:#e2e7ee;--needle:#b71c1c;--valid:#2b6a4a;--control:#8590a2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper)}
+.lb{font-family:'Archivo',system-ui,sans-serif;font-variation-settings:'wdth' 100;color:var(--ink);-webkit-font-smoothing:antialiased;font-size:17px;line-height:28px}
+.lb a{color:var(--navy)}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace;font-feature-settings:'tnum'}
+.wrap{max-width:1232px;margin:0 auto;padding:0 32px}
+.d1{font-weight:500;font-variation-settings:'wdth' 112;font-size:76px;line-height:78px;letter-spacing:-.025em;margin:0}
+.d2{font-weight:500;font-variation-settings:'wdth' 112;font-size:44px;line-height:50px;letter-spacing:-.02em;margin:0}
+.d3{font-weight:600;font-variation-settings:'wdth' 106;font-size:22px;line-height:30px;margin:0}
+.lead{font-size:20px;line-height:31px;color:var(--muted);margin:0;max-width:34em}
+.body{font-size:17px;line-height:28px;color:var(--muted);margin:0}
+.small{font-size:15px;line-height:24px;color:var(--muted)}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:20px;color:var(--muted)}
+.sec{padding:120px 0}.sec.tight{padding:88px 0}.draft{background:var(--draft)}
+.btn{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;min-height:56px;padding:0 28px;border:0;border-radius:4px;font:600 16px 'Archivo',sans-serif;cursor:pointer;text-decoration:none}
+.btn.red{background:var(--needle);color:#fff}
+.btn.navy{background:var(--navy);color:#fff}
+.btn.ghost{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)}
+.btn.sm{min-height:44px;padding:0 18px;font-size:15px}
+.lb :focus-visible{outline:2px solid var(--navy);outline-offset:3px}
+.plate{border:1px solid var(--ink);border-radius:2px;background:#fff}
+.plate dl{display:grid;grid-template-columns:150px 1fr;margin:0}
+.plate dt,.plate dd{margin:0;padding:12px 20px;border-top:1px solid var(--hair);font-size:15px;line-height:24px}
+.plate dt{color:var(--muted)}
+.seg{display:inline-flex;border:1px solid var(--ink);border-radius:4px;overflow:hidden}
+.seg button{border:0;background:#fff;color:var(--ink);font:600 15px 'Archivo',sans-serif;padding:0 22px;min-height:44px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:#fff}
+.tail{display:flex;border:1.5px solid var(--ink);border-radius:4px;overflow:hidden;background:#fff}
+.tail span{display:flex;align-items:center;padding:0 16px;font-size:24px;background:var(--draft);border-right:1.5px solid var(--ink)}
+.tail input{flex:1 1 auto;min-width:0;border:0;font-size:24px;padding:0 16px;min-height:58px;color:var(--ink);letter-spacing:.06em;text-transform:uppercase;background:#fff}
+.field label{display:block;font-size:15px;font-weight:600;margin-bottom:8px}
+.field input{width:100%;min-height:52px;border:1.5px solid var(--control);border-radius:4px;padding:0 14px;font:400 17px 'Archivo',sans-serif;color:var(--ink);background:#fff}
+.pin{position:absolute;width:34px;height:34px;border-radius:999px;background:#fff;color:var(--ink);display:flex;align-items:center;justify-content:center;font:600 14px 'IBM Plex Mono',monospace;box-shadow:0 0 0 1.5px var(--ink),0 0 0 6px rgba(255,255,255,.55);pointer-events:none}
+.wiper{position:relative;overflow:hidden;background:#cfd6df;touch-action:pan-y}
+.wiper img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.wiper .seam{position:absolute;top:0;bottom:0;width:2px;background:#fff;pointer-events:none}
+.wiper .grip{position:absolute;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:999px;background:#fff;box-shadow:0 0 0 1.5px var(--ink),0 8px 24px rgba(20,36,61,.25);display:flex;align-items:center;justify-content:center;gap:6px;pointer-events:none}
+.wiper .grip i{display:block;width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent}
+.wiper .grip i:first-child{border-right:8px solid var(--ink)}.wiper .grip i:last-child{border-left:8px solid var(--ink)}
+.wiper input[type=range]{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+.wiper input[type=range]:focus-visible + .focus{outline:3px solid #fff;outline-offset:-6px}
+.wiper .focus{position:absolute;inset:0;pointer-events:none}
+.wiper .lbl{position:absolute;top:20px;padding:4px 10px;background:#fff;color:var(--ink);font:500 13px 'IBM Plex Mono',monospace;border-radius:2px;pointer-events:none}
+.faq{border-top:1px solid var(--rule)}
+.faq button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;gap:24px;padding:22px 0;font-size:18px;font-weight:600;color:var(--ink);cursor:pointer}
+.faq button:focus-visible{outline:2px solid var(--navy);outline-offset:4px}
+.reg{width:100%;border-collapse:collapse}
+.reg th{font:500 13px 'IBM Plex Mono',monospace;color:var(--muted);text-align:left;padding:12px 20px 12px 0;border-bottom:1.5px solid var(--ink)}
+.reg td{padding:16px 20px 16px 0;border-bottom:1px solid var(--hair);font-size:16px;line-height:24px;vertical-align:top}
+@keyframes resolve{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.found{animation:resolve .4s ease-out both}
+@media (prefers-reduced-motion:reduce){.found{animation:none}}
+</style>
+</helmet>
+<div class="lb" style="">
+<header style="border-bottom:1px solid var(--hair);background:#fff"><div class="wrap" style="display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:32px">
+  <a href="LBHome.dc.html"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew home" style="height:36px;display:block"></a>
+  <nav aria-label="Main" style="display:flex;gap:36px;font-size:15px;font-weight:500"><a href="LBServices.dc.html" style="text-decoration:none;color:var(--ink);padding:6px 0;">Services</a><a href="LBAircraft.dc.html" style="text-decoration:none;color:var(--ink);padding:6px 0;">Aircraft</a><a href="LBCapabilities.dc.html" style="text-decoration:none;color:var(--ink);padding:6px 0;">Capabilities</a><a href="LBPortfolio.dc.html" style="text-decoration:none;color:var(--ink);padding:6px 0;">Portfolio</a></nav>
+  <div style="display:flex;gap:24px;align-items:center;font-size:15px"><a href="https://app.air-sew.com/" style="text-decoration:none;color:var(--muted)">Client login</a><a href="LBStart1.dc.html" class="btn ghost sm">Start your design</a></div>
+</div></header>
+<section style="padding:88px 0 104px;background:linear-gradient(90deg,var(--hair) 1px,transparent 1px) 0 0/calc(100%/12) 100%">
+  <div class="wrap" style="display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:start">
+    <div>
+      <p class="tag" style="margin:0 0 28px">FAA Part 145 repair station [cert no.]</p>
+      <h1 class="d1">Tell us your tail number. We'll show you what your cabin can become.</h1>
+      <p class="lead" style="margin-top:28px">We pull your aircraft from the FAA registry, ask how you fly, and render a concept of your own cabin. About ten minutes, and you'll hear from the owner within one business day.</p>
+      <form style="margin-top:40px;max-width:540px" onsubmit="return false">
+        <label for="tail" style="display:block;font-size:15px;font-weight:600;margin-bottom:10px">Tail number</label>
+        <div style="display:flex;gap:12px"><div class="tail" style="flex:1 1 auto"><span class="mono">N</span><input id="tail" class="mono" value="12345" autocomplete="off"></div><button type="button" class="btn red" onClick="{{find}}">Find my aircraft</button></div>
+        <p class="small" style="margin:12px 0 0">No tail number yet? <a href="#">Call us</a> and we'll talk it through.</p>
+      </form>
+    </div>
+    <div style="margin-top:8px"><div class="plate">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;padding:18px 20px"><span class="mono" style="font-size:28px;font-weight:500">N12345</span><span class="mono" style="font-size:13px;color:{{plateStatusColor}}">{{plateStatus}}</span></div>
+  <dl class="{{plateClass}}"><dt>Aircraft</dt><dd>{{v_model}}</dd><dt>Year · serial</dt><dd class="mono">{{v_year}}</dd><dt>Seats</dt><dd class="mono">{{v_seats}}</dd><dt>Burn standard</dt><dd>{{v_burn}}</dd></dl>
+  <div style="border-top:1px solid var(--hair);padding:20px;opacity:{{planOpacity}};transition:opacity .4s"><svg viewBox="0 0 520 190" width="100%" role="img" aria-label="Top-down seat plan, club layout" style="display:block">
+  <path d="M18 95 C18 58 52 44 104 42 L430 46 C470 48 500 70 502 95 C500 120 470 142 430 144 L104 148 C52 146 18 132 18 95Z" fill="none" stroke="var(--ink)" stroke-width="1"/>
+  <path d="M250 46 L300 4 L360 4 L330 46 M250 144 L300 186 L360 186 L330 144" fill="none" stroke="var(--rule)" stroke-width="1"/>
+  <path d="M96 52 V138" stroke="var(--rule)" stroke-width="1" stroke-dasharray="3 3"/>
+  <g fill="none" stroke="var(--ink)" stroke-width="1">
+    <rect x="120" y="56" width="46" height="34" rx="6"/><rect x="120" y="100" width="46" height="34" rx="6"/>
+    <rect x="236" y="56" width="46" height="34" rx="6"/><rect x="236" y="100" width="46" height="34" rx="6"/>
+    <rect x="322" y="56" width="46" height="34" rx="6"/><rect x="322" y="100" width="46" height="34" rx="6"/>
+  </g>
+  <g stroke="var(--ink)" stroke-width="3" stroke-linecap="round"><path d="M166 58V88M166 102V132M368 58V88M368 102V132M236 58V88M236 102V132"/></g>
+  <path d="M396 144 V156 H460 V142" fill="none" stroke="var(--rule)" stroke-width="1" stroke-dasharray="3 3"/>
+  <g font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--muted)"><text x="40" y="99">PANEL</text><text x="404" y="170">AFT DOORS</text><text x="128" y="172">ROW 1</text><text x="236" y="172">ROW 2</text><text x="326" y="172">ROW 3</text></g>
+</svg></div>
+</div></div>
+  </div>
+</section>
+
+<section aria-label="Credentials" style="border-top:1.5px solid var(--ink);border-bottom:1px solid var(--hair)">
+  <div class="wrap" style="display:grid;grid-template-columns:repeat(4,1fr)">
+    <div style="padding:22px 24px 22px 0px;"><div class="tag">Repair station</div><div style="font-size:16px;font-weight:600;line-height:24px;margin-top:4px">FAA Part 145, cert [no.]</div></div><div style="padding:22px 24px 22px 24px;border-left:1px solid var(--hair)"><div class="tag">Materials</div><div style="font-size:16px;font-weight:600;line-height:24px;margin-top:4px">Burn-certified, certs in your logbook</div></div><div style="padding:22px 24px 22px 24px;border-left:1px solid var(--hair)"><div class="tag">Shop</div><div style="font-size:16px;font-weight:600;line-height:24px;margin-top:4px">Owner-operated, [City, State]</div></div><div style="padding:22px 24px 22px 24px;border-left:1px solid var(--hair)"><div class="tag">Delivered</div><div style="font-size:16px;font-weight:600;line-height:24px;margin-top:4px">[n] cabins, pistons to midsize jets</div></div>
+  </div>
+</section>
+
+<section class="sec" style="padding-bottom:0">
+  <div class="wrap" style="display:grid;grid-template-columns:7fr 5fr;gap:72px;align-items:end;margin-bottom:48px">
+    <h2 class="d2">From worn out to one of a kind. Drag to see it.</h2>
+    <p class="body">The same cabin, the same angle, before it came in and the day it left. Every change listed in the quote and signed off in the owner's records.</p>
+  </div>
+  <figure style="margin:0"><div class="wiper" style="height:760px;border-radius:0px">
+  <img src="../assets/img/hero-after.jpg" alt="After: the finished cabin">
+  <img src="../assets/img/hero-before.jpg" alt="Before: the same cabin as it arrived" style="{{beforeClip}}">
+  <span class="pin" style="left:38%;top:58%">1</span><span class="pin" style="left:12%;top:40%">2</span><span class="pin" style="left:46%;top:9%">3</span>
+  <span class="lbl" style="left:20px">Before</span><span class="lbl" style="right:20px">After</span>
+  <span class="seam" style="left:{{pos}}%"></span>
+  <span class="grip" style="left:{{pos}}%"><i></i><i></i></span>
+  <input type="range" min="0" max="100" value="{{pos}}" onInput="{{slide}}" aria-label="Drag to compare before and after"><span class="focus"></span>
+</div></figure>
+  <div class="wrap"><ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:32px;border-bottom:1px solid var(--hair)">
+    <li style="display:flex;gap:16px;padding:24px 0"><span class="mono" style="font-weight:500">1</span><span><strong style="font-weight:600">Seats</strong><br><span class="small">Frames inspected, new foam, perforated leather</span></span></li><li style="display:flex;gap:16px;padding:24px 0"><span class="mono" style="font-weight:500">2</span><span><strong style="font-weight:600">Sidewalls</strong><br><span class="small">Wrapped to match, window reveals refinished</span></span></li><li style="display:flex;gap:16px;padding:24px 0"><span class="mono" style="font-weight:500">3</span><span><strong style="font-weight:600">Headliner</strong><br><span class="small">Re-covered, lights and vents re-fitted</span></span></li>
+  </ol><p class="tag" style="margin:16px 0 0">[Year] Beechcraft A36 · full interior</p></div>
+</section>
+
+<section class="sec">
+  <div class="wrap" style="display:grid;grid-template-columns:4fr 8fr;gap:72px">
+    <div><h2 class="d2">Every part of the cabin.</h2><p class="body" style="margin-top:20px">Designed together, built under one roof, so every piece belongs to the same cabin.</p><a href="#" style="display:inline-block;margin-top:24px;font-weight:600">All services</a></div>
+    <div><a href="#" style="display:grid;grid-template-columns:40px 1fr 1.4fr;gap:20px;align-items:center;padding:22px 0;border-top:1px solid var(--rule);text-decoration:none;color:var(--ink)"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 32px"><g stroke="#18335f" stroke-width="0.6"><path d="M6.6 3h3.1c.9 0 1.6.8 1.5 1.7L10.2 13H6.1L5.1 4.7C5 3.8 5.7 3 6.6 3z"/><path d="M5 13h11.5a1.5 1.5 0 0 1 1.5 1.5V16H5z"/><path d="M10.6 10H16M8 16v4M15 16v4M6 20h11"/></g><path d="M7.4 5.6l.6 5" stroke="#b71c1c" stroke-width="0.7" stroke-dasharray=".9 1.3"/></svg><span class="d3" style="font-size:20px">Seats & upholstery</span><span class="small">Rebuilt from the frame, new foam, your leather and stitch.</span></a><a href="#" style="display:grid;grid-template-columns:40px 1fr 1.4fr;gap:20px;align-items:center;padding:22px 0;border-top:1px solid var(--rule);text-decoration:none;color:var(--ink)"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 32px"><g stroke="#18335f" stroke-width="0.6"><rect x="4" y="3" width="16" height="18" rx="2"/><rect x="9" y="6.5" width="6" height="8" rx="3"/></g><path d="M7 18h10" stroke="#b71c1c" stroke-width="0.7" stroke-dasharray=".9 1.3"/></svg><span class="d3" style="font-size:20px">Sidewalls & panels</span><span class="small">Soft-touch panels and armrests matched to the seats.</span></a><a href="#" style="display:grid;grid-template-columns:40px 1fr 1.4fr;gap:20px;align-items:center;padding:22px 0;border-top:1px solid var(--rule);text-decoration:none;color:var(--ink)"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 32px"><path d="M3 20v-8a9 9 0 0 1 18 0v8M3 20h18" stroke="#18335f" stroke-width="0.6"/><path d="M7 11a5 5 0 0 1 10 0" stroke="#b71c1c" stroke-width="0.7" stroke-dasharray=".9 1.3"/></svg><span class="d3" style="font-size:20px">Headliners</span><span class="small">A tight, quiet ceiling; lights and vents re-fitted.</span></a><a href="#" style="display:grid;grid-template-columns:40px 1fr 1.4fr;gap:20px;align-items:center;padding:22px 0;border-top:1px solid var(--rule);text-decoration:none;color:var(--ink)"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 32px"><path d="M6 4h12l3 16H3z" stroke="#18335f" stroke-width="0.6"/><path d="M7.3 6.6h9.4l2.2 10.8H5.1z" stroke="#b71c1c" stroke-width="0.7" stroke-dasharray=".9 1.3"/></svg><span class="d3" style="font-size:20px">Carpet & flooring</span><span class="small">Bound carpet cut to your floor.</span></a><a href="#" style="display:grid;grid-template-columns:40px 1fr 1.4fr;gap:20px;align-items:center;padding:22px 0;border-top:1px solid var(--rule);text-decoration:none;color:var(--ink)"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 32px"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM4 9h16M12 9v11M10 13.5v2M14 13.5v2" stroke="#18335f" stroke-width="0.6"/><path d="M11 6.5h2" stroke="#b71c1c" stroke-width="0.7"/></svg><span class="d3" style="font-size:20px">Cabinetry & galleys</span><span class="small">Refinished or rebuilt in the veneer you pick.</span></a><a href="#" style="display:grid;grid-template-columns:40px 1fr 1.4fr;gap:20px;align-items:center;padding:22px 0;border-top:1px solid var(--rule);text-decoration:none;color:var(--ink)"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 32px"><path d="M8 9h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2zM8 9V6h4v3M12 7h1.5" stroke="#18335f" stroke-width="0.6"/><path d="M17 5h.01M19.5 3.5h.01M19 7h.01M21 5.5h.01M17.5 9h.01" stroke="#b71c1c" stroke-width="0.9"/></svg><span class="d3" style="font-size:20px">Plastics, covers & cowl plugs</span><span class="small">Trim restored or 3D-printed; covers made to your airplane.</span></a><div style="border-top:1px solid var(--rule)"></div></div>
+  </div>
+</section>
+
+<section class="sec draft">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:7fr 5fr;gap:72px;align-items:end;margin-bottom:40px">
+      <h2 class="d2">Built for your airplane, two seats to midsize jets.</h2>
+      <div><label for="find" style="display:block;font-size:15px;font-weight:600;margin-bottom:8px">Find your aircraft</label><input id="find" placeholder="Bonanza, PC-12, RV-10…" style="width:100%;min-height:52px;border:1.5px solid var(--ink);border-radius:4px;padding:0 16px;font:17px 'Archivo',sans-serif;background:#fff"></div>
+    </div>
+    <table class="reg"><thead><tr><th>Make</th><th>Model family</th><th>Seats</th><th>Category</th><th></th></tr></thead>
+      <tbody><tr><td>Beechcraft</td><td style="font-weight:600"><a href="LBModel.dc.html" style="color:var(--ink);text-decoration:none">Bonanza</a></td><td class="mono">4–6</td><td>Certified</td><td style="text-align:right;padding-right:0"><a href="LBModel.dc.html" style="font-weight:600;font-size:15px">Open</a></td></tr><tr><td>Cirrus</td><td style="font-weight:600"><a href="#" style="color:var(--ink);text-decoration:none">SR22</a></td><td class="mono">4–5</td><td>Certified</td><td style="text-align:right;padding-right:0"><a href="#" style="font-weight:600;font-size:15px">Open</a></td></tr><tr><td>Pilatus</td><td style="font-weight:600"><a href="#" style="color:var(--ink);text-decoration:none">PC-12</a></td><td class="mono">6–9</td><td>Certified</td><td style="text-align:right;padding-right:0"><a href="#" style="font-weight:600;font-size:15px">Open</a></td></tr><tr><td>Beechcraft</td><td style="font-weight:600"><a href="#" style="color:var(--ink);text-decoration:none">King Air</a></td><td class="mono">7–11</td><td>Certified</td><td style="text-align:right;padding-right:0"><a href="#" style="font-weight:600;font-size:15px">Open</a></td></tr><tr><td>Piper</td><td style="font-weight:600"><a href="#" style="color:var(--ink);text-decoration:none">PA-46 Malibu / M-Class</a></td><td class="mono">6</td><td>Certified</td><td style="text-align:right;padding-right:0"><a href="#" style="font-weight:600;font-size:15px">Open</a></td></tr><tr><td>Van's</td><td style="font-weight:600"><a href="#" style="color:var(--ink);text-decoration:none">RV-10</a></td><td class="mono">4</td><td>Experimental</td><td style="text-align:right;padding-right:0"><a href="#" style="font-weight:600;font-size:15px">Open</a></td></tr></tbody></table>
+    <a href="#" style="display:inline-block;margin-top:24px;font-weight:600">All aircraft, A to Z</a>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap" style="display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:center">
+    <div><h2 class="d2">Your job file, open the whole time.</h2>
+      <p class="body" style="margin-top:20px">Most shops go dark until the job is done. We don't. Every stage is photographed and signed off in your client portal, every finding comes with a photo and a price, and nothing changes without your approval.</p>
+      <a href="https://app.air-sew.com/" style="display:inline-block;margin-top:28px;font-weight:600">Client login</a></div>
+    <div class="plate" style="box-shadow:12px 12px 0 var(--draft)">
+  <div style="display:flex;justify-content:space-between;padding:18px 22px;border-bottom:1px solid var(--ink);gap:16px"><span class="mono" style="font-weight:500">N12345 · Work order [0000]</span><span class="tag">Completion [date]</span></div>
+  <table style="width:100%;border-collapse:collapse;font-size:15px">
+    <thead><tr style="text-align:left" class="tag"><th style="padding:12px 22px;font-weight:500">Stage</th><th style="font-weight:500">Status</th><th style="font-weight:500;padding-right:22px">Signed off</th></tr></thead>
+    <tbody>
+      <tr style="border-top:1px solid var(--hair)"><td style="padding:14px 22px">Strip and inspect</td><td>Complete</td><td class="mono" style="padding-right:22px">[date]</td></tr>
+      <tr style="border-top:1px solid var(--hair)"><td style="padding:14px 22px">Seat frames and foam</td><td>Complete</td><td class="mono" style="padding-right:22px">[date]</td></tr>
+      <tr style="border-top:1px solid var(--hair);background:var(--draft)"><td style="padding:14px 22px;font-weight:600">Upholstery</td><td style="font-weight:600">In progress</td><td class="mono" style="padding-right:22px">—</td></tr>
+      <tr style="border-top:1px solid var(--hair)"><td style="padding:14px 22px;color:var(--muted)">Panels and headliner</td><td style="color:var(--muted)">Scheduled</td><td class="mono" style="padding-right:22px">—</td></tr>
+      <tr style="border-top:1px solid var(--hair)"><td style="padding:14px 22px;color:var(--muted)">Install and records</td><td style="color:var(--muted)">Scheduled</td><td class="mono" style="padding-right:22px">—</td></tr>
+    </tbody>
+  </table>
+  <div style="display:flex;gap:16px;align-items:center;padding:16px 22px;border-top:1px solid var(--ink)"><img src="../assets/img/seat-frame.jpg" alt="Seat-rail bracket found during strip" style="width:56px;height:56px;object-fit:cover"><span style="flex:1;font-size:15px;line-height:22px"><strong style="font-weight:600">Finding: cracked seat-rail bracket</strong><br><span style="color:var(--muted)">Replace, $[price]. Your approval needed.</span></span><span class="btn ghost sm">Review</span></div>
+</div>
+  </div>
+</section>
+
+<section style="border-top:1px solid var(--hair)">
+  <div class="wrap" style="display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:center;padding:96px 32px">
+    <img src="../assets/img/portrait-craftsman.jpg" alt="[Name], owner of Air Sew, in the shop" style="width:100%;aspect-ratio:4/5;object-fit:cover">
+    <div><h2 class="d2">One owner designs, builds and signs off every cabin.</h2>
+      <p class="body" style="margin-top:20px;max-width:30em">Your airplane never gets passed down the line. The person you talk to on the first call is the person who signs your logbook.</p>
+      <dl style="display:grid;grid-template-columns:repeat(2,1fr);gap:0 32px;margin:36px 0 0">
+        <div style="border-top:1px solid var(--rule);padding:14px 0"><dt class="tag">Owner</dt><dd style="margin:4px 0 0;font-weight:600">[Name]</dd></div>
+        <div style="border-top:1px solid var(--rule);padding:14px 0"><dt class="tag">Direct line</dt><dd class="mono" style="margin:4px 0 0;font-weight:500">[Phone]</dd></div>
+      </dl></div>
+  </div>
+</section>
+
+<section class="sec draft">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:40px"><h2 class="d2">Recent work.</h2><a href="#" style="font-weight:600">All projects</a></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px">
+      <a href="#" style="text-decoration:none;color:var(--ink)"><img src="../assets/img/hero-after.jpg" alt="Bonanza cabin, cream leather club seats" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"><div class="tag" style="margin-top:14px">[Year] A36 Bonanza</div><div class="d3" style="margin-top:4px">[Project headline]</div></a><a href="#" style="text-decoration:none;color:var(--ink)"><img src="../assets/img/project-front-seats.jpg" alt="Slate gray leather front seats" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"><div class="tag" style="margin-top:14px">[Year] [Make Model]</div><div class="d3" style="margin-top:4px">[Project headline]</div></a><a href="#" style="text-decoration:none;color:var(--ink)"><img src="../assets/img/project-turboprop.jpg" alt="Turboprop cabin, taupe leather" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"><div class="tag" style="margin-top:14px">[Year] [Make Model]</div><div class="d3" style="margin-top:4px">[Project headline]</div></a>
+    </div>
+    <figure style="margin:88px 0 0;padding-top:40px;border-top:1.5px solid var(--ink);display:grid;grid-template-columns:8fr 4fr;gap:72px">
+      <blockquote style="margin:0;font-weight:500;font-variation-settings:'wdth' 108;font-size:36px;line-height:44px;letter-spacing:-.015em">“[Owner quote about the finished cabin and working with Air Sew.]”</blockquote>
+      <figcaption style="align-self:end"><div style="font-weight:600">[Owner name]</div><div class="tag">[Year] [Aircraft], [home airport]</div></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec tight">
+  <div class="wrap"><h2 class="d2" style="max-width:16em">Five steps, one person, a date in writing.</h2>
+    <ol style="list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1.5px solid var(--ink)">
+      <li style="padding:20px 24px 0 0"><span class="tag">01</span><div class="d3" style="font-size:19px;margin:8px 0 6px">Start your design</div><div class="small">Tail number, ten questions, your concept.</div></li><li style="padding:20px 24px 0 0"><span class="tag">02</span><div class="d3" style="font-size:19px;margin:8px 0 6px">Design session</div><div class="small">Materials in hand; quote and completion date in writing.</div></li><li style="padding:20px 24px 0 0"><span class="tag">03</span><div class="d3" style="font-size:19px;margin:8px 0 6px">Drop-off</div><div class="small">Fly in, or we arrange the ferry.</div></li><li style="padding:20px 24px 0 0"><span class="tag">04</span><div class="d3" style="font-size:19px;margin:8px 0 6px">Build</div><div class="small">Every stage signed off in your portal.</div></li><li style="padding:20px 24px 0 0"><span class="tag">05</span><div class="d3" style="font-size:19px;margin:8px 0 6px">Delivery</div><div class="small">Logbook entries, burn certs, records packet.</div></li>
+    </ol></div>
+</section>
+
+<section style="background:var(--navy-deep);color:#fff;padding:96px 0">
+  <div class="wrap" style="display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:center">
+    <h2 class="d2" style="color:#fff">Start with your tail number.</h2>
+    <form onsubmit="return false"><label for="tail2" style="display:block;font-size:15px;font-weight:600;margin-bottom:10px">Tail number</label>
+      <div style="display:flex;gap:12px"><div class="tail" style="flex:1 1 auto;border-color:#fff"><span class="mono" style="border-color:#fff;color:var(--ink)">N</span><input id="tail2" class="mono" placeholder="12345"></div><a href="LBStart1.dc.html" class="btn red">Find my aircraft</a></div>
+      <p style="margin:12px 0 0;font-size:15px;color:rgba(255,255,255,.8)">Or call <span class="mono">[phone]</span>.</p></form>
+  </div>
+</section>
+<footer style="border-top:1.5px solid var(--ink);padding:56px 0 40px"><div class="wrap">
+  <div style="display:grid;grid-template-columns:4fr 2fr 2fr 2fr;gap:32px">
+    <div><img src="../assets/logo/air-sew-logo.png" alt="Air Sew" style="height:32px"><p class="small" style="margin:16px 0 0;max-width:26em">Aircraft interiors from an owner-operated FAA Part 145 repair station. [City, State] · [Airport ID]</p></div>
+    <div class="small" style="display:flex;flex-direction:column;gap:8px"><span class="tag">Work</span><a href="LBServices.dc.html" style="color:var(--ink);text-decoration:none">Services</a><a href="LBAircraft.dc.html" style="color:var(--ink);text-decoration:none">Aircraft</a><a href="LBCapabilities.dc.html" style="color:var(--ink);text-decoration:none">Capabilities</a><a href="LBPortfolio.dc.html" style="color:var(--ink);text-decoration:none">Portfolio</a></div>
+    <div class="small" style="display:flex;flex-direction:column;gap:8px"><span class="tag">Company</span><a href="LBAbout.dc.html" style="color:var(--ink);text-decoration:none">About</a><a href="LBProcess.dc.html" style="color:var(--ink);text-decoration:none">How it works</a><a href="LBFaq.dc.html" style="color:var(--ink);text-decoration:none">FAQ</a><a href="LBContact.dc.html" style="color:var(--ink);text-decoration:none">Contact</a></div>
+    <div class="small" style="display:flex;flex-direction:column;gap:8px"><span class="tag">Clients</span><a href="LBStart1.dc.html" style="color:var(--ink);text-decoration:none">Start your design</a><a href="https://app.air-sew.com/" style="color:var(--ink);text-decoration:none">Client login</a><a href="tel:+10000000000" class="mono" style="color:var(--ink);text-decoration:none">[Phone]</a></div>
+  </div>
+  <div class="tag" style="display:flex;justify-content:space-between;margin-top:48px;padding-top:20px;border-top:1px solid var(--hair)"><span>© 2026 Air Sew</span><span><a href="LBLegal.dc.html" style="color:var(--muted)">Privacy</a>  <a href="LBLegal.dc.html" style="color:var(--muted)">Terms</a></span></div>
+</div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6000}}'>
+class Component extends DCLogic {
+  constructor(p) { super(p); this.state = { found: false, pos: 50 }; }
+  renderVals() {
+    const s = this.state;
+    const v = { plateStatus: s.found ? 'Registration valid' : 'Waiting for lookup', plateStatusColor: s.found ? 'var(--valid)' : 'var(--muted)', plateClass: s.found ? 'found' : '',
+      v_model: s.found ? 'Beechcraft A36 Bonanza' : '—', v_year: s.found ? '1998 · [E-0000]' : '—', v_seats: s.found ? '6' : '—', v_burn: s.found ? 'Part 23' : '—',
+      planOpacity: s.found ? 1 : 0.25, find: () => this.setState({ found: true }),pos: s.pos, slide: (e) => this.setState({ pos: Number(e.target.value) }), beforeClip: 'clip-path:inset(0 ' + (100 - s.pos) + '% 0 0)', };
+    
+    return v;
+  }
+}
+</script>
+</body>
+</html>

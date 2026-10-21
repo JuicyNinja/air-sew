@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Concept C — Altitude</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..500,0..100,0..1&family=Manrope:wght@400;500;600&display=swap">
+<style>
+:root{--white:#fff;--sky:#eef3f9;--paper:#f8f7f4;--ink:#14243d;--muted:#4e5a6d;--navy:#18335f;--deep:#10264a;--line:#e3e7ed;--needle:#b71c1c}
+body{margin:0;background:#fff}
+.c{font-family:'Manrope',system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+.c a{color:var(--navy)}
+.f{font-family:'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border:0;border-radius:12px;font:600 16px 'Manrope',sans-serif;text-decoration:none;cursor:pointer}
+.btn.red{background:var(--needle);color:#fff}.btn.navy{background:var(--navy);color:#fff}
+.stage{border:0;background:none;text-align:left;font:inherit;color:var(--muted);padding:18px 0 18px 24px;border-left:2px solid var(--line);cursor:pointer;width:100%}
+.stage[aria-pressed=true]{color:var(--ink);border-left-color:var(--navy)}
+.stage:focus-visible,.btn:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
+.fade{transition:opacity .5s ease}
+@media (prefers-reduced-motion:reduce){.fade{transition:none}}
+</style>
+</helmet>
+<div class="c">
+<header><div class="wrap" style="display:flex;align-items:center;justify-content:space-between;min-height:84px">
+  <img src="../assets/logo/air-sew-logo.png" alt="Air Sew" style="height:40px">
+  <nav aria-label="Main" style="display:flex;gap:36px;font-size:15px;font-weight:500"><a href="#" style="text-decoration:none;color:var(--ink)">Services</a><a href="#" style="text-decoration:none;color:var(--ink)">Aircraft</a><a href="#" style="text-decoration:none;color:var(--ink)">Capabilities</a><a href="#" style="text-decoration:none;color:var(--ink)">Portfolio</a></nav>
+  <div style="display:flex;gap:24px;align-items:center"><a href="#" style="font-size:15px;text-decoration:none;color:var(--muted)">Client login</a><a href="#" class="btn navy" style="min-height:44px;padding:0 20px;font-size:15px">Start your design</a></div>
+</div></header>
+<section style="padding:120px 0 72px;text-align:center">
+  <div class="wrap">
+    <h1 class="f" style="font-weight:300;font-size:112px;line-height:104px;letter-spacing:-.03em;margin:0 auto;max-width:8.6em">From worn out to one of a kind.</h1>
+    <p style="font-size:21px;line-height:33px;color:var(--muted);margin:36px auto 0;max-width:30em">Comfortable, personal cabins for two-seat trainers to midsize jets, from an owner-operated shop that shows you every stage.</p>
+    <div style="display:flex;gap:12px;justify-content:center;margin-top:40px"><a href="#" class="btn red">Start your design</a><a href="#" class="btn" style="color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)">See transformations</a></div>
+  </div>
+</section>
+<section style="padding:0 0 160px"><div class="wrap" style="max-width:1376px"><img src="../assets/img/hero-after.jpg" alt="Finished cabin: cream leather club seats" style="display:block;width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:24px"></div></section>
+
+<section style="background:var(--sky);padding:140px 0">
+  <div class="wrap" style="display:grid;grid-template-columns:4fr 7fr;gap:80px;align-items:center">
+    <div>
+      <h2 class="f" style="font-weight:400;font-size:52px;line-height:58px;letter-spacing:-.02em;margin:0 0 40px">What happens to your cabin.</h2>
+      <div role="group" aria-label="Stages"><button type="button" class="stage" aria-pressed="{{sp0}}" onClick="{{go0}}"><span style="display:block;font-size:20px;font-weight:600">Arrives</span><span style="display:{{sd0}};font-size:16px;line-height:26px;margin-top:6px">Your cabin as it flies in: photographed, measured, every worn spot noted in your quote.</span></button><button type="button" class="stage" aria-pressed="{{sp1}}" onClick="{{go1}}"><span style="display:block;font-size:20px;font-weight:600">Stripped</span><span style="display:{{sd1}};font-size:16px;line-height:26px;margin-top:6px">Seats down to the frame. Structure, rails and mechanisms inspected and signed off.</span></button><button type="button" class="stage" aria-pressed="{{sp2}}" onClick="{{go2}}"><span style="display:block;font-size:20px;font-weight:600">Built</span><span style="display:{{sd2}};font-size:16px;line-height:26px;margin-top:6px">New foam, your leather and stitch, cut by machine and finished by hand.</span></button><button type="button" class="stage" aria-pressed="{{sp3}}" onClick="{{go3}}"><span style="display:block;font-size:20px;font-weight:600">Delivered</span><span style="display:{{sd3}};font-size:16px;line-height:26px;margin-top:6px">Reinstalled, logbook entries made, burn certs in your records. One of a kind.</span></button></div>
+      <p style="font-size:13px;color:var(--muted);margin:24px 0 0">On the live site, scrolling moves through the stages while the image stays pinned.</p>
+    </div>
+    <div style="position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:#dfe7f1"><img src="../assets/img/hero-before.jpg" alt="Arrives" class="fade" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{so0}}"><img src="../assets/img/seat-frame.jpg" alt="Stripped" class="fade" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{so1}}"><img src="../assets/img/hands-sewing.jpg" alt="Built" class="fade" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{so2}}"><img src="../assets/img/hero-after.jpg" alt="Delivered" class="fade" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{so3}}"></div>
+  </div>
+</section>
+
+<section style="background:var(--deep);color:#fff;padding:140px 0">
+  <div class="wrap" style="display:grid;grid-template-columns:5fr 6fr;gap:80px;align-items:center">
+    <div>
+      <h2 class="f" style="font-weight:300;font-size:60px;line-height:64px;letter-spacing:-.02em;margin:0">Most shops go dark until the job is done. We don't.</h2>
+      <p style="font-size:19px;line-height:31px;color:rgba(255,255,255,.78);margin:28px 0 36px">Your client portal shows every stage, every photo and every approval, with your completion date in writing.</p>
+      <a href="#" style="color:#fff;font-weight:600;font-size:16px">How the portal works</a>
+    </div>
+    <div style="background:#fff;color:var(--ink);border-radius:20px;padding:28px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><span class="f" style="font-size:26px">N12345 · Full interior</span><span style="font-size:14px;color:var(--muted)">Completion [date]</span></div>
+      <div style="margin-top:20px;display:flex;flex-direction:column;gap:12px">
+        <div style="display:grid;grid-template-columns:110px 1fr 44px;gap:12px;align-items:center;font-size:14px"><span>Seats</span><span style="height:8px;border-radius:9px;background:var(--line)"><span style="display:block;width:72%;height:8px;border-radius:9px;background:var(--navy)"></span></span><span style="color:var(--muted);text-align:right">72%</span></div>
+        <div style="display:grid;grid-template-columns:110px 1fr 44px;gap:12px;align-items:center;font-size:14px"><span>Sidewalls</span><span style="height:8px;border-radius:9px;background:var(--line)"><span style="display:block;width:40%;height:8px;border-radius:9px;background:var(--navy)"></span></span><span style="color:var(--muted);text-align:right">40%</span></div>
+        <div style="display:grid;grid-template-columns:110px 1fr 44px;gap:12px;align-items:center;font-size:14px"><span>Headliner</span><span style="height:8px;border-radius:9px;background:var(--line)"><span style="display:block;width:15%;height:8px;border-radius:9px;background:var(--navy)"></span></span><span style="color:var(--muted);text-align:right">15%</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px"><img src="../assets/img/hero-before.jpg" alt="" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px"><img src="../assets/img/seat-frame.jpg" alt="" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px"><img src="../assets/img/project-front-seats.jpg" alt="" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px"></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:140px 0">
+  <div class="wrap" style="display:grid;grid-template-columns:4fr 7fr;gap:80px">
+    <h2 class="f" style="font-weight:400;font-size:52px;line-height:58px;letter-spacing:-.02em;margin:0">Every part of the cabin, made yours.</h2>
+    <div>
+      <a href="#" style="display:grid;grid-template-columns:1fr 2fr;gap:24px;padding:24px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--ink)"><span style="font-size:20px;font-weight:600">Seats & upholstery</span><span style="font-size:17px;line-height:27px;color:var(--muted)">Rebuilt from the frame, covered in your leather and stitch.</span></a><a href="#" style="display:grid;grid-template-columns:1fr 2fr;gap:24px;padding:24px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--ink)"><span style="font-size:20px;font-weight:600">Sidewalls & panels</span><span style="font-size:17px;line-height:27px;color:var(--muted)">Soft-touch panels and armrests matched to your seats.</span></a><a href="#" style="display:grid;grid-template-columns:1fr 2fr;gap:24px;padding:24px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--ink)"><span style="font-size:20px;font-weight:600">Headliners</span><span style="font-size:17px;line-height:27px;color:var(--muted)">A tight, quiet ceiling with lights and vents re-fitted.</span></a><a href="#" style="display:grid;grid-template-columns:1fr 2fr;gap:24px;padding:24px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--ink)"><span style="font-size:20px;font-weight:600">Carpet & cabinetry</span><span style="font-size:17px;line-height:27px;color:var(--muted)">Bound carpet and refinished woodwork in your choices.</span></a><a href="#" style="display:grid;grid-template-columns:1fr 2fr;gap:24px;padding:24px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--ink)"><span style="font-size:20px;font-weight:600">Plastics, covers & plugs</span><span style="font-size:17px;line-height:27px;color:var(--muted)">Trim restored or 3D-printed; covers made to your airplane.</span></a>
+      <div style="border-top:1px solid var(--line)"></div>
+    </div>
+  </div>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4100}}'>
+class Component extends DCLogic {
+  constructor(p) { super(p); this.state = { s: 0 }; }
+  renderVals() {
+    const s = this.state.s, v = {};
+    for (let i = 0; i < 4; i++) { const on = s === i; v['sp' + i] = String(on); v['sd' + i] = on ? 'block' : 'none'; v['so' + i] = on ? 1 : 0; v['go' + i] = () => this.setState({ s: i }); }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

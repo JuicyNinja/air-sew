@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Air Sew — Portfolio</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Manrope:wght@400;500;600&display=swap">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#18335f}a:hover{color:#10264a}
+.eb{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#18335f}
+.eb:before{content:"";width:20px;height:2px;border-radius:2px;background:#b71c1c}
+.h1{font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:60px;line-height:64px;letter-spacing:-.02em;margin:16px 0 24px}
+.h2{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:36px;line-height:44px;letter-spacing:-.01em;margin:8px 0 16px}
+.h3{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:22px;line-height:30px;margin:0}
+.lead{font-size:20px;line-height:32px;color:#566174;margin:0 0 32px;max-width:560px}
+.body{font-size:17px;line-height:28px;color:#566174;margin:0}
+.sm{font-size:15px;line-height:24px;color:#566174}
+.xs{font-size:13px;line-height:20px;color:#566174}
+.wrap{max-width:1200px;margin:0 auto}
+.sec{padding:96px 24px}.alt{background:#f8f7f4}.sky{background:#eef3f9}
+.split{display:flex;flex-wrap:wrap;gap:64px;align-items:center}.split>*{flex:1 1 440px;min-width:0}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:10px;background:#18335f;color:#fff;font-size:15px;font-weight:600;text-decoration:none;border:0;font-family:inherit;cursor:pointer}
+.btn:hover{color:#fff;background:#10264a}
+.btn.o{background:transparent;border:1.5px solid #18335f;color:#18335f}
+.btn.red{background:#b71c1c}
+.chip{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border:1px solid #e3e7ed;border-radius:999px;background:#fff;font-size:15px;color:#14243d;text-decoration:none;font-family:inherit;cursor:pointer}
+.chip.on{background:#18335f;border-color:#18335f;color:#fff}
+.card{display:flex;flex-direction:column;gap:12px;padding:16px 16px 24px;background:#fff;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d}
+.card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
+.pin{padding:0 8px}
+.ph{display:block;width:100%;object-fit:cover;border-radius:16px}
+.rowlink{display:flex;gap:20px;align-items:center;padding:24px;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d;background:#fff}
+.faq{border-bottom:1px solid #e3e7ed}
+.faq button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;gap:24px;padding:24px 0;font-size:17px;font-weight:600;color:#14243d;cursor:pointer}
+.faq button:focus-visible{outline:2px solid #18335f;outline-offset:4px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin:0}
+.facts>div{border-top:1px solid #e3e7ed;padding-top:16px}
+.facts dd{margin:4px 0 0;font-family:'Fraunces',Georgia,serif;font-size:22px;line-height:30px}
+.crumb{font-size:14px;color:#566174;margin-bottom:40px}.crumb a{color:#566174;text-decoration:none}
+.badge{position:absolute;padding:4px 12px;border-radius:999px;background:#fff;font-size:13px;font-weight:600;color:#14243d}
+</style>
+</helmet>
+<div style="font-family:'Manrope','Segoe UI',system-ui,sans-serif;color:#14243d;background:#fff;-webkit-font-smoothing:antialiased">
+  <header style="background:#fff;border-bottom:1px solid #e3e7ed">
+    <div class="wrap" style="padding:0 24px;min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap">
+      <a href="Main.dc.html" style="display:flex;align-items:center"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew home" style="height:40px;width:auto;display:block"></a>
+      <nav aria-label="Main" style="display:flex;align-items:center;gap:32px;flex-wrap:wrap"><a href="Services.dc.html" style="font-size:15px;font-weight:500;color:#14243d;text-decoration:none">Services</a><a href="Aircraft.dc.html" style="font-size:15px;font-weight:500;color:#14243d;text-decoration:none">Aircraft</a><a href="Capabilities.dc.html" style="font-size:15px;font-weight:500;color:#14243d;text-decoration:none">Capabilities</a><a href="Portfolio.dc.html" aria-current="page" style="font-size:15px;font-weight:600;color:#18335f;text-decoration:none;box-shadow:inset 0 -2px 0 #b71c1c;padding:4px 0">Portfolio</a></nav>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap"><a href="https://app.air-sew.com/" style="font-size:15px;font-weight:500;color:#566174;text-decoration:none">Client login</a><a href="Start1.dc.html" class="btn" style="min-height:44px;padding:0 20px">Start your design</a></div>
+    </div>
+  </header>
+
+  <section style="padding:72px 24px 48px"><div class="wrap">
+    <nav aria-label="Breadcrumb" class="crumb"><a href="Main.dc.html">Home</a> <span aria-hidden="true">/</span> <span style="color:#14243d">Portfolio</span></nav>
+    <div class="eb">Portfolio</div><h1 class="h1">Real transformations.</h1><p class="lead">Tired cabins, made one of a kind. Drag any before and after to see the difference.</p>
+  </div></section>
+  <section style="padding:0 24px 96px"><div class="wrap">
+    <a href="CaseStudy.dc.html" style="display:flex;flex-wrap:wrap;gap:0;border:1px solid #e3e7ed;border-radius:16px;overflow:hidden;text-decoration:none;color:#14243d">
+      <img src="../assets/img/hero-after.jpg" alt="Featured project: Bonanza cabin, cream leather club seats" style="flex:3 1 600px;min-width:0;display:block;aspect-ratio:16/10;object-fit:cover">
+      <div style="flex:2 1 360px;padding:48px;display:flex;flex-direction:column;justify-content:center;gap:16px;background:#f8f7f4"><div class="eb">Featured project</div><div class="xs">[Year] A36 Bonanza · Full interior</div><h2 class="h2" style="margin:0">[Featured project headline]</h2><p class="body">[One or two lines on what the owner wanted and what we built.]</p><span style="font-size:15px;font-weight:600;color:#18335f">Read the story →</span></div>
+    </a>
+  </div></section>
+  <nav aria-label="Filter projects" style="position:sticky;top:0;z-index:5;background:#fff;border-top:1px solid #e3e7ed;border-bottom:1px solid #e3e7ed;padding:16px 24px"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><button type="button" class="chip" aria-pressed="{{p0}}" onClick="{{f0}}" style="background:{{bg0}};color:{{fg0}};border-color:{{bd0}}">All</button><button type="button" class="chip" aria-pressed="{{p1}}" onClick="{{f1}}" style="background:{{bg1}};color:{{fg1}};border-color:{{bd1}}">Pistons</button><button type="button" class="chip" aria-pressed="{{p2}}" onClick="{{f2}}" style="background:{{bg2}};color:{{fg2}};border-color:{{bd2}}">Twins</button><button type="button" class="chip" aria-pressed="{{p3}}" onClick="{{f3}}" style="background:{{bg3}};color:{{fg3}};border-color:{{bd3}}">Turboprops</button><button type="button" class="chip" aria-pressed="{{p4}}" onClick="{{f4}}" style="background:{{bg4}};color:{{fg4}};border-color:{{bd4}}">Jets</button><button type="button" class="chip" aria-pressed="{{p5}}" onClick="{{f5}}" style="background:{{bg5}};color:{{fg5}};border-color:{{bd5}}">Experimental</button><span class="xs" style="margin-left:auto">[n] projects</span></div></nav>
+  <section class="sec"><div class="wrap">
+    <div class="grid3"><a href="CaseStudy.dc.html" class="card"><img src="../assets/img/project-front-seats.jpg" alt="Slate gray leather front seats"><div class="pin"><div class="xs">[Year] A36 Bonanza · Pistons</div><h3 class="h3" style="margin-top:4px">[Project headline]</h3></div></a><a href="CaseStudy.dc.html" class="card"><img src="../assets/img/project-turboprop.jpg" alt="Taupe leather turboprop cabin"><div class="pin"><div class="xs">[Year] King Air 350 · Turboprops</div><h3 class="h3" style="margin-top:4px">[Project headline]</h3></div></a><a href="CaseStudy.dc.html" class="card"><img src="../assets/img/sidewall-done.jpg" alt="Finished sidewall with matched armrest"><div class="pin"><div class="xs">[Year] PC-12 · Turboprops</div><h3 class="h3" style="margin-top:4px">[Project headline]</h3></div></a><a href="CaseStudy.dc.html" class="card"><img src="../assets/img/headliner.jpg" alt="New headliner with reading lights"><div class="pin"><div class="xs">[Year] Baron 58 · Twins</div><h3 class="h3" style="margin-top:4px">[Project headline]</h3></div></a><a href="CaseStudy.dc.html" class="card"><img src="../assets/img/carpet.jpg" alt="Bound carpet in a finished cabin"><div class="pin"><div class="xs">[Year] SR22 · Pistons</div><h3 class="h3" style="margin-top:4px">[Project headline]</h3></div></a><a href="CaseStudy.dc.html" class="card"><img src="../assets/img/cabinetry.jpg" alt="Refinished galley cabinetry"><div class="pin"><div class="xs">[Year] Citation CJ3 · Jets</div><h3 class="h3" style="margin-top:4px">[Project headline]</h3></div></a></div>
+    <div style="text-align:center;margin-top:48px"><button type="button" class="btn o">Load more projects</button></div>
+  </div></section>
+  <section class="sec sky"><div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px"><div style="max-width:680px"><div class="eb">From our owners</div><h2 class="h2">In their words</h2></div></div>
+    <div class="grid3">
+      <figure style="margin:0;background:#fff;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:24px"><blockquote style="margin:0;font-family:Fraunces,Georgia,serif;font-size:22px;line-height:32px">“[Owner quote]”</blockquote><figcaption style="display:flex;gap:12px;align-items:center"><img src="../assets/img/owner-with-plane.jpg" alt="" style="width:44px;height:44px;border-radius:999px;object-fit:cover"><span><span style="display:block;font-weight:600">[Owner name]</span><span class="xs">[Aircraft] owner</span></span></figcaption></figure><figure style="margin:0;background:#fff;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:24px"><blockquote style="margin:0;font-family:Fraunces,Georgia,serif;font-size:22px;line-height:32px">“[Owner quote]”</blockquote><figcaption style="display:flex;gap:12px;align-items:center"><img src="../assets/img/portrait-tech.jpg" alt="" style="width:44px;height:44px;border-radius:999px;object-fit:cover"><span><span style="display:block;font-weight:600">[Owner name]</span><span class="xs">[Aircraft] owner</span></span></figcaption></figure><figure style="margin:0;background:#fff;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:24px"><blockquote style="margin:0;font-family:Fraunces,Georgia,serif;font-size:22px;line-height:32px">“[Owner quote]”</blockquote><figcaption style="display:flex;gap:12px;align-items:center"><img src="../assets/img/portrait-woman.jpg" alt="" style="width:44px;height:44px;border-radius:999px;object-fit:cover"><span><span style="display:block;font-weight:600">[Owner name]</span><span class="xs">[Aircraft] owner</span></span></figcaption></figure>
+    </div>
+  </div></section>
+<section style="padding:0 24px 96px"><div class="wrap sky" style="border-radius:16px;padding:80px 32px;text-align:center">
+      <h2 style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:48px;line-height:56px;letter-spacing:-.015em;margin:0 auto 16px;max-width:18ch">Picture your cabin, made for you.</h2>
+      <p class="lead" style="margin:0 auto 32px">Enter your tail number, answer ten questions about how you fly, and see a concept of your own interior. We call you within one business day.</p>
+      <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap"><a href="Start1.dc.html" class="btn red" style="padding:0 28px">Start your design</a><a href="tel:+10000000000" class="btn o">Call [phone]</a></div>
+    </div></section>
+  <footer class="alt" style="border-top:1px solid #e3e7ed;padding:64px 24px 40px">
+    <div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px;justify-content:space-between">
+      <div style="flex:1 1 280px;max-width:360px"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew" style="height:40px;width:auto;display:block"><p class="sm" style="margin:16px 0 0">One-of-a-kind aircraft interiors from an owner-operated shop, designed with you and built by hand. [City, State] · [Airport ID]</p></div>
+      <nav aria-label="Footer" style="flex:2 1 480px;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px">
+        <div style="display:flex;flex-direction:column;gap:8px"><div class="eb" style="gap:0">Work</div><a href="Services.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Services</a><a href="Aircraft.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Aircraft</a><a href="Capabilities.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Capabilities</a><a href="Portfolio.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Portfolio</a></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div class="eb" style="gap:0">Company</div><a href="About.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">About</a><a href="Process.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">How it works</a><a href="Faq.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">FAQ</a><a href="Contact.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Contact</a></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div class="eb" style="gap:0">Clients</div><a href="Start1.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Start your design</a><a href="https://app.air-sew.com/" style="font-size:15px;color:#14243d;text-decoration:none">Client login</a><a href="tel:+10000000000" style="font-size:15px;color:#14243d;text-decoration:none">[Phone]</a></div>
+      </nav>
+    </div>
+    <div class="wrap xs" style="margin-top:48px;padding-top:24px;border-top:1px solid #e3e7ed;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px"><span>© 2026 Air Sew</span><span><a href="#" style="color:#566174">Privacy</a> · <a href="#" style="color:#566174">Terms</a></span></div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4100}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { pos: 50, open: 0, f: 0 }; }
+  renderVals() {
+    const s = this.state, pos = s.pos, open = s.open;
+    const v = {
+      pos,
+      slide: (e) => this.setState({ pos: Number(e.target.value) }),
+      beforeClip: 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:inset(0 ' + (100 - pos) + '% 0 0)'
+    };
+    for (let i = 0; i < 0; i++) {
+      const on = open === i;
+      v['o' + i] = String(on); v['s' + i] = on ? '−' : '+'; v['d' + i] = on ? 'block' : 'none';
+      v['t' + i] = () => this.setState({ open: on ? -1 : i });
+    }
+    for (let i=0;i<6;i++){ const on=(s.f||0)===i; v['p'+i]=String(on); v['f'+i]=()=>this.setState({f:i}); v['bg'+i]=on?'#18335f':'#fff'; v['fg'+i]=on?'#fff':'#14243d'; v['bd'+i]=on?'#18335f':'#e3e7ed'; }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

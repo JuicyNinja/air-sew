@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wireframe — Manufacturer page template</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./wf.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div class="wf">
+  <header class="hdr-bar"><div class="hdr">
+    <a href="Main.dc.html" class="logo">AIR SEW</a>
+    <nav class="nav" aria-label="Main"><a href="ServicesHub.dc.html">Services</a><a href="AircraftHub.dc.html" class="on">Aircraft</a><a href="CapabilitiesHub.dc.html">Capabilities</a><a href="Portfolio.dc.html">Portfolio</a></nav>
+    <div class="row"><a href="https://app.air-sew.com/" class="lnk">Client login</a><a href="#start" class="btn sm">Start your design</a></div>
+  </div></header>
+
+  <section class="sec alt"><span class="tag">01 · Hero</span>
+    <div class="wrap split"><div><div class="crumb">Home / Aircraft / <span class="var">{Category}</span> / <span class="var">{Manufacturer}</span></div><h1 class="h1"><span class="var">{Manufacturer}</span> interiors</h1><p class="lead"><span class="var">{2-sentence intro: what owners of this brand care about in a cabin}</span></p><div class="row" style="margin-top:24px"><a href="#start" class="btn">Start your <span class="var">{Manufacturer}</span> design</a></div></div><img class="img r169" src="../assets/img/project-turboprop.jpg" alt="{Brand hero: a finished cabin in one of its models}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"></div>
+  </section>
+
+  <section class="sec"><span class="tag">02 · Model families (CMS)</span>
+    <div class="wrap"><h2 class="h2">Pick your model</h2><div class="g3" style="margin-top:20px">
+      <a href="ModelTemplate.dc.html" class="card"><img class="img r43" src="../assets/img/hero-after.jpg" alt="{Model cabin image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3"><span class="var">{Model family}</span></span><span class="sm"><span class="var">{Seats · size class · years}</span></span><span class="lnk">See interiors →</span></a>
+      <a href="ModelTemplate.dc.html" class="card"><img class="img r43" src="../assets/img/style-modern.jpg" alt="{Model cabin image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3"><span class="var">{Model family}</span></span><span class="sm"><span class="var">{Seats · size class · years}</span></span><span class="lnk">See interiors →</span></a>
+      <a href="ModelTemplate.dc.html" class="card"><img class="img r43" src="../assets/img/project-turboprop.jpg" alt="{Model cabin image}" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3"><span class="var">{Model family}</span></span><span class="sm"><span class="var">{Seats · size class · years}</span></span><span class="lnk">See interiors →</span></a>
+    </div></div>
+  </section>
+
+  <section class="sec alt"><span class="tag">03 · Projects on this brand</span>
+    <div class="wrap"><h2 class="h2">Our <span class="var">{Manufacturer}</span> work</h2><div class="g3" style="margin-top:20px"><a href="CaseStudyTemplate.dc.html" class="card"><img class="img r43" src="../assets/img/style-executive.jpg" alt="Project" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Project}</span></span></a><a href="CaseStudyTemplate.dc.html" class="card"><img class="img r43" src="../assets/img/style-classic.jpg" alt="Project" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Project}</span></span></a><a href="CaseStudyTemplate.dc.html" class="card"><img class="img r43" src="../assets/img/style-modern.jpg" alt="Project" style="padding:0;display:block;width:100%;height:auto;object-fit:cover"><span class="h3" style="font-size:18px"><span class="var">{Project}</span></span></a></div><p class="sm" style="margin-top:12px">Hidden until a project is tagged; AI concept images stand in until then.</p></div>
+  </section>
+
+  <section class="sec"><span class="tag">04 · Owner quote</span>
+    <div class="wrap" style="max-width:820px;text-align:center"><p style="font-size:26px;line-height:38px;font-weight:300;margin:0">“<span class="var">{Quote from a {Manufacturer} owner}</span>”</p><p class="p" style="margin-top:12px"><span class="var">{Name · Model}</span></p></div>
+  </section>
+
+  <section class="sec tight"><span class="tag">05 · Closing CTA</span>
+    <div class="wrap cta"><h2 class="h2">Picture your <span class="var">{Manufacturer}</span>, made for you.</h2><div class="row" style="justify-content:center"><a href="#start" class="btn acc">Start your design</a></div></div>
+  </section>
+  <footer class="ftr"><div class="wrap row" style="justify-content:space-between"><span class="logo">AIR SEW</span><span class="sm">Footer — same as Home</span></div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2900}}'>
+class Component extends DCLogic { renderVals() { return {}; } }
+</script>
+</body>
+</html>

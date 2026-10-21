@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Air Sew — Beechcraft Bonanza (mobile)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Manrope:wght@400;500;600&display=swap">
+<style>
+body{margin:0;background:#fff}
+a{color:#18335f}
+*{box-sizing:border-box}
+.eb{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#18335f}
+.eb:before{content:"";width:16px;height:2px;border-radius:2px;background:#b71c1c}
+.h1{font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:40px;line-height:44px;letter-spacing:-.02em;margin:12px 0 16px}
+.h2{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:28px;line-height:34px;letter-spacing:-.01em;margin:8px 0 12px}
+.h3{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:20px;line-height:28px;margin:0}
+.lead{font-size:17px;line-height:27px;color:#566174;margin:0 0 24px}
+.body{font-size:16px;line-height:26px;color:#566174;margin:0}
+.sm{font-size:14px;line-height:22px;color:#566174}
+.xs{font-size:12px;line-height:18px;color:#566174}
+.sec{padding:64px 20px}.alt{background:#f8f7f4}.sky{background:#eef3f9}
+.btn{display:flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border-radius:10px;background:#18335f;color:#fff;font-size:16px;font-weight:600;text-decoration:none;border:0;font-family:inherit;cursor:pointer;width:100%}
+.btn.o{background:transparent;border:1.5px solid #18335f;color:#18335f}
+.btn.red{background:#b71c1c}
+.chip{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border:1px solid #e3e7ed;border-radius:999px;background:#fff;font-size:14px;color:#14243d;text-decoration:none;white-space:nowrap}
+.ph{display:block;width:100%;object-fit:cover;border-radius:14px}
+.row{display:flex;gap:14px;align-items:center;padding:16px 0;border-bottom:1px solid #e3e7ed;text-decoration:none;color:#14243d}
+.swipe{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:0 20px 4px;scrollbar-width:none}
+.swipe>*{flex:0 0 78%;scroll-snap-align:start}
+.card{display:flex;flex-direction:column;gap:10px;padding:10px 10px 16px;border:1px solid #e3e7ed;border-radius:14px;background:#fff;text-decoration:none;color:#14243d}
+.card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
+.faq{border-bottom:1px solid #e3e7ed}
+.faq button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;gap:16px;padding:20px 0;font-size:16px;font-weight:600;color:#14243d;cursor:pointer}
+.mbar{position:sticky;bottom:0;z-index:6;display:flex;gap:8px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid #e3e7ed}
+.lbl{display:block;font-size:15px;font-weight:600;margin-bottom:6px}
+.inp{width:100%;min-height:52px;padding:0 14px;border:1.5px solid #8590a2;border-radius:8px;font-family:inherit;font-size:17px;color:#14243d;background:#fff}
+.badge{position:absolute;padding:3px 10px;border-radius:999px;background:#fff;font-size:12px;font-weight:600;color:#14243d}
+</style>
+</helmet>
+<div style="font-family:'Manrope','Segoe UI',system-ui,sans-serif;color:#14243d;background:#fff;-webkit-font-smoothing:antialiased;max-width:390px;margin:0 auto;position:relative">
+<header style="position:sticky;top:0;z-index:7;background:#fff;border-bottom:1px solid #e3e7ed;display:flex;align-items:center;justify-content:space-between;padding:0 16px;min-height:64px">
+  <a href="HomeM.dc.html"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew home" style="height:30px;width:auto;display:block"></a>
+  <div style="display:flex;align-items:center;gap:4px"><a href="https://app.air-sew.com/" style="font-size:14px;font-weight:500;color:#566174;text-decoration:none;padding:12px 8px">Log in</a>
+  <button type="button" aria-label="Menu" aria-expanded="{{menuExp}}" onClick="{{toggleMenu}}" style="width:48px;height:48px;border:0;background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#14243d" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/><path d="M17 17h3" stroke="#b71c1c"/></svg></button></div>
+</header>
+<div style="display:{{menuDisp}};position:absolute;top:64px;left:0;right:0;z-index:8;background:#fff;flex-direction:column;padding:8px 20px 24px;border-bottom:1px solid #e3e7ed;box-shadow:0 16px 40px rgba(20,36,61,.12)">
+  <a href="#" class="row" style="font-size:20px;font-family:Fraunces,Georgia,serif">Services<span style="margin-left:auto;color:#18335f">→</span></a><a href="#" class="row" style="font-size:20px;font-family:Fraunces,Georgia,serif">Aircraft<span style="margin-left:auto;color:#18335f">→</span></a><a href="#" class="row" style="font-size:20px;font-family:Fraunces,Georgia,serif">Capabilities<span style="margin-left:auto;color:#18335f">→</span></a><a href="#" class="row" style="font-size:20px;font-family:Fraunces,Georgia,serif">Portfolio<span style="margin-left:auto;color:#18335f">→</span></a><a href="#" class="row" style="font-size:20px;font-family:Fraunces,Georgia,serif">How it works<span style="margin-left:auto;color:#18335f">→</span></a><a href="#" class="row" style="font-size:20px;font-family:Fraunces,Georgia,serif">About<span style="margin-left:auto;color:#18335f">→</span></a><a href="#" class="row" style="font-size:20px;font-family:Fraunces,Georgia,serif">Contact<span style="margin-left:auto;color:#18335f">→</span></a>
+  <a href="StartM1.dc.html" class="btn red" style="margin-top:20px">Start your design</a>
+  <a href="tel:+10000000000" class="btn o" style="margin-top:8px">Call [phone]</a>
+</div>
+<nav aria-label="Breadcrumb" class="xs" style="padding:12px 20px;background:#eef3f9"><a href="#" style="color:#566174;text-decoration:none">Aircraft</a> / <a href="#" style="color:#566174;text-decoration:none">Beechcraft</a> / <span style="color:#14243d">Bonanza</span></nav>
+<section class="sky" style="padding:16px 20px 40px">
+  <div class="eb">Six-seat piston · Certified</div>
+  <h1 class="h1">Beechcraft Bonanza interiors</h1>
+  <p class="lead">Club seats you can talk across, a cabin that stays cool and quiet, and a finish no other Bonanza on the field has.</p>
+  <div style="position:relative"><img src="../assets/img/hero-after.jpg" alt="Bonanza cabin after restoration" class="ph" style="aspect-ratio:4/3"><span class="badge" style="left:12px;bottom:12px">A36 · full interior</span></div>
+  <p class="xs" style="margin:12px 0 0">[Fleet count] Bonanzas on the US register</p>
+</section>
+<nav aria-label="On this page" style="position:sticky;top:64px;z-index:5;background:#fff;border-bottom:1px solid #e3e7ed;padding:10px 0"><div class="swipe" style="margin:0;padding:0 16px;gap:8px"><a href="#cabin" class="chip" style="flex:0 0 auto;min-height:36px;background:#18335f;color:#fff;border-color:#18335f">Cabin</a><a href="#wear" class="chip" style="flex:0 0 auto;min-height:36px">Wear</a><a href="#do" class="chip" style="flex:0 0 auto;min-height:36px">Services</a><a href="#opts" class="chip" style="flex:0 0 auto;min-height:36px">Options</a><a href="#work" class="chip" style="flex:0 0 auto;min-height:36px">Work</a><a href="#faq" class="chip" style="flex:0 0 auto;min-height:36px">FAQ</a></div></nav>
+<section id="cabin" class="sec">
+  <div class="eb">Cabin at a glance</div><h2 class="h2">Your Bonanza cabin</h2>
+  <div style="display:inline-flex;padding:4px;background:#f8f7f4;border:1px solid #e3e7ed;border-radius:999px;margin:8px 0 16px">
+    <button type="button" aria-pressed="{{isClub}}" onClick="{{setClub}}" style="min-height:40px;padding:0 18px;border:0;border-radius:999px;font:inherit;font-weight:600;background:{{clubBg}};color:{{clubFg}}">Club</button>
+    <button type="button" aria-pressed="{{isStd}}" onClick="{{setStd}}" style="min-height:40px;padding:0 18px;border:0;border-radius:999px;font:inherit;font-weight:600;background:{{stdBg}};color:{{stdFg}}">Standard</button>
+  </div>
+  <div style="background:#f8f7f4;border-radius:14px;padding:16px">
+  <svg viewBox="0 0 240 520" width="100%" style="display:block;max-height:440px" role="img" aria-label="{{mapLabel}}">
+    <path d="M120 20 C170 20 186 70 188 130 L184 470 C182 496 160 506 120 506 C80 506 58 496 56 470 L52 130 C54 70 70 20 120 20z" fill="#fff" stroke="#8590a2" stroke-width="1.2"/>
+    <text x="120" y="80" text-anchor="middle" font-size="10" fill="#8590a2" font-family="Manrope">PANEL</text>
+    <g fill="#18335f" fill-opacity=".1" stroke="#18335f" stroke-width="1.2"><rect x="70" y="110" width="44" height="56" rx="8"/><rect x="126" y="110" width="44" height="56" rx="8"/><rect x="70" y="{{r2y}}" width="44" height="56" rx="8"/><rect x="126" y="{{r2y}}" width="44" height="56" rx="8"/><rect x="70" y="350" width="44" height="56" rx="8"/><rect x="126" y="350" width="44" height="56" rx="8"/></g>
+    <g stroke="#18335f" stroke-width="2" stroke-linecap="round"><path d="M74 166H110M130 166H166M74 406H110M130 406H166"/></g>
+    <g stroke="#b71c1c" stroke-width="2" stroke-linecap="round"><path d="M74 {{b2}}H110M130 {{b2}}H166"/></g>
+  </svg></div>
+  <p class="sm" style="margin:12px 0 20px">{{mapNote}}</p>
+  <dl style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0"><div style="border-top:1px solid #e3e7ed;padding-top:10px"><dt class="xs">Seats</dt><dd class="h3" style="margin:2px 0 0">4–6</dd></div><div style="border-top:1px solid #e3e7ed;padding-top:10px"><dt class="xs">Layouts</dt><dd class="h3" style="margin:2px 0 0">Club or forward</dd></div><div style="border-top:1px solid #e3e7ed;padding-top:10px"><dt class="xs">Cabin</dt><dd class="h3" style="margin:2px 0 0">[L × W × H]</dd></div><div style="border-top:1px solid #e3e7ed;padding-top:10px"><dt class="xs">Burn standard</dt><dd class="h3" style="margin:2px 0 0">Part 23</dd></div></dl>
+</section>
+<section id="wear" class="sec alt">
+  <div class="eb">From the shop floor</div><h2 class="h2">What wears out on a Bonanza</h2>
+  <div class="swipe" style="margin-top:16px"><div class="card"><img src="../assets/img/worn-seats.jpg" alt="Sun-baked seat leather"><span class="h3" style="padding:0 4px">Sun-baked seat leather</span><span class="sm" style="padding:0 4px">Rebuilt foam, UV-stable burn-certified leather.</span></div><div class="card"><img src="../assets/img/worn-sidewall.jpg" alt="Cracked sidewalls and trim"><span class="h3" style="padding:0 4px">Cracked sidewalls and trim</span><span class="sm" style="padding:0 4px">Repaired, refinished or 3D-printed new.</span></div><div class="card"><img src="../assets/img/seat-frame.jpg" alt="Tired aft doors and club seats"><span class="h3" style="padding:0 4px">Tired aft doors and club seats</span><span class="sm" style="padding:0 4px">Wear points reinforced, mechanisms rebuilt.</span></div></div>
+</section>
+<section id="do" class="sec">
+  <div class="eb">What we do</div><h2 class="h2">Everything inside your Bonanza</h2>
+  <a href="#" class="row"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 32px"><g stroke="#18335f" stroke-width="0.6"><path d="M6.6 3h3.1c.9 0 1.6.8 1.5 1.7L10.2 13H6.1L5.1 4.7C5 3.8 5.7 3 6.6 3z"/><path d="M5 13h11.5a1.5 1.5 0 0 1 1.5 1.5V16H5z"/><path d="M10.6 10H16M8 16v4M15 16v4M6 20h11"/></g><path d="M7.4 5.6l.6 5" stroke="#b71c1c" stroke-width="0.7" stroke-dasharray=".9 1.3"/></svg><span style="flex:1 1 auto"><span style="display:block;font-weight:600">Seats &amp; upholstery</span><span class="sm">All six, incl. club conversions</span></span><span style="color:#18335f">→</span></a><a href="#" class="row"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 32px"><g stroke="#18335f" stroke-width="0.6"><rect x="4" y="3" width="16" height="18" rx="2"/><rect x="9" y="6.5" width="6" height="8" rx="3"/></g><path d="M7 18h10" stroke="#b71c1c" stroke-width="0.7" stroke-dasharray=".9 1.3"/></svg><span style="flex:1 1 auto"><span style="display:block;font-weight:600">Sidewalls &amp; panels</span><span class="sm">Matched to the seats</span></span><span style="color:#18335f">→</span></a><a href="#" class="row"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 32px"><path d="M3 20v-8a9 9 0 0 1 18 0v8M3 20h18" stroke="#18335f" stroke-width="0.6"/><path d="M7 11a5 5 0 0 1 10 0" stroke="#b71c1c" stroke-width="0.7" stroke-dasharray=".9 1.3"/></svg><span style="flex:1 1 auto"><span style="display:block;font-weight:600">Headliner</span><span class="sm">Lights and vents re-fitted</span></span><span style="color:#18335f">→</span></a><a href="#" class="row"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 32px"><path d="M8 9h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2zM8 9V6h4v3M12 7h1.5" stroke="#18335f" stroke-width="0.6"/><path d="M17 5h.01M19.5 3.5h.01M19 7h.01M21 5.5h.01M17.5 9h.01" stroke="#b71c1c" stroke-width="0.9"/></svg><span style="flex:1 1 auto"><span style="display:block;font-weight:600">Plastics, covers &amp; plugs</span><span class="sm">Bonanza-pattern covers</span></span><span style="color:#18335f">→</span></a>
+</section>
+<section id="opts" class="sec sky">
+  <div class="eb">Make it yours</div><h2 class="h2">Popular on Bonanzas</h2>
+  <img src="../assets/img/materials-wall.jpg" alt="Leather and stitch samples" class="ph" style="aspect-ratio:16/10;margin:12px 0 16px">
+  <div style="display:flex;flex-wrap:wrap;gap:8px"><span class="chip">Perforated inserts</span><span class="chip">Two-tone</span><span class="chip">Club conversion</span><span class="chip">LED lighting</span><span class="chip">USB-C</span><span class="chip">Sound deadening</span></div>
+</section>
+<section id="work" class="sec">
+  <div class="eb">Our work</div><h2 class="h2">Bonanza cabins we&#39;ve built</h2>
+  <div style="margin-top:16px"><div style="position:relative;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#dfe7f1">
+  <img src="../assets/img/hero-after.jpg" alt="After: cream leather club seats" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+  <img src="../assets/img/hero-before.jpg" alt="Before: worn, faded seats" style="{{beforeClip}}">
+  <span aria-hidden="true" style="position:absolute;top:0;bottom:0;left:{{pos}}%;width:2px;background:#fff"></span>
+  <span class="badge" style="left:12px;top:12px">Before</span><span class="badge" style="right:12px;top:12px">After</span>
+  <input type="range" min="0" max="100" value="{{pos}}" onInput="{{slide}}" aria-label="Drag to compare before and after" style="position:absolute;left:16px;bottom:10px;width:calc(100% - 32px);accent-color:#18335f;height:32px">
+</div></div>
+  <a href="#" style="display:inline-block;margin-top:16px;font-weight:600;text-decoration:none">See the project →</a>
+</section>
+<section class="sec alt">
+  <div class="eb">Coverage</div><h2 class="h2">Variants we cover</h2>
+  <div style="padding:14px 0;border-bottom:1px solid #e3e7ed"><div style="font-weight:600">A36 Bonanza</div><div class="sm">6 seats · aft double doors, optional club</div></div><div style="padding:14px 0;border-bottom:1px solid #e3e7ed"><div style="font-weight:600">A36TC / B36TC</div><div class="sm">6 seats · turbo, oxygen fittings</div></div><div style="padding:14px 0;border-bottom:1px solid #e3e7ed"><div style="font-weight:600">G36 Bonanza</div><div class="sm">6 seats · refresh or full redesign</div></div><div style="padding:14px 0;border-bottom:1px solid #e3e7ed"><div style="font-weight:600">V35 / 35-series</div><div class="sm">4–6 seats · V-tail, single door</div></div>
+</section>
+<section id="faq" class="sec">
+  <div class="eb">FAQ</div><h2 class="h2">Bonanza questions</h2>
+  <div class="faq"><button type="button" aria-expanded="{{o0}}" onClick="{{t0}}"><span>How long will my Bonanza be down?</span><span aria-hidden="true" style="color:#18335f">{{s0}}</span></button><p class="body" style="display:{{d0}};padding:0 0 20px">Every scope is different, so we don&#39;t quote a typical number. Your completion date is written into your quote and tracked in your portal.</p></div><div class="faq"><button type="button" aria-expanded="{{o1}}" onClick="{{t1}}"><span>Can you pick it up?</span><span aria-hidden="true" style="color:#18335f">{{s1}}</span></button><p class="body" style="display:{{d1}};padding:0 0 20px">Yes. Fly it in, or we arrange a ferry pilot.</p></div><div class="faq"><button type="button" aria-expanded="{{o2}}" onClick="{{t2}}"><span>What does a Bonanza interior cost?</span><span aria-hidden="true" style="color:#18335f">{{s2}}</span></button><p class="body" style="display:{{d2}};padding:0 0 20px">It depends on scope and materials. Start your design for a concept and a written quote.</p></div><div class="faq"><button type="button" aria-expanded="{{o3}}" onClick="{{t3}}"><span>What paperwork do I get?</span><span aria-hidden="true" style="color:#18335f">{{s3}}</span></button><p class="body" style="display:{{d3}};padding:0 0 20px">Logbook entries, burn certificates and a records packet, kept in your portal.</p></div>
+</section>
+<section style="padding:0 20px 64px"><div class="sky" style="border-radius:16px;padding:40px 20px;text-align:center">
+  <h2 class="h2" style="font-weight:300;font-size:32px;line-height:38px">Picture your Bonanza, made for you.</h2>
+  <p class="body" style="margin-bottom:20px">Enter your tail number and we pull the rest from the FAA.</p>
+  <a href="StartM1.dc.html" class="btn red">Start your Bonanza design</a></div></section>
+<footer class="alt" style="padding:48px 20px 32px;border-top:1px solid #e3e7ed">
+  <img src="../assets/logo/air-sew-logo.png" alt="Air Sew" style="height:30px;width:auto;display:block">
+  <p class="sm" style="margin:12px 0 24px">One-of-a-kind aircraft interiors from an owner-operated shop. [City, State] · [Airport ID]</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 16px"><a href="#" style="font-size:15px;color:#14243d;text-decoration:none;padding:10px 0">Services</a><a href="#" style="font-size:15px;color:#14243d;text-decoration:none;padding:10px 0">Aircraft</a><a href="#" style="font-size:15px;color:#14243d;text-decoration:none;padding:10px 0">Capabilities</a><a href="#" style="font-size:15px;color:#14243d;text-decoration:none;padding:10px 0">Portfolio</a><a href="#" style="font-size:15px;color:#14243d;text-decoration:none;padding:10px 0">How it works</a><a href="#" style="font-size:15px;color:#14243d;text-decoration:none;padding:10px 0">About</a><a href="#" style="font-size:15px;color:#14243d;text-decoration:none;padding:10px 0">FAQ</a><a href="#" style="font-size:15px;color:#14243d;text-decoration:none;padding:10px 0">Contact</a></div>
+  <div class="xs" style="margin-top:24px;padding-top:16px;border-top:1px solid #e3e7ed">© 2026 Air Sew · <a href="#" style="color:#566174">Privacy</a> · <a href="#" style="color:#566174">Terms</a></div>
+</footer>
+<div class="mbar"><a href="StartM1.dc.html" class="btn" style="flex:1 1 auto">Start your Bonanza design</a><a href="tel:+10000000000" class="btn o" aria-label="Call Air Sew" style="flex:0 0 56px;width:56px;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#18335f" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":6400}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { menu: false, pos: 50, open: 0, club: true }; }
+  renderVals() { const s = this.state; const v = {
+      menuDisp: s.menu ? 'flex' : 'none', menuExp: String(!!s.menu),
+      toggleMenu: () => this.setState({ menu: !s.menu }),
+      pos: s.pos, slide: (e) => this.setState({ pos: Number(e.target.value) }),
+      beforeClip: 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:inset(0 ' + (100 - s.pos) + '% 0 0)'
+    };
+    for (let i = 0; i < 4; i++) { const on = s.open === i; v['o'+i]=String(on); v['s'+i]=on?'−':'+'; v['d'+i]=on?'block':'none'; v['t'+i]=()=>this.setState({open: on?-1:i}); }
+    const club = s.club !== false;
+    Object.assign(v, { isClub: String(club), isStd: String(!club), setClub: () => this.setState({club:true}), setStd: () => this.setState({club:false}),
+      clubBg: club?'#18335f':'transparent', clubFg: club?'#fff':'#14243d', stdBg: club?'transparent':'#18335f', stdFg: club?'#14243d':'#fff',
+      r2y: club ? 240 : 230, b2: club ? 240 : 286,
+      mapLabel: club ? 'Seat map, club layout: middle row faces aft' : 'Seat map, standard layout: all seats face forward',
+      mapNote: club ? 'Red marks the seat backs. In club layout the middle row faces aft, so four passengers sit face to face.' : 'Every seat faces forward.' });
+    return v; }
+}
+</script>
+</body>
+</html>

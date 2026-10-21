@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wireframe — FAQ</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./wf.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div class="wf">
+  <header class="hdr-bar"><div class="hdr">
+    <a href="Main.dc.html" class="logo">AIR SEW</a>
+    <nav class="nav" aria-label="Main"><a href="ServicesHub.dc.html">Services</a><a href="AircraftHub.dc.html">Aircraft</a><a href="CapabilitiesHub.dc.html">Capabilities</a><a href="Portfolio.dc.html">Portfolio</a></nav>
+    <div class="row"><a href="https://app.air-sew.com/" class="lnk">Client login</a><a href="#start" class="btn sm">Start your design</a></div>
+  </div></header>
+
+  <section class="sec alt"><span class="tag">01 · Hero + search</span>
+    <div class="wrap" style="max-width:820px"><div class="crumb">Home / FAQ</div><h1 class="h1">Questions owners ask us.</h1><span class="input">Search questions…</span></div>
+  </section>
+
+  <section class="sec"><span class="tag">02 · Grouped questions (accordions, first one open)</span>
+    <div class="wrap" style="display:flex;gap:56px;flex-wrap:wrap;align-items:flex-start">
+      <nav aria-label="Topics" class="stack" style="flex:0 1 220px;gap:10px"><span class="chip on">Cost &amp; quotes</span><span class="chip">Downtime</span><span class="chip">Materials &amp; design</span><span class="chip">Certification &amp; paperwork</span><span class="chip">Logistics</span><span class="chip">Client portal</span><span class="chip">Payments</span></nav>
+      <div style="flex:999 1 560px;min-width:0">
+        <div class="eb" style="margin-bottom:8px">Cost &amp; quotes</div>
+        <div class="faq" style="flex-direction:column"><div class="row" style="justify-content:space-between"><span>What does a full interior cost?</span><span>−</span></div><p class="p" style="font-weight:400">[Answer: what drives price — aircraft size, scope, materials. Ranges if Tad wants to publish them.]</p></div>
+        <div class="faq"><span>Is the quote fixed?</span><span>+</span></div>
+        <div class="faq"><span>What happens if you find damage during the build?</span><span>+</span></div>
+        <div class="eb" style="margin:32px 0 8px">Downtime</div>
+        <div class="faq"><span>How long will my airplane be down?</span><span>+</span></div>
+        <div class="faq"><span>Can I fly it between the design session and drop-off?</span><span>+</span></div>
+        <div class="eb" style="margin:32px 0 8px">Certification &amp; paperwork</div>
+        <div class="faq"><span>Are your materials burn-certified?</span><span>+</span></div>
+        <div class="faq"><span>What paperwork do I get back?</span><span>+</span></div>
+        <div class="faq"><span>Do you work on experimental aircraft?</span><span>+</span></div>
+        <div class="eb" style="margin:32px 0 8px">Client portal</div>
+        <div class="faq"><span>Do I have to log in to approve things?</span><span>+</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt"><span class="tag">03 · Still have a question</span>
+    <div class="wrap split"><div><h2 class="h2">Still have a question?</h2><p class="p">Talk to the owner directly.</p></div><div class="row"><a href="Contact.dc.html" class="btn o">Contact us</a><a href="#start" class="btn">Start your design</a></div></div>
+  </section>
+  <footer class="ftr"><div class="wrap row" style="justify-content:space-between"><span class="logo">AIR SEW</span><span class="sm">Footer — same as Home</span></div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2300}}'>
+class Component extends DCLogic { renderVals() { return {}; } }
+</script>
+</body>
+</html>

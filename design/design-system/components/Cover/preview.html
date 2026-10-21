@@ -1,0 +1,29 @@
+<!-- @dsCard height=300 -->
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+  html, body { margin: 0; background: var(--surface); }
+  .cv { position: relative; width: 960px; height: 300px; overflow: hidden; background: var(--surface);
+        background-image: linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 80px 100%; }
+  .cv-text { position: absolute; left: 48px; bottom: 44px; }
+  .cv-name { font-family: var(--font-display); font-variation-settings: 'wdth' 112; font-weight: 500; font-size: 104px; line-height: .95; letter-spacing: -0.03em; color: var(--ink); margin: 0; }
+  .cv-tag { font-family: var(--font-mono); font-size: 14px; line-height: 20px; color: var(--ink-muted); margin: 16px 0 0; }
+  .plate { position: absolute; right: 48px; top: 40px; width: 320px; background: var(--surface); border: 1px solid var(--ink); border-radius: 2px; font-family: var(--font-sans); }
+  .plate .hd { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 18px; }
+  .plate .tn { font-family: var(--font-mono); font-size: 26px; font-weight: 500; color: var(--ink); }
+  .plate .ok { font-family: var(--font-mono); font-size: 12px; color: var(--success); }
+  .plate dl { display: grid; grid-template-columns: 110px 1fr; margin: 0; }
+  .plate dt, .plate dd { margin: 0; padding: 9px 18px; border-top: 1px solid var(--line); font-size: 14px; color: var(--ink); }
+  .plate dt { color: var(--ink-muted); }
+  .btn { position: absolute; right: 48px; bottom: 44px; background: var(--needle); color: var(--on-needle); font: 600 15px var(--font-sans); padding: 14px 22px; border-radius: 4px; }
+</style>
+<div class="cv">
+  <div class="plate" aria-hidden="true">
+    <div class="hd"><span class="tn">N12345</span><span class="ok">Registration valid</span></div>
+    <dl><dt>Aircraft</dt><dd>Beechcraft A36</dd><dt>Seats</dt><dd style="font-family:var(--font-mono)">6</dd><dt>Burn standard</dt><dd>Part 23</dd></dl>
+  </div>
+  <span class="btn" aria-hidden="true">Find my aircraft</span>
+  <div class="cv-text">
+    <h1 class="cv-name">Air Sew</h1>
+    <p class="cv-tag">Aircraft interiors, on the record.</p>
+  </div>
+</div>

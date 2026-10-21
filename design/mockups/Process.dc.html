@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Air Sew — How it works</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Manrope:wght@400;500;600&display=swap">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#18335f}a:hover{color:#10264a}
+.eb{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#18335f}
+.eb:before{content:"";width:20px;height:2px;border-radius:2px;background:#b71c1c}
+.h1{font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:60px;line-height:64px;letter-spacing:-.02em;margin:16px 0 24px}
+.h2{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:36px;line-height:44px;letter-spacing:-.01em;margin:8px 0 16px}
+.h3{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:22px;line-height:30px;margin:0}
+.lead{font-size:20px;line-height:32px;color:#566174;margin:0 0 32px;max-width:560px}
+.body{font-size:17px;line-height:28px;color:#566174;margin:0}
+.sm{font-size:15px;line-height:24px;color:#566174}
+.xs{font-size:13px;line-height:20px;color:#566174}
+.wrap{max-width:1200px;margin:0 auto}
+.sec{padding:96px 24px}.alt{background:#f8f7f4}.sky{background:#eef3f9}
+.split{display:flex;flex-wrap:wrap;gap:64px;align-items:center}.split>*{flex:1 1 440px;min-width:0}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:10px;background:#18335f;color:#fff;font-size:15px;font-weight:600;text-decoration:none;border:0;font-family:inherit;cursor:pointer}
+.btn:hover{color:#fff;background:#10264a}
+.btn.o{background:transparent;border:1.5px solid #18335f;color:#18335f}
+.btn.red{background:#b71c1c}
+.chip{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border:1px solid #e3e7ed;border-radius:999px;background:#fff;font-size:15px;color:#14243d;text-decoration:none;font-family:inherit;cursor:pointer}
+.chip.on{background:#18335f;border-color:#18335f;color:#fff}
+.card{display:flex;flex-direction:column;gap:12px;padding:16px 16px 24px;background:#fff;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d}
+.card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
+.pin{padding:0 8px}
+.ph{display:block;width:100%;object-fit:cover;border-radius:16px}
+.rowlink{display:flex;gap:20px;align-items:center;padding:24px;border:1px solid #e3e7ed;border-radius:16px;text-decoration:none;color:#14243d;background:#fff}
+.faq{border-bottom:1px solid #e3e7ed}
+.faq button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;gap:24px;padding:24px 0;font-size:17px;font-weight:600;color:#14243d;cursor:pointer}
+.faq button:focus-visible{outline:2px solid #18335f;outline-offset:4px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin:0}
+.facts>div{border-top:1px solid #e3e7ed;padding-top:16px}
+.facts dd{margin:4px 0 0;font-family:'Fraunces',Georgia,serif;font-size:22px;line-height:30px}
+.crumb{font-size:14px;color:#566174;margin-bottom:40px}.crumb a{color:#566174;text-decoration:none}
+.badge{position:absolute;padding:4px 12px;border-radius:999px;background:#fff;font-size:13px;font-weight:600;color:#14243d}
+</style>
+</helmet>
+<div style="font-family:'Manrope','Segoe UI',system-ui,sans-serif;color:#14243d;background:#fff;-webkit-font-smoothing:antialiased">
+  <header style="background:#fff;border-bottom:1px solid #e3e7ed">
+    <div class="wrap" style="padding:0 24px;min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap">
+      <a href="Main.dc.html" style="display:flex;align-items:center"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew home" style="height:40px;width:auto;display:block"></a>
+      <nav aria-label="Main" style="display:flex;align-items:center;gap:32px;flex-wrap:wrap"><a href="Services.dc.html" style="font-size:15px;font-weight:500;color:#14243d;text-decoration:none">Services</a><a href="Aircraft.dc.html" style="font-size:15px;font-weight:500;color:#14243d;text-decoration:none">Aircraft</a><a href="Capabilities.dc.html" style="font-size:15px;font-weight:500;color:#14243d;text-decoration:none">Capabilities</a><a href="Portfolio.dc.html" style="font-size:15px;font-weight:500;color:#14243d;text-decoration:none">Portfolio</a></nav>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap"><a href="https://app.air-sew.com/" style="font-size:15px;font-weight:500;color:#566174;text-decoration:none">Client login</a><a href="Start1.dc.html" class="btn" style="min-height:44px;padding:0 20px">Start your design</a></div>
+    </div>
+  </header>
+
+  <section class="sky" style="padding:72px 24px 96px"><div class="wrap">
+    <nav aria-label="Breadcrumb" class="crumb"><a href="Main.dc.html">Home</a> <span aria-hidden="true">/</span> <span style="color:#14243d">How it works</span></nav>
+    <div style="max-width:760px"><div class="eb">How it works</div><h1 class="h1">Designed with you, start to finish.</h1><p class="lead">Five steps, one person who runs the shop, and a portal that shows you every stage. No guessing, no going dark.</p></div>
+  </div></section>
+  <section class="sec"><div class="wrap" style="display:flex;gap:64px;align-items:flex-start">
+    <nav aria-label="Steps" style="position:sticky;top:24px;flex:0 0 240px;display:flex;flex-direction:column;gap:4px">
+      <a href="#s01" style="display:flex;gap:12px;align-items:center;padding:12px 16px;border-radius:10px;text-decoration:none;color:#fff;background:#18335f;font-size:15px;font-weight:600"><span style="font-family:Fraunces,Georgia,serif;font-weight:400;color:#fff">01</span>Start your design</a><a href="#s02" style="display:flex;gap:12px;align-items:center;padding:12px 16px;border-radius:10px;text-decoration:none;color:#14243d;background:transparent;font-size:15px;font-weight:600"><span style="font-family:Fraunces,Georgia,serif;font-weight:400;color:#b71c1c">02</span>Design session</a><a href="#s03" style="display:flex;gap:12px;align-items:center;padding:12px 16px;border-radius:10px;text-decoration:none;color:#14243d;background:transparent;font-size:15px;font-weight:600"><span style="font-family:Fraunces,Georgia,serif;font-weight:400;color:#b71c1c">03</span>Drop-off</a><a href="#s04" style="display:flex;gap:12px;align-items:center;padding:12px 16px;border-radius:10px;text-decoration:none;color:#14243d;background:transparent;font-size:15px;font-weight:600"><span style="font-family:Fraunces,Georgia,serif;font-weight:400;color:#b71c1c">04</span>Build</a><a href="#s05" style="display:flex;gap:12px;align-items:center;padding:12px 16px;border-radius:10px;text-decoration:none;color:#14243d;background:transparent;font-size:15px;font-weight:600"><span style="font-family:Fraunces,Georgia,serif;font-weight:400;color:#b71c1c">05</span>Delivery</a>
+    </nav>
+    <div style="flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:96px">
+      <article id="s01" class="split" style="gap:48px"><div><div style="font-family:Fraunces,Georgia,serif;font-size:48px;line-height:1;color:#b71c1c">01</div><h2 class="h2" style="margin-top:16px">Start your design</h2><div class="xs" style="font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px">About ten minutes online</div><p class="body">Enter your tail number and we pull your aircraft from the FAA registry. Answer ten questions about how you fly and who flies with you, add a photo, and see a concept of your new cabin. We call you within one business day.</p></div><div style="position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#dfe7f1"><img src="../assets/img/hero-after.jpg" alt="Start your design" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div></article><article id="s02" class="split" style="gap:48px"><div><div style="font-family:Fraunces,Georgia,serif;font-size:48px;line-height:1;color:#b71c1c">02</div><h2 class="h2" style="margin-top:16px">Design session</h2><div class="xs" style="font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px">In person or by video</div><p class="body">Feel the leathers, pick colors and stitching, and settle the details. You leave with a written quote and your completion date.</p></div><div style="position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#dfe7f1"><img src="../assets/img/materials-wall.jpg" alt="Design session" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div></article><article id="s03" class="split" style="gap:48px"><div><div style="font-family:Fraunces,Georgia,serif;font-size:48px;line-height:1;color:#b71c1c">03</div><h2 class="h2" style="margin-top:16px">Drop-off</h2><div class="xs" style="font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px">Fly in, or we arrange the ferry</div><p class="body">We walk the airplane with you, photograph every surface, and open your client portal.</p></div><div style="position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#dfe7f1"><img src="../assets/img/aircraft-ramp.jpg" alt="Drop-off" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div></article><article id="s04" class="split" style="gap:48px"><div><div style="font-family:Fraunces,Georgia,serif;font-size:48px;line-height:1;color:#b71c1c">04</div><h2 class="h2" style="margin-top:16px">Build</h2><div class="xs" style="font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px">Watch it in your portal</div><p class="body">Every stage is photographed and signed off. Anything unexpected comes to you with photos and a price before we touch it.</p></div><div style="position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#dfe7f1"><img src="../assets/img/hands-sewing.jpg" alt="Build" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div></article><article id="s05" class="split" style="gap:48px"><div><div style="font-family:Fraunces,Georgia,serif;font-size:48px;line-height:1;color:#b71c1c">05</div><h2 class="h2" style="margin-top:16px">Delivery</h2><div class="xs" style="font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px">Signed off, paperwork in hand</div><p class="body">We walk the cabin with you, make the logbook entries, and hand over burn certs and your records packet.</p></div><div style="position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#dfe7f1"><img src="../assets/img/project-front-seats.jpg" alt="Delivery" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div></article>
+    </div>
+  </div></section>
+  <section class="sec alt"><div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px"><div style="max-width:680px"><div class="eb">Downtime</div><h2 class="h2">Your date, in writing</h2><p class="body">No two cabins are the same, so we don&#39;t publish typical timelines. We give you a real date for your airplane instead.</p></div></div>
+    <div class="grid3"><div style="background:#fff;border:1px solid #e3e7ed;border-radius:16px;padding:32px"><div style="font-family:Fraunces,Georgia,serif;font-size:24px;color:#b71c1c">01</div><h3 class="h3" style="margin:8px 0">Set after your design session</h3><p class="sm" style="margin:0">Once scope and materials are chosen, we set your completion date.</p></div><div style="background:#fff;border:1px solid #e3e7ed;border-radius:16px;padding:32px"><div style="font-family:Fraunces,Georgia,serif;font-size:24px;color:#b71c1c">02</div><h3 class="h3" style="margin:8px 0">Written into your quote</h3><p class="sm" style="margin:0">The date is part of what you approve, not a verbal estimate.</p></div><div style="background:#fff;border:1px solid #e3e7ed;border-radius:16px;padding:32px"><div style="font-family:Fraunces,Georgia,serif;font-size:24px;color:#b71c1c">03</div><h3 class="h3" style="margin:8px 0">Tracked in your portal</h3><p class="sm" style="margin:0">You watch it hold, stage by stage. If a finding could move it, you hear first, with photos and options.</p></div></div>
+  </div></section>
+  <section class="sec"><div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px"><div style="max-width:680px"><div class="eb">What you get back</div><h2 class="h2">More than a beautiful cabin</h2></div></div>
+    <div class="grid4"><div style="border:1px solid #e3e7ed;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:12px"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 40px"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM14 3v4h4M9 12h6M9 15h6" stroke="#18335f" stroke-width="0.9"/><path d="M9 18h3" stroke="#b71c1c" stroke-width="1"/></svg><div style="font-size:17px;font-weight:600">Logbook entries</div><div class="sm">Made and signed before the airplane leaves.</div></div><div style="border:1px solid #e3e7ed;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:12px"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 40px"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z" stroke="#18335f" stroke-width="0.9"/><path d="M9 12l2 2 4-4" stroke="#b71c1c" stroke-width="1"/></svg><div style="font-size:17px;font-weight:600">Burn certificates</div><div class="sm">For every material in the cabin.</div></div><div style="border:1px solid #e3e7ed;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:12px"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 40px"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM14 3v4h4M9 12h6M9 15h6" stroke="#18335f" stroke-width="0.9"/><path d="M9 18h3" stroke="#b71c1c" stroke-width="1"/></svg><div style="font-size:17px;font-weight:600">Records packet</div><div class="sm">Photos, materials and patterns, stored in your portal.</div></div><div style="border:1px solid #e3e7ed;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:12px"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 40px"><path d="M4.5 19.5L15.2 8.8" stroke="#18335f" stroke-width="0.9"/><circle cx="16.8" cy="7.2" r="2.2" stroke="#18335f" stroke-width="0.9"/><path d="M18.3 8.8c1.7 3 .8 7.6-4 10.4M3.5 21.5h7" stroke="#b71c1c" stroke-width="1" stroke-dasharray="1.3 1.9"/></svg><div style="font-size:17px;font-weight:600">Patterns on file</div><div class="sm">So spares fit, years from now.</div></div></div>
+  </div></section>
+  <section class="sec sky"><div class="wrap split">
+    <div><div class="eb">Your client portal</div><h2 class="h2">See every stage, from anywhere.</h2><p class="body" style="margin-bottom:32px">Live timeline, photos as each stage is signed off, approvals with prices, and your records for good.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><a href="Main.dc.html#portal" class="btn o">See the portal</a><a href="https://app.air-sew.com/" style="display:inline-flex;align-items:center;min-height:48px;font-size:15px;font-weight:600;text-decoration:none">Client login →</a></div></div>
+    <div style="position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#dfe7f1"><img src="../assets/img/seat-frame.jpg" alt="Portal photo of a seat frame stripped for rebuild" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="badge" style="left:16px;bottom:16px;background:rgba(255,255,255,.92)">Seats · stage signed off</span></div>
+  </div></section>
+  <section class="sec"><div class="wrap" style="max-width:800px">
+    <div class="eb">FAQ</div><h2 class="h2" style="margin-bottom:24px">Process questions</h2>
+    <div class="faq"><button type="button" aria-expanded="{{o0}}" onClick="{{t0}}"><span>Is the quote fixed?</span><span aria-hidden="true" style="color:#18335f">{{s0}}</span></button><p class="body" style="display:{{d0}};padding:0 0 24px">Yes, for the work you approve. Anything we find once the cabin is open comes to you with photos and a price, and nothing happens without your yes.</p></div><div class="faq"><button type="button" aria-expanded="{{o1}}" onClick="{{t1}}"><span>Can I fly it between the design session and drop-off?</span><span aria-hidden="true" style="color:#18335f">{{s1}}</span></button><p class="body" style="display:{{d1}};padding:0 0 24px">Yes. Nothing changes on the airplane until it arrives for the build.</p></div><div class="faq"><button type="button" aria-expanded="{{o2}}" onClick="{{t2}}"><span>Do I have to log in to approve things?</span><span aria-hidden="true" style="color:#18335f">{{s2}}</span></button><p class="body" style="display:{{d2}};padding:0 0 24px">No. You can approve by text or email reply; the portal keeps the record either way.</p></div><div class="faq"><button type="button" aria-expanded="{{o3}}" onClick="{{t3}}"><span>What if I&#39;m not local?</span><span aria-hidden="true" style="color:#18335f">{{s3}}</span></button><p class="body" style="display:{{d3}};padding:0 0 24px">Most owners aren&#39;t. We arrange ferry flights both ways, and the design session can happen by video with samples mailed to you.</p></div>
+    <a href="Faq.dc.html" style="display:inline-block;margin-top:24px;font-size:15px;font-weight:600;text-decoration:none">All questions →</a>
+  </div></section>
+<section style="padding:0 24px 96px"><div class="wrap sky" style="border-radius:16px;padding:80px 32px;text-align:center">
+      <h2 style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:48px;line-height:56px;letter-spacing:-.015em;margin:0 auto 16px;max-width:18ch">Picture your cabin, made for you.</h2>
+      <p class="lead" style="margin:0 auto 32px">Enter your tail number, answer ten questions about how you fly, and see a concept of your own interior. We call you within one business day.</p>
+      <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap"><a href="Start1.dc.html" class="btn red" style="padding:0 28px">Start your design</a><a href="tel:+10000000000" class="btn o">Call [phone]</a></div>
+    </div></section>
+  <footer class="alt" style="border-top:1px solid #e3e7ed;padding:64px 24px 40px">
+    <div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px;justify-content:space-between">
+      <div style="flex:1 1 280px;max-width:360px"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew" style="height:40px;width:auto;display:block"><p class="sm" style="margin:16px 0 0">One-of-a-kind aircraft interiors from an owner-operated shop, designed with you and built by hand. [City, State] · [Airport ID]</p></div>
+      <nav aria-label="Footer" style="flex:2 1 480px;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px">
+        <div style="display:flex;flex-direction:column;gap:8px"><div class="eb" style="gap:0">Work</div><a href="Services.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Services</a><a href="Aircraft.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Aircraft</a><a href="Capabilities.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Capabilities</a><a href="Portfolio.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Portfolio</a></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div class="eb" style="gap:0">Company</div><a href="About.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">About</a><a href="Process.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">How it works</a><a href="Faq.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">FAQ</a><a href="Contact.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Contact</a></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div class="eb" style="gap:0">Clients</div><a href="Start1.dc.html" style="font-size:15px;color:#14243d;text-decoration:none">Start your design</a><a href="https://app.air-sew.com/" style="font-size:15px;color:#14243d;text-decoration:none">Client login</a><a href="tel:+10000000000" style="font-size:15px;color:#14243d;text-decoration:none">[Phone]</a></div>
+      </nav>
+    </div>
+    <div class="wrap xs" style="margin-top:48px;padding-top:24px;border-top:1px solid #e3e7ed;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px"><span>© 2026 Air Sew</span><span><a href="#" style="color:#566174">Privacy</a> · <a href="#" style="color:#566174">Terms</a></span></div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6200}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { pos: 50, open: 0 }; }
+  renderVals() {
+    const s = this.state, pos = s.pos, open = s.open;
+    const v = {
+      pos,
+      slide: (e) => this.setState({ pos: Number(e.target.value) }),
+      beforeClip: 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:inset(0 ' + (100 - pos) + '% 0 0)'
+    };
+    for (let i = 0; i < 4; i++) {
+      const on = open === i;
+      v['o' + i] = String(on); v['s' + i] = on ? '−' : '+'; v['d' + i] = on ? 'block' : 'none';
+      v['t' + i] = () => this.setState({ open: on ? -1 : i });
+    }
+    
+    return v;
+  }
+}
+</script>
+</body>
+</html>
