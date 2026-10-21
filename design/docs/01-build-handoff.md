@@ -69,7 +69,7 @@ The site is 10 static pages, the Start Your Design flow and 7 CMS templates. The
 | Services hub | /services | Static | LBServices |
 | Service | /services/{slug} | CMS template | LBService |
 | Aircraft hub | /aircraft | Static | LBAircraft |
-| Category | /aircraft/certified, /aircraft/experimental | CMS template | LBCategory |
+| Category | /aircraft/certified, /aircraft/experimental | CMS template | LBCategory, LBCategoryExp |
 | Manufacturer | /aircraft/{maker} | CMS template | LBManufacturer |
 | Model family | /aircraft/{maker}/{model} | CMS template | LBModel, LBModelM |
 | Capabilities hub | /capabilities | Static | LBCapabilities |
@@ -86,7 +86,7 @@ The site is 10 static pages, the Start Your Design flow and 7 CMS templates. The
 
 Main navigation: Services · Aircraft · Capabilities · Portfolio, with Client login (to app.air-sew.com) and the Start your design button on the right. The footer adds About, How it works, FAQ, Contact, Privacy and Terms.
 
-Mobile: every page is responsive at 390 px. Home, the model template and the Start flow have dedicated mobile mockups; all other pages follow the same patterns as those LB mobile boards (stacked sections, horizontal swipe rows, pinned bottom action bar).
+Mobile: every page is responsive at 390 px. Every page has a dedicated mobile mockup (the LB…M files) (stacked sections, horizontal swipe rows, pinned bottom action bar).
 
 ## CMS content model
 

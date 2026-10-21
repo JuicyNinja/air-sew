@@ -14,11 +14,11 @@ You are building the new Air Sew marketing site from the approved design package
 
 1. `design/docs/01-build-handoff.md`: the build spec (pages, URLs, content model, components, Start flow, integrations, SEO, launch checklist). **This is the source of truth.**
 2. `design/design-system/`: the Logbook tokens (`tokens.json`), README (signature components: data plate, tail field, seat plan, wiper, register, job file, step rail), icons, logo. Its token values override the older color/type values quoted in the handoff doc.
-3. `design/screenshots/LB*.jpg` and `design/mockups/LB*.dc.html`: every page in Logbook. Home, the Bonanza model page and the Start flow have desktop and mobile; the other pages are desktop, so derive their mobile layouts from the LB mobile boards (same header, menu, stacking and type scale). Build these exactly.
+3. `design/screenshots/LB*.jpg` and `design/mockups/LB*.dc.html`: every page in Logbook. Every page has a desktop file and a mobile file (`…M`, 390 px). Build these exactly.
 4. `design/screenshots/` and `design/mockups/` (non-LB files): superseded earlier versions. Don't copy their look (Fraunces, rounded cards, eyebrow labels, sky bands).
 5. `design/docs/04-design-audit-and-directions.md`: why Logbook, and the improvement plan (spacing, type, flow, motion, responsiveness, accessibility) that applies to every page.
 6. `design/docs/02-sitemap-ux-plan.md` and `03-media-motion-trust-brief.md`: background on structure, media and motion. Where they disagree with the handoff or mockups, **the handoff and mockups win** (they are newer).
-7. `design/wireframes/`: gray wireframes, superseded by the LB mockups. Useful only for the Experimental category and Terms pages, which reuse the LBCategory and LBLegal layouts.
+7. `design/wireframes/`: gray wireframes, superseded by the LB mockups. Terms reuses the LBLegal layout.
 
 ## Reading the mockups
 
@@ -26,13 +26,13 @@ Each `*.dc.html` file is one page. Inside `<x-dc>` is plain HTML with inline sty
 
 To view a mockup in a browser: `cd design && python3 -m http.server 8765`, then open `http://localhost:8765/mockups/LBHome.dc.html`. The `support.js` next to the files is a small preview shim; it is not part of the product.
 
-| Mockup file (Logbook: build these) | Page | URL |
+| Mockup file (Logbook: build these; each also has an `M` mobile file) | Page | URL |
 | --- | --- | --- |
 | **LBHome / LBHomeM** | Home (desktop / mobile) | `/` |
 | **LBServices** | Services hub | `/services` |
 | **LBService** | Service template, filled for Seats & upholstery | `/services/[slug]` |
 | **LBAircraft** | Aircraft hub (search, Certified / Experimental, sizes, popular models, A–Z) | `/aircraft` |
-| **LBCategory** | Category template, filled for Certified (reuse for Experimental) | `/aircraft/certified` |
+| **LBCategory / LBCategoryExp** | Category template, filled for Certified and Experimental | `/aircraft/certified`, `/aircraft/experimental` |
 | **LBManufacturer** | Manufacturer template, filled for Beechcraft | `/aircraft/[make]` |
 | **LBModel / LBModelM** | Model template, filled for the Bonanza | `/aircraft/[make]/[model]` |
 | **LBCapabilities** | Capabilities hub | `/capabilities` |
