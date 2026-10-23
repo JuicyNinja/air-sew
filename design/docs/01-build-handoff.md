@@ -216,7 +216,7 @@ The build can start now; these items fill the brackets in the mockups and can la
 
 - [ ] White logo variant (dark backgrounds, video heroes)
 - [ ] Shop location, address and airport ID (About, Contact, footer)
-- [ ] Part 145 certificate number and insurance details (trust strip, About)
+- [ ] Repair-station status at Sky Park (certificate number, or who signs logbook entries) and insurance details (About, Certified category). Until confirmed, the site makes no Part 145 claim.
 - [ ] Real photos: owner portrait, shop and hangar, team, before/after pairs
 - [ ] Cabins delivered count; CNC tolerance figure (or drop the claim)
 - [ ] Equipment models: cutting table, 3D printer, paint and repair setup

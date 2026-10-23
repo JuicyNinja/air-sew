@@ -25,7 +25,7 @@ body{margin:0;background:var(--paper)}
 .lead{font-size:20px;line-height:31px;color:var(--muted);margin:0;max-width:34em}
 .body{font-size:17px;line-height:28px;color:var(--muted);margin:0}
 .small{font-size:15px;line-height:24px;color:var(--muted)}
-.tag{font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:20px;color:var(--muted)}
+.tag{font-size:14px;line-height:21px;color:var(--muted)}
 .sec{padding:120px 0}.sec.tight{padding:88px 0}.draft{background:var(--draft)}
 .btn{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;min-height:56px;padding:0 28px;border:0;border-radius:4px;font:600 16px 'Archivo',sans-serif;cursor:pointer;text-decoration:none}
 .btn.red{background:var(--needle);color:#fff}
@@ -78,7 +78,7 @@ body{margin:0;background:var(--paper)}
     <nav aria-label="Breadcrumb" class="tag" style="margin-bottom:48px"><a href="LBHome.dc.html" style="color:var(--muted)">Home</a> / <a href="#" style="color:var(--muted)">Aircraft</a> / <a href="#" style="color:var(--muted)">Beechcraft</a> / <span style="color:var(--ink)">Bonanza</span></nav>
     <div style="display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:start">
       <div>
-        <p class="tag" style="margin:0 0 20px">Six-seat piston, certified</p>
+        
         <h1 class="d1">Beechcraft Bonanza interiors.</h1>
         <p class="lead" style="margin-top:28px">The Bonanza was built to carry six in comfort. Decades of sun and use wear that down. We bring it back, then make it yours: club seats you can talk across, a cabin that stays cool and quiet, and a finish no other Bonanza on the field has.</p>
         <div style="display:flex;gap:12px;margin-top:36px"><a href="LBStart1.dc.html" class="btn red">Start your Bonanza design</a><a href="#work" class="btn ghost">See Bonanza cabins</a></div>
@@ -119,7 +119,7 @@ body{margin:0;background:var(--paper)}
 <section id="squawks" class="sec draft">
   <div class="wrap"><div style="display:grid;grid-template-columns:7fr 5fr;gap:72px;align-items:end;margin-bottom:48px"><h2 class="d2">Squawk list: what wears out on a Bonanza.</h2><p class="body">After [number] Bonanzas through our shop, we know where they tire first, and how to make the fix outlast the original.</p></div>
     <table class="reg"><thead><tr><th style="width:56px">#</th><th style="width:220px"></th><th>Squawk</th><th>Our fix</th></tr></thead><tbody>
-      <tr><td class="mono">01</td><td><img src="../assets/img/worn-seats.jpg" alt="Sun-baked seat leather" style="display:block;width:200px;aspect-ratio:4/3;object-fit:cover"></td><td><div style="font-weight:600;font-size:18px">Sun-baked seat leather</div><div class="small" style="margin-top:4px">Big side windows cook the seat tops.</div></td><td>Rebuild the foam; re-cover in UV-stable, burn-certified leather.</td></tr><tr><td class="mono">02</td><td><img src="../assets/img/worn-sidewall.jpg" alt="Cracked sidewalls and window trim" style="display:block;width:200px;aspect-ratio:4/3;object-fit:cover"></td><td><div style="font-weight:600;font-size:18px">Cracked sidewalls and window trim</div><div class="small" style="margin-top:4px">Original plastics go brittle with age and heat.</div></td><td>Repair and refinish, or 3D-print new trim; wrap panels to match.</td></tr><tr><td class="mono">03</td><td><img src="../assets/img/seat-frame.jpg" alt="Tired aft doors and club seats" style="display:block;width:200px;aspect-ratio:4/3;object-fit:cover"></td><td><div style="font-weight:600;font-size:18px">Tired aft doors and club seats</div><div class="small" style="margin-top:4px">The aft double doors and club seats take the most traffic.</div></td><td>Reinforce wear points; rebuild seat mechanisms.</td></tr>
+      <tr><td class="mono">01</td><td><img src="../assets/img/v2-wornseat.jpg" alt="Sun-baked seat leather" style="display:block;width:200px;aspect-ratio:4/3;object-fit:cover"></td><td><div style="font-weight:600;font-size:18px">Sun-baked seat leather</div><div class="small" style="margin-top:4px">Big side windows cook the seat tops.</div></td><td>Rebuild the foam; re-cover in UV-stable, burn-certified leather.</td></tr><tr><td class="mono">02</td><td><img src="../assets/img/v2-wornwall.jpg" alt="Cracked sidewalls and window trim" style="display:block;width:200px;aspect-ratio:4/3;object-fit:cover"></td><td><div style="font-weight:600;font-size:18px">Cracked sidewalls and window trim</div><div class="small" style="margin-top:4px">Original plastics go brittle with age and heat.</div></td><td>Repair and refinish, or 3D-print new trim; wrap panels to match.</td></tr><tr><td class="mono">03</td><td><img src="../assets/img/v2-frame.jpg" alt="Tired aft doors and club seats" style="display:block;width:200px;aspect-ratio:4/3;object-fit:cover"></td><td><div style="font-weight:600;font-size:18px">Tired aft doors and club seats</div><div class="small" style="margin-top:4px">The aft double doors and club seats take the most traffic.</div></td><td>Reinforce wear points; rebuild seat mechanisms.</td></tr>
     </tbody></table>
   </div>
 </section>
@@ -127,8 +127,8 @@ body{margin:0;background:var(--paper)}
 <section id="work" class="sec" style="padding-bottom:0">
   <div class="wrap" style="display:flex;justify-content:space-between;align-items:end;margin-bottom:40px"><h2 class="d2">Bonanza cabins we've built.</h2><a href="#" style="font-weight:600">See the project</a></div>
   <figure style="margin:0"><div class="wiper" style="height:720px;border-radius:0px">
-  <img src="../assets/img/hero-after.jpg" alt="After: the finished cabin">
-  <img src="../assets/img/hero-before.jpg" alt="Before: the same cabin as it arrived" style="{{beforeClip}}">
+  <img src="../assets/img/v2-after.jpg" alt="After: the finished cabin">
+  <img src="../assets/img/v2-before.jpg" alt="Before: the same cabin as it arrived" style="{{beforeClip}}">
   
   <span class="lbl" style="left:20px">Before</span><span class="lbl" style="right:20px">After</span>
   <span class="seam" style="left:{{pos}}%"></span>
@@ -168,10 +168,10 @@ body{margin:0;background:var(--paper)}
 </section>
 <footer style="border-top:1.5px solid var(--ink);padding:56px 0 40px"><div class="wrap">
   <div style="display:grid;grid-template-columns:4fr 2fr 2fr 2fr;gap:32px">
-    <div><img src="../assets/logo/air-sew-logo.png" alt="Air Sew" style="height:32px"><p class="small" style="margin:16px 0 0;max-width:26em">Aircraft interiors from an owner-operated FAA Part 145 repair station. [City, State] · [Airport ID]</p></div>
+    <div><img src="../assets/logo/air-sew-logo.png" alt="Air Sew" style="height:32px"><p class="small" style="margin:16px 0 0;max-width:26em">Aircraft interiors, designed and built in Hangar 27 at Sky Park Airport (KBTF).<br>2124 Thunderbird Dr, Woods Cross, UT 84087<br>Monday to Friday, 8am to 5pm</p></div>
     <div class="small" style="display:flex;flex-direction:column;gap:8px"><span class="tag">Work</span><a href="LBServices.dc.html" style="color:var(--ink);text-decoration:none">Services</a><a href="LBAircraft.dc.html" style="color:var(--ink);text-decoration:none">Aircraft</a><a href="LBCapabilities.dc.html" style="color:var(--ink);text-decoration:none">Capabilities</a><a href="LBPortfolio.dc.html" style="color:var(--ink);text-decoration:none">Portfolio</a></div>
     <div class="small" style="display:flex;flex-direction:column;gap:8px"><span class="tag">Company</span><a href="LBAbout.dc.html" style="color:var(--ink);text-decoration:none">About</a><a href="LBProcess.dc.html" style="color:var(--ink);text-decoration:none">How it works</a><a href="LBFaq.dc.html" style="color:var(--ink);text-decoration:none">FAQ</a><a href="LBContact.dc.html" style="color:var(--ink);text-decoration:none">Contact</a></div>
-    <div class="small" style="display:flex;flex-direction:column;gap:8px"><span class="tag">Clients</span><a href="LBStart1.dc.html" style="color:var(--ink);text-decoration:none">Start your design</a><a href="https://app.air-sew.com/" style="color:var(--ink);text-decoration:none">Client login</a><a href="tel:+10000000000" class="mono" style="color:var(--ink);text-decoration:none">[Phone]</a></div>
+    <div class="small" style="display:flex;flex-direction:column;gap:8px"><span class="tag">Clients</span><a href="LBStart1.dc.html" style="color:var(--ink);text-decoration:none">Start your design</a><a href="https://app.air-sew.com/" style="color:var(--ink);text-decoration:none">Client login</a><a href="tel:+13855956002" class="mono" style="color:var(--ink);text-decoration:none">(385) 595-6002</a></div>
   </div>
   <div class="tag" style="display:flex;justify-content:space-between;margin-top:48px;padding-top:20px;border-top:1px solid var(--hair)"><span>© 2026 Air Sew</span><span><a href="LBLegal.dc.html" style="color:var(--muted)">Privacy</a>  <a href="LBLegal.dc.html" style="color:var(--muted)">Terms</a></span></div>
 </div></footer>

@@ -25,7 +25,7 @@ body{margin:0;background:var(--paper)}
 .lead{font-size:20px;line-height:31px;color:var(--muted);margin:0;max-width:34em}
 .body{font-size:17px;line-height:28px;color:var(--muted);margin:0}
 .small{font-size:15px;line-height:24px;color:var(--muted)}
-.tag{font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:20px;color:var(--muted)}
+.tag{font-size:14px;line-height:21px;color:var(--muted)}
 .sec{padding:120px 0}.sec.tight{padding:88px 0}.draft{background:var(--draft)}
 .btn{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;min-height:56px;padding:0 28px;border:0;border-radius:4px;font:600 16px 'Archivo',sans-serif;cursor:pointer;text-decoration:none}
 .btn.red{background:var(--needle);color:#fff}
@@ -71,14 +71,14 @@ body{margin:0;background:var(--paper)}
 <header style="border-bottom:1px solid var(--hair)"><div style="max-width:1216px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:180px 1fr 200px;gap:40px;align-items:center;min-height:84px">
   <a href="LBHome.dc.html"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew home" style="height:32px;display:block"></a>
   <nav aria-label="Progress"><ol style="list-style:none;margin:0;padding:0;display:flex;gap:8px"><li style="flex:1;border-top:3px solid var(--ink);padding-top:10px;color:var(--ink)"><span class="tag" style="color:inherit">01</span> <span style="font-size:14px;font-weight:500">Tail number</span></li><li style="flex:1;border-top:3px solid var(--ink);padding-top:10px;color:var(--ink)"><span class="tag" style="color:inherit">02</span> <span style="font-size:14px;font-weight:500">Confirm</span></li><li style="flex:1;border-top:3px solid var(--ink);padding-top:10px;color:var(--ink)"><span class="tag" style="color:inherit">03</span> <span style="font-size:14px;font-weight:500">Your style</span></li><li style="flex:1;border-top:3px solid var(--ink);padding-top:10px;color:var(--ink)"><span class="tag" style="color:inherit">04</span> <span style="font-size:14px;font-weight:500">Photos</span></li><li style="flex:1;border-top:3px solid var(--ink);padding-top:10px;color:var(--ink)" aria-current=step><span class="tag" style="color:inherit">05</span> <span style="font-size:14px;font-weight:600">Concept</span></li><li style="flex:1;border-top:3px solid var(--hair);padding-top:10px;color:var(--muted)"><span class="tag" style="color:inherit">06</span> <span style="font-size:14px;font-weight:500">Done</span></li></ol></nav>
-  <span class="small" style="text-align:right">Questions? <a href="tel:+10000000000" class="mono">[phone]</a></span>
+  <span class="small" style="text-align:right">Questions? <a href="tel:+13855956002" class="mono">(385) 595-6002</a></span>
 </div></header>
 <div style="max-width:1216px;margin:0 auto;padding:56px 32px 0;display:grid;grid-template-columns:7fr 4fr;gap:72px;align-items:start;min-height:700px">
   <main><h1 class="d2" style="font-size:52px;line-height:56px">Your Bonanza, reimagined.</h1>
 <p class="lead" style="margin-top:12px">Drag across to compare your photo with the concept.</p>
 <div style="margin-top:24px"><figure style="margin:0"><div class="wiper" style="aspect-ratio:4/3;border-radius:0px">
-  <img src="../assets/img/hero-after.jpg" alt="Concept: the finished cabin">
-  <img src="../assets/img/hero-before.jpg" alt="Your photo: the same cabin as it arrived" style="{{beforeClip}}">
+  <img src="../assets/img/v2-after.jpg" alt="Concept: the finished cabin">
+  <img src="../assets/img/v2-before.jpg" alt="Your photo: the same cabin as it arrived" style="{{beforeClip}}">
   
   <span class="lbl" style="left:20px">Your photo</span><span class="lbl" style="right:20px">Concept</span>
   <span class="seam" style="left:{{pos}}%"></span>
@@ -90,7 +90,7 @@ body{margin:0;background:var(--paper)}
   <div><aside class="plate" aria-label="Your job file">
   <div style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 20px;border-bottom:1px solid var(--ink)"><span style="font-weight:600">Your job file</span><span class="tag">Saved as you go</span></div>
   <dl style="grid-template-columns:120px 1fr"><dt>Tail number</dt><dd class=mono style="">N12345</dd><dt>Aircraft</dt><dd style="">1998 Beechcraft A36 Bonanza</dd><dt>Seats</dt><dd class=mono style="">6</dd><dt>Owner</dt><dd style="">[Full name]</dd><dt>Scope</dt><dd style="">Seats, sidewalls, headliner</dd><dt>Used for</dt><dd style="">Family and business</dd><dt>Style</dt><dd style="">Modern</dd><dt>Photos</dt><dd class=mono style="">3 added</dd></dl>
-</aside><div style="display:flex;gap:16px;align-items:center;margin-top:24px"><img src="../assets/img/portrait-craftsman.jpg" alt="" style="width:56px;height:56px;object-fit:cover;border-radius:2px"><span class="small" style="line-height:22px">You'll hear from <strong style="color:var(--ink)">[Name]</strong>, the owner, within one business day.</span></div></div>
+</aside><div style="display:flex;gap:16px;align-items:center;margin-top:24px"><span aria-hidden="true" style="flex:0 0 56px;width:56px;height:56px;background:var(--draft);border:1px dashed var(--rule);display:inline-flex;align-items:center;justify-content:center;font-size:12px;color:var(--muted)">Photo</span><span class="small" style="line-height:22px">You'll hear from <strong style="color:var(--ink)">[Name]</strong>, the owner, within one business day.</span></div></div>
 </div>
 <div style="max-width:1216px;margin:0 auto;padding:0 32px 40px"><div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--hair);padding-top:24px;margin-top:24px;max-width:calc(7/11*100% - 40px)"><a href="LBStart4.dc.html" style="font-weight:600;font-size:15px">Back</a><a href="LBStart6.dc.html" class="btn red">Send my design to Air Sew</a></div></div>
 </div>

@@ -25,7 +25,7 @@ body{margin:0;background:var(--paper)}
 .lead{font-size:20px;line-height:31px;color:var(--muted);margin:0;max-width:34em}
 .body{font-size:17px;line-height:28px;color:var(--muted);margin:0}
 .small{font-size:15px;line-height:24px;color:var(--muted)}
-.tag{font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:20px;color:var(--muted)}
+.tag{font-size:14px;line-height:21px;color:var(--muted)}
 .sec{padding:120px 0}.sec.tight{padding:88px 0}.draft{background:var(--draft)}
 .btn{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;min-height:56px;padding:0 28px;border:0;border-radius:4px;font:600 16px 'Archivo',sans-serif;cursor:pointer;text-decoration:none}
 .btn.red{background:var(--needle);color:#fff}
@@ -94,14 +94,13 @@ body{margin:0;background:var(--paper)}
   <a href="LBServicesM.dc.html" style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--hair);font-size:20px;font-weight:500;text-decoration:none;color:var(--ink)">Services</a><a href="LBAircraftM.dc.html" style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--hair);font-size:20px;font-weight:500;text-decoration:none;color:var(--ink)">Aircraft</a><a href="LBCapabilitiesM.dc.html" style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--hair);font-size:20px;font-weight:500;text-decoration:none;color:var(--ink)">Capabilities</a><a href="LBPortfolioM.dc.html" style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--hair);font-size:20px;font-weight:500;text-decoration:none;color:var(--ink)">Portfolio</a><a href="LBProcessM.dc.html" style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--hair);font-size:20px;font-weight:500;text-decoration:none;color:var(--ink)">How it works</a><a href="LBAboutM.dc.html" style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--hair);font-size:20px;font-weight:500;text-decoration:none;color:var(--ink)">About</a><a href="LBFaqM.dc.html" style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--hair);font-size:20px;font-weight:500;text-decoration:none;color:var(--ink)">FAQ</a><a href="LBContactM.dc.html" style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--hair);font-size:20px;font-weight:500;text-decoration:none;color:var(--ink)">Contact</a>
   <a href="LBStartM1.dc.html" class="btn red" style="margin-top:20px">Start your design</a>
 </div>
-<section style="padding:32px 0 40px"><div class="wrap">
-  <p class="tag" style="margin:0 0 16px">FAA Part 145 repair station [cert no.]</p>
-  <h1 class="d1">Tell us your tail number. We'll show you what your cabin can become.</h1>
-  <p class="lead" style="margin-top:18px">FAA lookup, ten questions, a concept of your own cabin.</p>
-  <label for="mt" style="display:block;font-size:15px;font-weight:600;margin:28px 0 8px">Tail number</label>
+<section style="padding:28px 0 40px"><div class="wrap">
+  <h1 class="d1">Make the cabin worth the airplane.</h1>
+  <p class="lead" style="margin-top:16px">Designed with you, built by hand in Hangar 27 at Sky Park. Start with your tail number.</p>
+  <label for="mt" style="display:block;font-size:15px;font-weight:600;margin:24px 0 8px">Tail number</label>
   <div class="tail"><span class="mono">N</span><input id="mt" class="mono" value="12345" autocomplete="off"></div>
   <button type="button" class="btn red" onClick="{{find}}" style="width:100%;margin-top:12px">Find my aircraft</button>
-  <div style="margin-top:24px"><div class="plate">
+  <div style="display:{{plateDisp}};margin-top:20px"><div class="plate">
   <div style="display:flex;justify-content:space-between;align-items:baseline;padding:14px"><span class="mono" style="font-size:22px;font-weight:500">N12345</span><span class="mono" style="font-size:13px;color:{{plateStatusColor}}">{{plateStatus}}</span></div>
   <dl class="{{plateClass}}"><dt>Aircraft</dt><dd>{{v_model}}</dd><dt>Seats</dt><dd class="mono">{{v_seats}}</dd><dt>Burn standard</dt><dd>{{v_burn}}</dd></dl>
   <div style="border-top:1px solid var(--hair);padding:12px;opacity:{{planOpacity}};transition:opacity .4s"><svg viewBox="0 0 520 190" width="100%" role="img" aria-label="Top-down seat plan, club layout" style="display:block">
@@ -118,15 +117,17 @@ body{margin:0;background:var(--paper)}
   <g font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--muted)"><text x="40" y="99">PANEL</text><text x="404" y="170">AFT DOORS</text><text x="128" y="172">ROW 1</text><text x="236" y="172">ROW 2</text><text x="326" y="172">ROW 3</text></g>
 </svg></div>
 </div></div>
-</div></section>
+</div>
+<img src="../assets/img/real-kodiak-seat.jpg" alt="A Kodiak seat in navy leather with a red diamond-quilted insert, outside the shop" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;margin-top:32px">
+<p class="tag" style="margin:10px 20px 0">A Kodiak seat, navy leather with a red diamond-quilted insert.</p></section>
 <section style="border-top:1.5px solid var(--ink)"><div class="wrap" style="display:grid;grid-template-columns:1fr 1fr">
-  <div style="padding:16px 12px;"><div class="tag" style="font-size:12px">Repair station</div><div style="font-size:14px;font-weight:600;line-height:20px;margin-top:2px">FAA Part 145, cert [no.]</div></div><div style="padding:16px 0 16px 12px;border-left:1px solid var(--hair);"><div class="tag" style="font-size:12px">Materials</div><div style="font-size:14px;font-weight:600;line-height:20px;margin-top:2px">Burn-certified, certs in your logbook</div></div><div style="padding:16px 12px;border-top:1px solid var(--hair)"><div class="tag" style="font-size:12px">Shop</div><div style="font-size:14px;font-weight:600;line-height:20px;margin-top:2px">Owner-operated, [City, State]</div></div><div style="padding:16px 0 16px 12px;border-left:1px solid var(--hair);border-top:1px solid var(--hair)"><div class="tag" style="font-size:12px">Delivered</div><div style="font-size:14px;font-weight:600;line-height:20px;margin-top:2px">[n] cabins, pistons to midsize jets</div></div>
+  <p style="margin:0;padding:16px 12px 16px 0;font-size:14px;font-weight:600;line-height:20px;">Hangar 27, Sky Park Airport (KBTF), Woods Cross</p><p style="margin:0;padding:16px 0 16px 12px;font-size:14px;font-weight:600;line-height:20px;border-left:1px solid var(--hair);">Fly it in, or we arrange the ferry</p><p style="margin:0;padding:16px 12px 16px 0;font-size:14px;font-weight:600;line-height:20px;border-top:1px solid var(--hair)">Burn-certified materials, certs in your logbook</p><p style="margin:0;padding:16px 0 16px 12px;font-size:14px;font-weight:600;line-height:20px;border-left:1px solid var(--hair);border-top:1px solid var(--hair)">The owner answers: <span style="white-space:nowrap">(385) 595-6002</span></p>
 </div></section>
 <section class="sec draft" style="padding-bottom:40px"><div class="wrap">
   <h2 class="d2">From worn out to one of a kind.</h2><p class="body" style="margin:12px 0 20px">Drag across the photo.</p></div>
   <figure style="margin:0"><div class="wiper" style="aspect-ratio:4/5;border-radius:0px">
-  <img src="../assets/img/hero-after.jpg" alt="After: the finished cabin">
-  <img src="../assets/img/hero-before.jpg" alt="Before: the same cabin as it arrived" style="{{beforeClip}}">
+  <img src="../assets/img/v2-after.jpg" alt="After: the finished cabin">
+  <img src="../assets/img/v2-before.jpg" alt="Before: the same cabin as it arrived" style="{{beforeClip}}">
   <span class="pin" style="left:38%;top:58%">1</span><span class="pin" style="left:12%;top:40%">2</span><span class="pin" style="left:46%;top:9%">3</span>
   <span class="lbl" style="left:20px">Before</span><span class="lbl" style="right:20px">After</span>
   <span class="seam" style="left:{{pos}}%"></span>
@@ -140,20 +141,20 @@ body{margin:0;background:var(--paper)}
 </div></section>
 <section class="sec draft"><div class="wrap"><h2 class="d2">Your job file, open the whole time.</h2>
   <p class="body" style="margin:14px 0 24px">Most shops go dark until the job is done. We don't.</p>
-  <div class="plate"><div class="mono" style="padding:14px 16px;border-bottom:1px solid var(--ink);font-size:14px;font-weight:500">N12345 · Work order [0000]</div>
+  <div class="plate"><div class="mono" style="padding:14px 16px;border-bottom:1px solid var(--ink);font-size:14px;font-weight:500">N12345, Work order [0000]</div>
   <div style="display:flex;justify-content:space-between;padding:12px 16px;border-top:1px solid var(--hair);font-size:15px;"><span>Strip and inspect</span><span>Complete</span></div><div style="display:flex;justify-content:space-between;padding:12px 16px;border-top:1px solid var(--hair);font-size:15px;"><span>Seat frames and foam</span><span>Complete</span></div><div style="display:flex;justify-content:space-between;padding:12px 16px;border-top:1px solid var(--hair);font-size:15px;font-weight:600;background:var(--draft)"><span>Upholstery</span><span>In progress</span></div><div style="display:flex;justify-content:space-between;padding:12px 16px;border-top:1px solid var(--hair);font-size:15px;color:var(--muted)"><span>Panels and headliner</span><span>Scheduled</span></div></div>
 </div></section>
 <section class="sec"><div class="wrap">
-  <img src="../assets/img/portrait-craftsman.jpg" alt="[Name], owner of Air Sew" style="width:100%;aspect-ratio:4/5;object-fit:cover">
-  <h2 class="d2" style="margin-top:24px">One owner designs, builds and signs off every cabin.</h2>
-  <p class="tag" style="margin:12px 0 0">[Name] · <span class="mono">[Phone]</span></p>
+  <img src="../assets/img/v2-workshop.jpg" alt="The sewing room in Hangar 27" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+  <h2 class="d2" style="margin-top:24px">The person who answers the phone builds your cabin.</h2>
+  <p class="body" style="margin:12px 0 0">[Name], owner. Direct line <a href="tel:+13855956002" class="mono">(385) 595-6002</a>.</p>
 </div></section>
 <section style="background:var(--navy-deep);color:#fff;padding:48px 0"><div class="wrap">
   <h2 class="d2" style="color:#fff">Start with your tail number.</h2>
   <a href="LBStartM1.dc.html" class="btn red" style="width:100%;margin-top:20px">Start your design</a>
 </div></section>
-<footer style="padding:32px 20px 96px;border-top:1px solid var(--hair)"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew" style="height:26px"><p class="small" style="margin:12px 0 0">FAA Part 145 repair station. [City, State]</p></footer>
-<div class="mbar"><a href="LBStartM1.dc.html" class="btn navy" style="flex:1">Start your design</a><a href="tel:+10000000000" class="btn ghost" style="flex:0 0 auto">Call</a></div>
+<footer style="padding:32px 20px 96px;border-top:1px solid var(--hair)"><img src="../assets/logo/air-sew-logo.png" alt="Air Sew" style="height:26px"><p class="small" style="margin:12px 0 0">Hangar 27, Sky Park Airport (KBTF)<br>2124 Thunderbird Dr, Woods Cross, UT 84087</p></footer>
+<div class="mbar"><a href="LBStartM1.dc.html" class="btn red" style="flex:1">Start your design</a><a href="tel:+13855956002" class="btn ghost" style="flex:0 0 auto">Call</a></div>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":4400}}'>
@@ -162,8 +163,8 @@ class Component extends DCLogic {
   renderVals() {
     const s = this.state;
     const v = { plateStatus: s.found ? 'Registration valid' : 'Waiting for lookup', plateStatusColor: s.found ? 'var(--valid)' : 'var(--muted)', plateClass: s.found ? 'found' : '',
-      v_model: s.found ? 'Beechcraft A36 Bonanza' : '—', v_year: s.found ? '1998 · [E-0000]' : '—', v_seats: s.found ? '6' : '—', v_burn: s.found ? 'Part 23' : '—',
-      planOpacity: s.found ? 1 : 0.25, find: () => this.setState({ found: true }),pos: s.pos, slide: (e) => this.setState({ pos: Number(e.target.value) }), beforeClip: 'clip-path:inset(0 ' + (100 - s.pos) + '% 0 0)',menuDisp: s.menu ? 'flex' : 'none', menuExp: String(!!s.menu), toggleMenu: () => this.setState({ menu: !s.menu }), };
+      v_model: s.found ? 'Beechcraft A36 Bonanza' : '—', v_year: s.found ? '1998, [E-0000]' : '—', v_seats: s.found ? '6' : '—', v_burn: s.found ? 'Part 23' : '—',
+      planOpacity: s.found ? 1 : 0.25, plateDisp: s.found ? 'block' : 'none', find: () => this.setState({ found: true }),pos: s.pos, slide: (e) => this.setState({ pos: Number(e.target.value) }), beforeClip: 'clip-path:inset(0 ' + (100 - s.pos) + '% 0 0)',menuDisp: s.menu ? 'flex' : 'none', menuExp: String(!!s.menu), toggleMenu: () => this.setState({ menu: !s.menu }), };
     
     return v;
   }
